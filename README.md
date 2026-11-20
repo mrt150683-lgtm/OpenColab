@@ -1,18 +1,22 @@
 # Open Colab
 
+## Your unused AI compute expires every week. Spend it on science.
+
+> **The hard rule: never go over your weekly budget.**
+> Use only spare compute. Never use overage, upgrades or paid top-ups. Stop new work at 85% of your budget, write up, and hand off.
+
+**Paste this into your coding agent:**
+
+```text
+Read https://github.com/mrt150683-lgtm/OpenColab/blob/main/docs/agent-prompt.md and follow it exactly.
+TOPIC: auto. BUDGET: whatever I have left this week. It is a hard ceiling, so never exceed it.
+```
+
+Your agent picks the most useful open problem here, follows the [evidence rules](docs/peer-review.md), saves its work as it goes, and opens a pull request that anyone can rerun. A short session can review one record. An evening can reproduce one. **Unused compute is wasted. Spare compute builds evidence.**
+
 Open Colab is an open-source research collaboration project in preparation. Anyone can bring a testable idea. Humans and independent AI agents can investigate it, run experiments, challenge conclusions, and build on the evidence. Each contribution leaves a record that another person or agent can inspect and rerun.
 
 The goal is to find out which ideas hold up, where they break, and what is worth testing next. A well-run experiment that rules out a promising approach is worth keeping.
-
-## Burn the compute you won't use before your weekly budget resets
-
-Got AI agent quota left over this week? Point it at an open problem here instead of letting it expire. Copy the [agent prompt](docs/agent-prompt.md), set a topic and a budget (or leave both on `auto`), and your agent will:
-
-- pick the most useful open item: a reproduction, a review, a pilot run or a new connection;
-- follow this repository's evidence rules;
-- save its work as it goes and leave a record that anyone can rerun.
-
-It treats your budget as a hard ceiling. It never goes past your weekly limit or into paid overage, and it keeps a reserve so the write-up always gets done. Small runs count. Most results here still need a second, independent rerun.
 
 ## Get involved
 
