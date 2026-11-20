@@ -44,3 +44,5 @@ Share the solver, certificate files with SHA-256 hashes, verifier, environment l
 - connect the verifier to Lean so that the interval check is no longer a trusted step outside the proof. That step was a gap in the 20 November 2026 claim.
 
 This challenge makes no claim about Navier–Stokes itself.
+
+**Runs so far:** an [exploratory pilot](../experiments/004-certified-numerics-pilot/README.md) on 2026-11-20 by the proposer. It covers benchmarks 2 and 4 and a substitute control, and does not apply the decision rule. Benchmark 3 remains open.

@@ -1,0 +1,22 @@
+Model name:                              AMD Ryzen 5 5500U with Radeon Graphics
+Linux 6.8.0-138-generic
+Python 3.10.12
+abe810ef66b1af6febb96caf2b2fdfd1ec02d0bde9b9d7870e58336d04cdc5e5  verify.py
+4171cc8b078654038d7fde0cb0e759d659219a438397540ea9729107dba2645c  certificates/allen-cahn-eps0.02.json
+e67089ba69e294687f7e8258b6ba3eba306cbcf6c573d31dbf42db860db2391a  certificates/allen-cahn-eps0.1.json
+919055b21faf971ceea96ef576b2d35c35b1eea34f1c5ebfa1a72a7b3253976a  certificates/control-manufactured-seed05.json
+ae9ad5212b0e6be410132288dd0c210ac2d805f65177a5e861897c0e0088824d  certificates/control-manufactured.json
+78ad09517df50b03e19cca3a2cc629a52219794790e377aabc09ee4728d652f3  certificates/grid3-swing.json
+ACCEPT allen-cahn-eps0.02 {"Y0": "[2.3095664576716113997929375926633342920e-16 +/- 5.00e-54]", "Z1": "[0.010150022403714554794853777616243529662 +/- 3.96e-40]", "normA": "[0.80642502845513046329939023905282887893 +/- 1.33e-39]", "p(r)": "[-9.8961902094091198517001579595327931351e-13 +/- 4.22e-51]", "radius": 1e-12, "seconds": 1.03}
+ACCEPT allen-cahn-eps0.1 {"Y0": "[6.9008210607045826202074715224774466549e-17 +/- 1.05e-56]", "Z1": "[0.010229029332621165983179760297962033855 +/- 3.18e-40]", "normA": "[0.78458843580261157225807693758664495904 +/- 3.50e-39]", "p(r)": "[-9.8970196244987207374016722853789520491e-13 +/- 4.85e-51]", "radius": 1e-12, "seconds": 0.17}
+ACCEPT control-manufactured-seed05 {"Y0": "[9.4049745231762174245915862492299590616e-12 +/- 9.29e-51]", "Z1": "[0.017116829594756334968143914470949807785 +/- 2.09e-40]", "normA": "[7.5289223413461658017900942041640990849 +/- 4.77e-38]", "p(r)": "[-8.8883342249066322189115234089840548086e-11 +/- 3.21e-49]", "radius": 1e-10, "dist_to_ustar_upper": "[0.36357401560981125092918029212383552759 +/- 6.44e-39]", "contains_ustar": false, "excludes_ustar": true, "seconds": 0.02}
+ACCEPT control-manufactured {"Y0": "[6.9515217972373309341091227668918311046e-17 +/- 5.04e-56]", "Z1": "[0.032270158750558377961347710127122269722 +/- 3.25e-40]", "normA": "[4.0772428447291999555246732302071429646 +/- 1.98e-38]", "p(r)": "[-9.6766032600945211790346998960739034354e-13 +/- 3.92e-51]", "radius": 1e-12, "dist_to_ustar_upper": "[6.9515217972095775316926364751599941033e-17 +/- 4.80e-55]", "contains_ustar": true, "excludes_ustar": false, "seconds": 0.02}
+ACCEPT grid3-swing {"krawczyk_contained": true, "P_posdef": true, "negQ_posdef": true, "certified_decay_rate_alpha": 0.22499999999999995, "theta_radius": 1e-12, "theta_enclosure": ["[0.28162042902 +/- 5.13e-12]", "[-0.09754537775 +/- 2.60e-12]"], "seconds": 0.0}
+ok   approximation moved by 1e-6, radius kept at 1e-12
+ok   different equation (eps 1/9) for the same solution
+ok   approximate inverse scaled by 3
+ok   forcing term changed
+ok   claimed decay rate 0.26 exceeds the true 0.25
+ok   equilibrium moved by 1e-6, radius kept at 1e-12
+ok   injection 2.5 p.u. (no equilibrium near the old angles)
+7/7 corrupted certificates rejected

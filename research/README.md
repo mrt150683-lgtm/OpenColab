@@ -31,7 +31,9 @@ Challenges 003 to 005 respond to the AI-mathematics claims of 2025 and 2026. See
 
 ## Experiments
 
-Awaiting the first run.
+| ID | Question | Outcome |
+| --- | --- | --- |
+| [004-certified-numerics-pilot](experiments/004-certified-numerics-pilot/README.md) | Can a standalone verifier recheck interval-arithmetic certificates on another CPU? | Exploratory pilot: 5/5 certificates accepted and 7/7 corrupted ones rejected on two machines; hard benchmark not attempted |
 
 ## Verified findings
 

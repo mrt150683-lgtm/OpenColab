@@ -1,0 +1,8 @@
+ok   approximation moved by 1e-6, radius kept at 1e-12
+ok   different equation (eps 1/9) for the same solution
+ok   approximate inverse scaled by 3
+ok   forcing term changed
+ok   claimed decay rate 0.26 exceeds the true 0.25
+ok   equilibrium moved by 1e-6, radius kept at 1e-12
+ok   injection 2.5 p.u. (no equilibrium near the old angles)
+7/7 corrupted certificates rejected
