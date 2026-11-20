@@ -1,0 +1,470 @@
+[
+ {
+  "sid": "S01",
+  "id": 960,
+  "statement": "For fixed r,k ≥ 2 and n points in the plane with no k collinear, determine the threshold number of ordinary lines (lines through exactly 2 points) that forces r points all of whose C(r,2) connecting lines are ordinary; in particular is it o(n^2)?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/960"
+  ],
+  "note": "Wiki 1(a): OpenAI internal model full solution 9 Apr 2026 (threshold ≥ n^2/12 − O(n))."
+ },
+ {
+  "sid": "S02",
+  "id": 694,
+  "statement": "For n in the image of Euler's φ, let f_max(n), f_min(n) be the largest and smallest m with φ(m)=n. Determine the asymptotic size of max_{n ≤ x} f_max(n)/f_min(n).",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/694"
+  ],
+  "note": "Wiki 1(a): GPT-5.5 Pro full solution 1 May 2026: (e^γ+o(1)) log log x."
+ },
+ {
+  "sid": "S03",
+  "id": 1051,
+  "statement": "If a_1 < a_2 < ... are integers with liminf a_n^{1/2^n} > 1, must sum_n 1/(a_n a_{n+1}) be irrational?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/1051"
+  ],
+  "note": "Wiki 1(a): Aletheia full (Lean) solution 29 Jan 2026; later extended by humans."
+ },
+ {
+  "sid": "S04",
+  "id": 94,
+  "statement": "Suppose n points in the plane form the vertices of a convex polygon, and the distance u_i occurs f(u_i) times among pairs. Is sum_i f(u_i)^2 ≪ n^3?",
+  "label": "PRIOR",
+  "prior_work": "Lefmann and Theile (1995), Combinatorica (title not verified) — proved the bound under the weaker hypothesis of no three collinear points; Erdős attributes a solution to Fishburn (no reference).",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/94"
+  ],
+  "note": "Wiki 2(a): GPT-5 found the full solution in the literature (2 Nov 2025)."
+ },
+ {
+  "sid": "S05",
+  "id": 897,
+  "statement": "Let f be an additive arithmetic function with limsup over prime powers of f(p^k)/log(p^k) = ∞. Must limsup_n (f(n+1) − f(n))/log n = ∞, or even limsup_n f(n+1)/f(n) = ∞?",
+  "label": "PRIOR",
+  "prior_work": "Wirsing (1981) — published the counterexample construction f(q)=g(q)log q (crediting Erdős).",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/897"
+  ],
+  "note": "Wiki 1(b): Archivara + Aristotle full (Lean) disproof 26 Dec 2025; Wirsing (1981) found same day, judged similar."
+ },
+ {
+  "sid": "S06",
+  "id": 1148,
+  "statement": "Can every sufficiently large integer n be written as x^2 + y^2 − z^2 with max(x^2, y^2, z^2) ≤ n?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/1148"
+  ],
+  "note": "Wiki 1(d): Chojecki et al. with GPT/Gemini models full (Lean) solution Jan–Mar 2026 via Duke's theorem (Einsiedler–Lindenstrauss–Michel–Venkatesh 2012); human-AI collaboration."
+ },
+ {
+  "sid": "S07",
+  "id": 822,
+  "statement": "Does the set of integers of the form n + φ(n), with φ Euler's totient function, have positive lower density?",
+  "label": "PRIOR",
+  "prior_work": "Gabdullin, Iudelevich and Luca (2024), 'Numbers of the form k+f(k)' (arXiv; title from memory).",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/822"
+  ],
+  "note": "Wiki 2(a) literature search: GPT-5 (Oct 2025) located an existing full solution; part of the Oct 2025 episode where these problems were publicised as AI-'solved' but were already solved in the literature."
+ },
+ {
+  "sid": "S08",
+  "id": 990,
+  "statement": "For a complex polynomial with n nonzero coefficients and M = (|a_0|+...+|a_d|)/sqrt(|a_0||a_d|), is the discrepancy of root arguments in every arc I bounded by |#{θ_i ∈ I} − |I|d/2π| ≪ (n log M)^{1/2}?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/990"
+  ],
+  "note": "Wiki 1(a): OpenAI internal model full disproof 9 Apr 2026."
+ },
+ {
+  "sid": "S09",
+  "id": 1079,
+  "statement": "Let r ≥ 4. If a graph G on n vertices has at least ex(n; K_r) (Turán number) edges, must G contain a vertex of degree d ≫_r n whose neighbourhood spans at least ex(d; K_{r-1}) edges?",
+  "label": "PRIOR",
+  "prior_work": "Bollobás and Thomason (1981), 'Dense neighbourhoods and Turán's theorem', J. Combin. Theory Ser. B 31; Bondy (1983).",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/1079"
+  ],
+  "note": "Wiki 2(a) literature search: GPT-5 (Oct 2025) located an existing full solution; part of the Oct 2025 episode where these problems were publicised as AI-'solved' but were already solved in the literature."
+ },
+ {
+  "sid": "S10",
+  "id": 903,
+  "statement": "Let n = p^2+p+1 with p a prime power, and let A_1,...,A_t be subsets of {1,...,n} such that every pair of elements lies in exactly one A_i (a pairwise balanced design / linear space). Is it true that if t > n then t ≥ n + p?",
+  "label": "PRIOR",
+  "prior_work": "Erdős, Fowler, Sós and Wilson (1985), 'On 2-designs', J. Combin. Theory Ser. A 38.",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/903"
+  ],
+  "note": "Wiki 2(a) literature search: GPT-5 (Oct 2025) located an existing full solution; part of the Oct 2025 episode where these problems were publicised as AI-'solved' but were already solved in the literature."
+ },
+ {
+  "sid": "S11",
+  "id": 1141,
+  "statement": "Are there infinitely many n such that n − k^2 is prime for every k with gcd(n,k)=1 and k^2 < n?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/1141"
+  ],
+  "note": "Wiki 1(a): OpenAI internal model full disproof 9 Apr 2026; deduced from Pollack (2017), so 'new' but leaning on a known result."
+ },
+ {
+  "sid": "S12",
+  "id": 380,
+  "statement": "Call an interval [u,v] bad if the largest prime factor of the product of the integers in [u,v] appears to a power > 1. Is the number of n ≤ x lying in some bad interval asymptotic to #{n ≤ x : P(n)^2 | n}, P(n) the largest prime factor?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/380"
+  ],
+  "note": "Wiki 1(d): Tao with GPT-5.4 Pro full solution 31 Mar 2026 (human-AI collaboration)."
+ },
+ {
+  "sid": "S13",
+  "id": 494,
+  "statement": "For a finite set A of complex numbers and k ≥ 1, let A_k be the multiset of sums of k distinct elements of A. For k > 2 (and |A| sufficiently large), does A_k together with |A| uniquely determine A?",
+  "label": "PRIOR",
+  "prior_work": "Gordon, Fraenkel and Straus (1962), 'On the determination of sets by the sets of sums of a certain order', Pacific J. Math. 12; partial results Selfridge and Straus (1958).",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/494"
+  ],
+  "note": "Wiki 2(a) literature search: GPT-5 (Oct 2025) located an existing full solution; part of the Oct 2025 episode where these problems were publicised as AI-'solved' but were already solved in the literature. Note: literal statement is false for |A|=k or 2k; the literature answers the 'sufficiently large |A|' version."
+ },
+ {
+  "sid": "S14",
+  "id": 457,
+  "statement": "Is there ε > 0 such that for infinitely many n, every prime p ≤ (2+ε) log n divides the product (n+1)(n+2)...(n+⌊log n⌋)?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/457"
+  ],
+  "note": "Wiki 1(a): Aristotle + GPT-5.2 Pro full (Lean) solution 2 Mar 2026."
+ },
+ {
+  "sid": "S15",
+  "id": 621,
+  "statement": "For a graph G on n vertices, let α1(G) be the maximum size of an edge set containing at most one edge of every triangle, and τ1(G) the minimum size of an edge set meeting every triangle. Is α1(G) + τ1(G) ≤ n^2/4?",
+  "label": "PRIOR",
+  "prior_work": "Norin and Sun (2016), 'Triangle-independent sets vs. cuts' (arXiv) — proves the stronger α1(G)+τ_B(G) ≤ n^2/4.",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/621"
+  ],
+  "note": "Wiki 2(a) literature search: GPT-5 (Oct 2025) located an existing full solution; part of the Oct 2025 episode where these problems were publicised as AI-'solved' but were already solved in the literature."
+ },
+ {
+  "sid": "S16",
+  "id": 333,
+  "statement": "Let A be a set of natural numbers of natural density zero. Must there exist a set B with A contained in B+B such that |B ∩ {1,...,N}| = o(N^{1/2}) for all large N?",
+  "label": "PRIOR",
+  "prior_work": "Erdős and Newman (1977), 'Bases for sets of integers', J. Number Theory 9 — Theorem 2 already implies a negative answer.",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/333"
+  ],
+  "note": "Wiki 1(b): Claude Opus 4.5 / GPT-5.2 Pro produced a full (Lean) solution 25 Dec 2025; literature (Erdős–Newman 1977) found the same day, judged similar. Also 2(a): GPT-5.2 Pro failed to find the literature proof; Aletheia later found it."
+ },
+ {
+  "sid": "S17",
+  "id": 1196,
+  "statement": "Is it true that for primitive sets A ⊆ [x, ∞) (no element divides another), sum_{a∈A} 1/(a log a) < 1 + o(1) as x → ∞?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/1196"
+  ],
+  "note": "Wiki 1(a): GPT-5.4 Pro full solution 13 Apr 2026 (bound 1+O(1/log x)); improved on Lichtman (2023)."
+ },
+ {
+  "sid": "S18",
+  "id": 1043,
+  "statement": "Let f be a monic non-constant complex polynomial. Must there be a line ℓ such that the orthogonal projection of the lemniscate region {z : |f(z)| ≤ 1} onto ℓ has length (measure) at most 2?",
+  "label": "PRIOR",
+  "prior_work": "Pommerenke (1961), 'On metric properties of complex polynomials', Michigan Math. J. 8 — counterexample with all projections ≥ 2.386.",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/1043"
+  ],
+  "note": "Wiki 2(a) literature search: GPT-5 (Oct 2025) located an existing full solution; part of the Oct 2025 episode where these problems were publicised as AI-'solved' but were already solved in the literature. Aristotle (Dec 2025) later gave a new Lean proof (wiki 1(c))."
+ },
+ {
+  "sid": "S19",
+  "id": 397,
+  "statement": "Are there only finitely many solutions to products of central binomial coefficients prod_i C(2m_i, m_i) = prod_j C(2n_j, n_j) with all the m_i, n_j distinct?",
+  "label": "PRIOR",
+  "prior_work": "China TST (2012) competition problem containing an infinite family of solutions (per wiki).",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/397"
+  ],
+  "note": "Wiki 1(b): GPT-5.2 Pro + Aristotle gave a full (Lean) disproof 10 Jan 2026; literature (China TST 2012) found 14 Jan 2026, judged similar. Also Aletheia independently (Feb 2026). erdosproblems page credits Somani/ChatGPT and does not cite the TST; label rests on the wiki."
+ },
+ {
+  "sid": "S20",
+  "id": 205,
+  "statement": "Can all sufficiently large n be written as 2^k + m with k ≥ 0 and Ω(m) < log log m (Ω = number of prime factors with multiplicity)?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/205"
+  ],
+  "note": "Wiki 1(a): Aristotle + GPT-5.2 Thinking full (Lean) disproof 10 Jan 2026."
+ },
+ {
+  "sid": "S21",
+  "id": 645,
+  "statement": "In every 2-colouring of the positive integers, must there be a monochromatic 3-term arithmetic progression x, x+d, x+2d with d > x?",
+  "label": "PRIOR",
+  "prior_work": "Brown and Landman (1999), 'Monochromatic arithmetic progressions with large differences', Bull. Austral. Math. Soc. 60.",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/645"
+  ],
+  "note": "Wiki 2(a) literature search: GPT-5 (20 Oct 2025) located an existing full solution; part of the 20 Oct 2025 episode where these problems were publicised as AI-'solved' but were already solved in the literature."
+ },
+ {
+  "sid": "S22",
+  "id": 515,
+  "statement": "Let f be a transcendental entire function (not a polynomial). Is there a locally rectifiable path C tending to infinity such that the integral of |f(z)|^{-λ} |dz| along C is finite for every λ > 0?",
+  "label": "PRIOR",
+  "prior_work": "Lewis, Rossi and Weitsman (1984), 'On the growth of subharmonic functions along paths', Ark. Mat. 22; earlier Huber (1957) for each fixed λ, Zhang (1977) finite order.",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/515"
+  ],
+  "note": "Wiki 2(a) literature search: GPT-5 (Oct 2025) located an existing full solution; part of the Oct 2025 episode where these problems were publicised as AI-'solved' but were already solved in the literature."
+ },
+ {
+  "sid": "S23",
+  "id": 1129,
+  "statement": "For nodes x_1..x_n in [−1,1], let Λ be the Lebesgue constant max_x sum_k |l_k(x)| of Lagrange interpolation. Characterise the node sets minimising Λ — in particular, is the minimiser characterised by all local maxima λ_i of sum_k|l_k| between consecutive nodes being equal?",
+  "label": "PRIOR",
+  "prior_work": "Kilgore (1977), 'Optimization of the norm of the Lagrange interpolation operator', Bull. AMS; de Boor and Pinkus (1978), 'Proof of the conjectures of Bernstein and Erdős concerning the optimal nodes for polynomial interpolation', J. Approx. Theory 24.",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/1129"
+  ],
+  "note": "Wiki 2(a): GPT-5.2 Pro (17 Jan 2026) found the full solution in the literature."
+ },
+ {
+  "sid": "S24",
+  "id": 1202,
+  "statement": "Given ε>0, is there k such that for any k primes p_1<...<p_k<n^{1−ε}, each with a set of (p_i−1)/2 residue classes removed, at most εn integers m ≤ n survive the sieve?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/1202"
+  ],
+  "note": "Wiki 1(a): GPT-5.4 Pro full (negative) solution 1 Apr 2026."
+ },
+ {
+  "sid": "S25",
+  "id": 1091,
+  "statement": "Must every K_4-free 4-chromatic graph contain an odd cycle with at least two diagonals? More generally, is there f(r) → ∞ such that every 4-chromatic graph whose subgraphs on ≤ r vertices are 3-colourable contains an odd cycle with ≥ f(r) diagonals?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/1091"
+  ],
+  "note": "Wiki 1(a): OpenAI internal model full solution 9 Apr 2026. CAUTION: first part was already solved by Voss (1982); only the general second part is new."
+ },
+ {
+  "sid": "S26",
+  "id": 737,
+  "statement": "Let G be a graph with chromatic number aleph_1. Must there be an edge e such that, for all sufficiently large n, G contains a cycle of length n through e?",
+  "label": "PRIOR",
+  "prior_work": "Thomassen (1983), 'Cycles in graphs of uncountable chromatic number', Combinatorica 3.",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/737"
+  ],
+  "note": "Wiki 2(a): GPT-5 found the full solution in the literature (30 Sep 2025)."
+ },
+ {
+  "sid": "S27",
+  "id": 1217,
+  "statement": "If A = {a_1 < a_2 < ...} has positive lower logarithmic density, must there be a divisibility chain a_{n_1} | a_{n_2} | ... whose counting function up to x is ≫ (1/log log x)·sum_{a_n<x} 1/(a_n log a_n) infinitely often (limsup positive)?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/1217"
+  ],
+  "note": "Wiki 1(a): GPT-5.4 Pro full solution 16 Apr 2026; humans found similar proofs independently. Statement paraphrase approximate."
+ },
+ {
+  "sid": "S28",
+  "id": 987,
+  "statement": "For a sequence x_j in (0,1) let A_k = limsup_n |sum_{j≤n} e(k x_j)|. Is limsup_k A_k = ∞? Is A_k = o(k) possible?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/987"
+  ],
+  "note": "Wiki 1(a): OpenAI internal model full solution 9 Apr 2026 (construction with A_k ≪ (k log k)^{1/2})."
+ },
+ {
+  "sid": "S29",
+  "id": 741,
+  "statement": "If A ⊆ N and A+A has positive upper density, can A always be split into two parts A_1, A_2 with A_1+A_1 and A_2+A_2 both of positive upper density? Also: is there a basis of order 2 that cannot be split so both A_i+A_i have bounded gaps?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/741"
+  ],
+  "note": "Wiki 1(a): DeepMind prover agent full (Lean) solution 16 Apr 2026; OpenAI model independently did the second part. Answer depends on density interpretation."
+ },
+ {
+  "sid": "S30",
+  "id": 1008,
+  "statement": "Does every graph with m edges contain a C_4-free subgraph with ≫ m^{2/3} edges?",
+  "label": "PRIOR",
+  "prior_work": "Conlon, Fox and Sudakov (2014) [CFS14b] (title not verified).",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/1008"
+  ],
+  "note": "Wiki 2(a): GPT-5 found the full solution in the literature (29 Sep 2025)."
+ },
+ {
+  "sid": "S31",
+  "id": 339,
+  "statement": "Let A be an additive basis of order r of the natural numbers. Must the set of integers representable as a sum of exactly r distinct elements of A have positive lower density?",
+  "label": "PRIOR",
+  "prior_work": "Hegyvári, Hennecart and Plagne (2003), 'A proof of two Erdős' conjectures on restricted addition and further results', J. reine angew. Math. 560.",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/339"
+  ],
+  "note": "Wiki 2(a) literature search: GPT-5 (Oct 2025) located an existing full solution; part of the Oct 2025 episode where these problems were publicised as AI-'solved' but were already solved in the literature."
+ },
+ {
+  "sid": "S32",
+  "id": 125,
+  "statement": "Let A be the integers whose base-3 digits are all 0 or 1, and B those whose base-4 digits are all 0 or 1. Does A+B have positive lower density?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/125"
+  ],
+  "note": "Wiki 1(a): DeepMind prover agent full (Lean) disproof 30 Mar 2026 (lower density is 0)."
+ },
+ {
+  "sid": "S33",
+  "id": 1021,
+  "statement": "For k ≥ 3, let G_k be the 1-subdivision of K_k (k vertices, plus one vertex for each pair joined to exactly that pair). Is ex(n, G_k) ≪ n^{3/2 − c_k} for some c_k > 0?",
+  "label": "PRIOR",
+  "prior_work": "Conlon and Lee (2021), 'On the extremal number of subdivisions', IMRN; Janzer (2019) improved c_k = 1/(4k−6).",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/1021"
+  ],
+  "note": "Wiki 2(a): GPT (21 Jan 2026) found the full solution, which had been previously noted."
+ },
+ {
+  "sid": "S34",
+  "id": 1014,
+  "statement": "For fixed k ≥ 3, does the off-diagonal Ramsey number satisfy R(k, l+1)/R(k, l) → 1 as l → ∞?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/1014"
+  ],
+  "note": "Wiki 1(a): OpenAI internal model full solution 23 Apr 2026."
+ },
+ {
+  "sid": "S35",
+  "id": 38,
+  "statement": "Is there a set B of natural numbers that is not an additive basis but such that, for some f(α)>0, every A ⊆ N of Schnirelmann density α ∈ (0,1) and every N admit b ∈ B with |(A ∪ (A+b)) ∩ [1,N]| ≥ (α + f(α))N?",
+  "label": "NEW",
+  "prior_work": null,
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/38"
+  ],
+  "note": "Wiki 1(a): GPT-5.5 Pro full solution (25 Apr 2026), Lean-verified; no prior literature reported."
+ },
+ {
+  "sid": "S36",
+  "id": 481,
+  "statement": "Given positive integers a_1..a_r, b_1..b_r with sum 1/a_i > 1, define T on finite integer sequences by T(x_1..x_n) = (a_i x_j + b_i) over all i, j. Starting from A_1 = (1) and A_{k+1} = T(A_k), must some A_k contain a repeated element?",
+  "label": "PRIOR",
+  "prior_work": "Klarner (1982) (title not verified); generalisation Kolpakov and Talambutsa (2022).",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/481"
+  ],
+  "note": "Wiki 2(a): ChatGPT/Gemini Deep Research 'unwittingly reproduced existing proof' (1 Dec 2025); GPT then found the literature (3 Dec 2025)."
+ },
+ {
+  "sid": "S37",
+  "id": 705,
+  "statement": "Is there k such that every finite unit-distance graph in the plane with girth at least k has chromatic number at most 3?",
+  "label": "PRIOR",
+  "prior_work": "O'Donnell (1999/2000), 4-chromatic unit distance graphs of arbitrarily large girth (Geombinatorics; title not verified); earlier Wormald (1979).",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/705"
+  ],
+  "note": "Wiki 2(a): GPT (26 Jan 2026) and Aletheia (1 Feb 2026) found the full solution in the literature."
+ },
+ {
+  "sid": "S38",
+  "id": 281,
+  "statement": "Let n_1 < n_2 < ... be such that for every choice of residues a_i mod n_i, the integers avoiding all congruences a_i mod n_i have density 0. Must it follow that for every ε > 0 there is k such that, for every choice of a_i, the density of integers avoiding the first k congruences is < ε?",
+  "label": "PRIOR",
+  "prior_work": "Davenport and Erdős (1936), 'On sequences of positive integers', Acta Arith. 2; Rogers' theorem as printed in Halberstam and Roth (1966), 'Sequences', Ch. V.3.",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/281"
+  ],
+  "note": "Wiki 1(b): GPT-5.2 Pro (Somani) full solution 17 Jan 2026; literature found 18 Jan 2026 but marked NOT similar — the problem follows quickly from two classical results rather than appearing verbatim. Moderate confidence for PRIOR."
+ },
+ {
+  "sid": "S39",
+  "id": 223,
+  "statement": "Let f_d(n) be the maximum number of pairs at distance exactly 1 among n points in R^d of diameter 1 (maximum number of diameters). Determine or estimate f_d(n).",
+  "label": "PRIOR",
+  "prior_work": "Hopf and Pannwitz (1934) for d=2; Grünbaum (1956), Heppes (1956), Straszewicz (1957) for d=3; Erdős (1960) asymptotics; Swanepoel (2009), 'Unit distances and diameters in Euclidean spaces', Discrete Comput. Geom. 41 (exact for large n, d ≥ 4).",
+  "sources": [
+   "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+   "https://www.erdosproblems.com/223"
+  ],
+  "note": "Wiki 2(a) literature search: GPT-5 (Oct 2025) located an existing full solution; part of the Oct 2025 episode where these problems were publicised as AI-'solved' but were already solved in the literature. 'Estimate' problem; resolution assembled from several papers."
+ }
+]

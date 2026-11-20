@@ -1,0 +1,422 @@
+[
+ {
+  "qid": "Q01",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_855",
+  "file": "FormalConjectures/ErdosProblems/855.lean"
+ },
+ {
+  "qid": "Q02",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_723",
+  "file": "FormalConjectures/ErdosProblems/723.lean"
+ },
+ {
+  "qid": "Q03",
+  "truth": "mutant",
+  "op": "forall_exists",
+  "name": "erdos_1049",
+  "file": "FormalConjectures/ErdosProblems/1049.lean"
+ },
+ {
+  "qid": "Q04",
+  "truth": "mutant",
+  "op": "negate",
+  "name": "erdos_903",
+  "file": "FormalConjectures/ErdosProblems/903.lean"
+ },
+ {
+  "qid": "Q05",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_943",
+  "file": "FormalConjectures/ErdosProblems/943.lean"
+ },
+ {
+  "qid": "Q06",
+  "truth": "mutant",
+  "op": "negate",
+  "name": "erdos_159",
+  "file": "FormalConjectures/ErdosProblems/159.lean"
+ },
+ {
+  "qid": "Q07",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_267",
+  "file": "FormalConjectures/ErdosProblems/267.lean"
+ },
+ {
+  "qid": "Q08",
+  "truth": "mutant",
+  "op": "negate",
+  "name": "erdos_86",
+  "file": "FormalConjectures/ErdosProblems/86.lean"
+ },
+ {
+  "qid": "Q09",
+  "truth": "mutant",
+  "op": "nonstrict_flip",
+  "name": "erdos_207",
+  "file": "FormalConjectures/ErdosProblems/207.lean"
+ },
+ {
+  "qid": "Q10",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_242",
+  "file": "FormalConjectures/ErdosProblems/242.lean"
+ },
+ {
+  "qid": "Q11",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_613",
+  "file": "FormalConjectures/ErdosProblems/613.lean"
+ },
+ {
+  "qid": "Q12",
+  "truth": "mutant",
+  "op": "negate",
+  "name": "erdos_562",
+  "file": "FormalConjectures/ErdosProblems/562.lean"
+ },
+ {
+  "qid": "Q13",
+  "truth": "mutant",
+  "op": "forall_exists",
+  "name": "erdos_657",
+  "file": "FormalConjectures/ErdosProblems/657.lean"
+ },
+ {
+  "qid": "Q14",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_355",
+  "file": "FormalConjectures/ErdosProblems/355.lean"
+ },
+ {
+  "qid": "Q15",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_194",
+  "file": "FormalConjectures/ErdosProblems/194.lean"
+ },
+ {
+  "qid": "Q16",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_906",
+  "file": "FormalConjectures/ErdosProblems/906.lean"
+ },
+ {
+  "qid": "Q17",
+  "truth": "mutant",
+  "op": "forall_exists",
+  "name": "erdos_727",
+  "file": "FormalConjectures/ErdosProblems/727.lean"
+ },
+ {
+  "qid": "Q18",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_306",
+  "file": "FormalConjectures/ErdosProblems/306.lean"
+ },
+ {
+  "qid": "Q19",
+  "truth": "mutant",
+  "op": "and_or",
+  "name": "erdos_277",
+  "file": "FormalConjectures/ErdosProblems/277.lean"
+ },
+ {
+  "qid": "Q20",
+  "truth": "mutant",
+  "op": "literal_bump",
+  "name": "erdos_288",
+  "file": "FormalConjectures/ErdosProblems/288.lean"
+ },
+ {
+  "qid": "Q21",
+  "truth": "mutant",
+  "op": "atTop_atBot",
+  "name": "erdos_578",
+  "file": "FormalConjectures/ErdosProblems/578.lean"
+ },
+ {
+  "qid": "Q22",
+  "truth": "mutant",
+  "op": "exists_forall",
+  "name": "erdos_333",
+  "file": "FormalConjectures/ErdosProblems/333.lean"
+ },
+ {
+  "qid": "Q23",
+  "truth": "mutant",
+  "op": "negate",
+  "name": "erdos_66",
+  "file": "FormalConjectures/ErdosProblems/66.lean"
+ },
+ {
+  "qid": "Q24",
+  "truth": "mutant",
+  "op": "exists_forall",
+  "name": "erdos_268",
+  "file": "FormalConjectures/ErdosProblems/268.lean"
+ },
+ {
+  "qid": "Q25",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_317",
+  "file": "FormalConjectures/ErdosProblems/317.lean"
+ },
+ {
+  "qid": "Q26",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_716",
+  "file": "FormalConjectures/ErdosProblems/716.lean"
+ },
+ {
+  "qid": "Q27",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_914",
+  "file": "FormalConjectures/ErdosProblems/914.lean"
+ },
+ {
+  "qid": "Q28",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_891",
+  "file": "FormalConjectures/ErdosProblems/891.lean"
+ },
+ {
+  "qid": "Q29",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_197",
+  "file": "FormalConjectures/ErdosProblems/197.lean"
+ },
+ {
+  "qid": "Q30",
+  "truth": "mutant",
+  "op": "strict_flip",
+  "name": "erdos_1122",
+  "file": "FormalConjectures/ErdosProblems/1122.lean"
+ },
+ {
+  "qid": "Q31",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_312",
+  "file": "FormalConjectures/ErdosProblems/312.lean"
+ },
+ {
+  "qid": "Q32",
+  "truth": "faithful",
+  "op": null,
+  "name": "theorem_1",
+  "file": "FormalConjectures/ErdosProblems/229.lean"
+ },
+ {
+  "qid": "Q33",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_479",
+  "file": "FormalConjectures/ErdosProblems/479.lean"
+ },
+ {
+  "qid": "Q34",
+  "truth": "mutant",
+  "op": "forall_exists",
+  "name": "erdos_243",
+  "file": "FormalConjectures/ErdosProblems/243.lean"
+ },
+ {
+  "qid": "Q35",
+  "truth": "mutant",
+  "op": "forall_exists",
+  "name": "erdos_273",
+  "file": "FormalConjectures/ErdosProblems/273.lean"
+ },
+ {
+  "qid": "Q36",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_1219",
+  "file": "FormalConjectures/ErdosProblems/1219.lean"
+ },
+ {
+  "qid": "Q37",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_25",
+  "file": "FormalConjectures/ErdosProblems/25.lean"
+ },
+ {
+  "qid": "Q38",
+  "truth": "mutant",
+  "op": "literal_bump",
+  "name": "mono_k",
+  "file": "FormalConjectures/ErdosProblems/1171.lean"
+ },
+ {
+  "qid": "Q39",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_344",
+  "file": "FormalConjectures/ErdosProblems/344.lean"
+ },
+ {
+  "qid": "Q40",
+  "truth": "mutant",
+  "op": "nonstrict_flip",
+  "name": "erdos_307.barrier_sixty",
+  "file": "FormalConjectures/ErdosProblems/307.lean"
+ },
+ {
+  "qid": "Q41",
+  "truth": "mutant",
+  "op": "exists_forall",
+  "name": "erdos_221",
+  "file": "FormalConjectures/ErdosProblems/221.lean"
+ },
+ {
+  "qid": "Q42",
+  "truth": "mutant",
+  "op": "and_or",
+  "name": "erdos_1083",
+  "file": "FormalConjectures/ErdosProblems/1083.lean"
+ },
+ {
+  "qid": "Q43",
+  "truth": "mutant",
+  "op": "negate",
+  "name": "erdos_845",
+  "file": "FormalConjectures/ErdosProblems/845.lean"
+ },
+ {
+  "qid": "Q44",
+  "truth": "mutant",
+  "op": "forall_exists",
+  "name": "erdos_677",
+  "file": "FormalConjectures/ErdosProblems/677.lean"
+ },
+ {
+  "qid": "Q45",
+  "truth": "mutant",
+  "op": "nonstrict_flip",
+  "name": "erdos_1149",
+  "file": "FormalConjectures/ErdosProblems/1149.lean"
+ },
+ {
+  "qid": "Q46",
+  "truth": "mutant",
+  "op": "negate",
+  "name": "erdos_932",
+  "file": "FormalConjectures/ErdosProblems/932.lean"
+ },
+ {
+  "qid": "Q47",
+  "truth": "mutant",
+  "op": "exists_forall",
+  "name": "erdos_722",
+  "file": "FormalConjectures/ErdosProblems/722.lean"
+ },
+ {
+  "qid": "Q48",
+  "truth": "mutant",
+  "op": "negate",
+  "name": "erdos_130",
+  "file": "FormalConjectures/ErdosProblems/130.lean"
+ },
+ {
+  "qid": "Q49",
+  "truth": "mutant",
+  "op": "exists_forall",
+  "name": "erdos_686",
+  "file": "FormalConjectures/ErdosProblems/686.lean"
+ },
+ {
+  "qid": "Q50",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_75",
+  "file": "FormalConjectures/ErdosProblems/75.lean"
+ },
+ {
+  "qid": "Q51",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_940",
+  "file": "FormalConjectures/ErdosProblems/940.lean"
+ },
+ {
+  "qid": "Q52",
+  "truth": "mutant",
+  "op": "strict_flip",
+  "name": "erdos_234",
+  "file": "FormalConjectures/ErdosProblems/234.lean"
+ },
+ {
+  "qid": "Q53",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_502",
+  "file": "FormalConjectures/ErdosProblems/502.lean"
+ },
+ {
+  "qid": "Q54",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_656",
+  "file": "FormalConjectures/ErdosProblems/656.lean"
+ },
+ {
+  "qid": "Q55",
+  "truth": "faithful",
+  "op": null,
+  "name": "sylvester_schur",
+  "file": "FormalConjectures/ErdosProblems/699.lean"
+ },
+ {
+  "qid": "Q56",
+  "truth": "faithful",
+  "op": null,
+  "name": "greedy_sidon_construction",
+  "file": "FormalConjectures/ErdosProblems/44.lean"
+ },
+ {
+  "qid": "Q57",
+  "truth": "mutant",
+  "op": "exists_forall",
+  "name": "erdos_1030",
+  "file": "FormalConjectures/ErdosProblems/1030.lean"
+ },
+ {
+  "qid": "Q58",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_215",
+  "file": "FormalConjectures/ErdosProblems/215.lean"
+ },
+ {
+  "qid": "Q59",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_850",
+  "file": "FormalConjectures/ErdosProblems/850.lean"
+ },
+ {
+  "qid": "Q60",
+  "truth": "faithful",
+  "op": null,
+  "name": "erdos_695",
+  "file": "FormalConjectures/ErdosProblems/695.lean"
+ }
+]

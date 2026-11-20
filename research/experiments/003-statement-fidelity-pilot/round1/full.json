@@ -1,0 +1,572 @@
+[
+ {
+  "file": "FormalConjectures/ErdosProblems/855.lean",
+  "name": "erdos_855",
+  "informal": "Erdős Problem 855 (Segal's conjecture): $\\pi(x + y) \\le \\pi(x) + \\pi(y)$ for all sufficiently large $x, y$, i.e. for all $x, y \\ge N$ for some $N$.",
+  "formal": ": ∀ᶠ (xy : ℕ × ℕ) in atTop ×ˢ atTop, π (xy.1 + xy.2) ≤ π xy.1 + π xy.2",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q01"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/723.lean",
+  "name": "erdos_723",
+  "informal": "If there is a finite projective plane of order $n$ then must $n$ be a prime power?",
+  "formal": ": ∀ {P L : Type} (_: Membership P L) (_ : Fintype P) (_ : Fintype L), ∀ pp : ProjectivePlane P L, IsPrimePow pp.order",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q02"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/1049.lean",
+  "name": "erdos_1049",
+  "informal": "Let $t>1$ be a rational number. Is $\\sum_{n=1}^\\infty\\frac{1}{t^n-1}=\\sum_{n=1}^\\infty \\frac{\\tau(n)}{t^n}$ irrational, where $\\tau(n)$ counts the divisors of $n$? A conjecture of Chowla.",
+  "formal": ": ∃ t : ℚ, t > 1 → Irrational (∑' n : ℕ+, 1 / ((t : ℝ) ^ (n : ℕ) - 1))",
+  "formal_original": ": ∀ t : ℚ, t > 1 → Irrational (∑' n : ℕ+, 1 / ((t : ℝ) ^ (n : ℕ) - 1))",
+  "truth": "mutant",
+  "op": "forall_exists",
+  "qid": "Q03"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/903.lean",
+  "name": "erdos_903",
+  "informal": "Let $n=p^2+p+1$ for some prime power $p$, and let $A_1,\\ldots,A_t\\subseteq \\{1,\\ldots,n\\}$ be a block design (so that every pair $x,y\\in \\{1,\\ldots,n\\}$ is contained in exactly one $A_i$). Is it true that if $t>n$ then $t\\geq n+p$? This is true, and was proved by Erdős, Fowler, Sós, and Wilson [EFSW85].",
+  "formal": ": ¬(∀ p : ℕ, IsPrimePow p → ∀ H : Finset (Finset (Fin (p ^ 2 + p + 1))), H.IsPairwiseBalancedDesign → p ^ 2 + p + 1 < H.card → p ^ 2 + p + 1 + p ≤ H.card)",
+  "formal_original": ": ∀ p : ℕ, IsPrimePow p → ∀ H : Finset (Finset (Fin (p ^ 2 + p + 1))), H.IsPairwiseBalancedDesign → p ^ 2 + p + 1 < H.card → p ^ 2 + p + 1 + p ≤ H.card",
+  "truth": "mutant",
+  "op": "negate",
+  "qid": "Q04"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/943.lean",
+  "name": "erdos_943",
+  "informal": "Let $A$ be the set of powerful numbers. Is is true that $1_A\\ast 1_A(n)=n^{o(1)}$ for every $n$?",
+  "formal": ": ∃ (o : ℕ → ℝ), o =o[atTop] (1 : ℕ → ℝ) ∧ ∀ᶠ n in atTop, (sumRep Powerful n) ≤ (n : ℝ)^(o n)",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q05"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/159.lean",
+  "name": "erdos_159",
+  "informal": "There exists some constant $c>0$ such that $$R(C_4,K_n) \\ll n^{2-c}.$$ The prize of $100 is offered in [Er78] for a proof or disproof. This problem is #17 in Ramsey Theory in the graphs problem collection.",
+  "formal": ": ¬(∃ (c : ℝ) (_ : 0 < c) (C : ℝ), ∀ (n : ℕ), 1 ≤ n → (SimpleGraph.graphRamsey (SimpleGraph.cycleGraph 4) (SimpleGraph.completeGraph (Fin n)) : ℝ) ≤ C * (n : ℝ) ^ (2 - c))",
+  "formal_original": ": ∃ (c : ℝ) (_ : 0 < c) (C : ℝ), ∀ (n : ℕ), 1 ≤ n → (SimpleGraph.graphRamsey (SimpleGraph.cycleGraph 4) (SimpleGraph.completeGraph (Fin n)) : ℝ) ≤ C * (n : ℝ) ^ (2 - c)",
+  "truth": "mutant",
+  "op": "negate",
+  "qid": "Q06"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/267.lean",
+  "name": "erdos_267",
+  "informal": "Let $F_1=F_2=1$ and $F_{n+1} = F_n + F_{n-1}$ be the Fibonacci sequence. Let $n_1 < n_2 < \\dots$ be an infinite sequence with $\\frac{n_{k+1}}{n_k} \\ge c > 1$. Must $\\sum_k \\frac 1 {F_{n_k}}$ be irrational?",
+  "formal": ": ∀ᵉ (n : ℕ → ℕ) (c > (1 : ℚ)), StrictMono n → (∀ k, c ≤ n (k+1) / n k) → Irrational (∑' k, 1 / (Nat.fib <| n k))",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q07"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/86.lean",
+  "name": "erdos_86",
+  "informal": "Let $Q_n$ be the $n$-dimensional hypercube graph (so that $Q_n$ has $2^n$ vertices and $n2^{n-1}$ edges). Is it true that every subgraph of $Q_n$ with $$\\geq \\left(\\frac{1}{2}+o(1)\\right)n2^{n-1}$$ many edges contains a $C_4$?",
+  "formal": ": ¬(∀ ε : ℝ, 0 < ε → ∀ᶠ n : ℕ in atTop, ∀ H : SimpleGraph (Fin n → Bool), H ≤ hypercube n → (1 / 2 + ε) * n * 2 ^ (n - 1 : ℕ) ≤ (H.edgeSet.ncard : ℝ) → cycleGraph 4 ⊑ H)",
+  "formal_original": ": ∀ ε : ℝ, 0 < ε → ∀ᶠ n : ℕ in atTop, ∀ H : SimpleGraph (Fin n → Bool), H ≤ hypercube n → (1 / 2 + ε) * n * 2 ^ (n - 1 : ℕ) ≤ (H.edgeSet.ncard : ℝ) → cycleGraph 4 ⊑ H",
+  "truth": "mutant",
+  "op": "negate",
+  "qid": "Q08"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/207.lean",
+  "name": "erdos_207",
+  "informal": "For any $g\\geq 2$, if $n$ is sufficiently large and $\\equiv 1,3\\pmod{6}$ then there exists a 3-uniform hypergraph on $n$ vertices such that - every pair of vertices is contained in exactly one edge (i.e. the graph is a Steiner triple system) and - for any $2\\leq j\\leq g$ any collection of $j$ edges contains at least $j+3$ vertices. Proved by Kwan, Sah, Sawhney, and Simkin [KSSS22b].",
+  "formal": ": ∀ g : ℕ, 2 < g → ∀ᶠ n : ℕ in atTop, n % 6 = 1 ∨ n % 6 = 3 → ∃ H : Finset (Finset (Fin n)), H.IsBlockDesign 2 3 ∧ ∀ E ⊆ H, 2 ≤ E.card → E.card ≤ g → E.card + 3 ≤ (E.biUnion id).card",
+  "formal_original": ": ∀ g : ℕ, 2 ≤ g → ∀ᶠ n : ℕ in atTop, n % 6 = 1 ∨ n % 6 = 3 → ∃ H : Finset (Finset (Fin n)), H.IsBlockDesign 2 3 ∧ ∀ E ⊆ H, 2 ≤ E.card → E.card ≤ g → E.card + 3 ≤ (E.biUnion id).card",
+  "truth": "mutant",
+  "op": "nonstrict_flip",
+  "qid": "Q09"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/242.lean",
+  "name": "erdos_242",
+  "informal": "For every $n>2$ there exist distinct integers $1 ≤ x < y < z$ such that $\\frac 4 n = \\frac 1 x + \\frac 1 y + \\frac 1 z$.",
+  "formal": "(n : ℕ) (hn : 2 < n) : ∃ x y z : ℕ, 1 ≤ x ∧ x < y ∧ y < z ∧ (4 / n : ℚ) = 1 / x + 1 / y + 1 / z",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q10"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/613.lean",
+  "name": "erdos_613",
+  "informal": "**Erdős Problem 613:** Let $n \\geq 3$ and $G$ be a graph with $\\binom{2n+1}{2} - \\binom{n}{2} - 1$ edges. Must $G$ be the union of a bipartite graph and a graph with maximum degree less than $n$?",
+  "formal": ": ¬ ∀ n ≥ 3, ∀ (V : Type*) [Fintype V] (G : SimpleGraph V), [DecidableRel G.Adj] → G.edgeFinset.card = Nat.choose (2 * n + 1) 2 - Nat.choose n 2 - 1 → ∃ (B D : SimpleGraph V), [DecidableRel B.Adj] → [DecidableRel D.Adj] → G = B ⊔ D ∧ B.IsBipartite ∧ ∀ v, D.degree v < n",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q11"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/562.lean",
+  "name": "erdos_562",
+  "informal": "Let $R_r(n)$ denote the $r$-uniform hypergraph Ramsey number: the minimal $m$ such that if we $2$-colour all edges of the complete $r$-uniform hypergraph on $m$ vertices then there must be some monochromatic copy of the complete $r$-uniform hypergraph on $n$ vertices. Prove that, for $r \\ge 3$, $$ \\log_{r-1} R_r(n) \\asymp_r n, $$ where $\\log_{r-1}$ denotes the $(r-1)$-fold iterated logarithm.",
+  "formal": ": ¬(∀ r ≥ 3, (fun n ↦ log^[r - 1] (hypergraphRamsey r n)) =Θ[atTop] (fun n ↦ (n : ℝ)))",
+  "formal_original": ": ∀ r ≥ 3, (fun n ↦ log^[r - 1] (hypergraphRamsey r n)) =Θ[atTop] (fun n ↦ (n : ℝ))",
+  "truth": "mutant",
+  "op": "negate",
+  "qid": "Q12"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/657.lean",
+  "name": "erdos_657",
+  "informal": "Is it true that if $A\\subset \\mathbb{R}^2$ is a set of $n$ points such that every subset of $3$ points determines $3$ distinct distances (that is, $A$ has no isosceles triangles, degenerate ones included) then $A$ determines at least $f(n)n$ distinct distances, for some function $f$ with $f(n)\\to \\infty$?",
+  "formal": ": ∃ f : ℕ → ℝ, Tendsto f atTop atTop ∧ ∃ n : ℕ, ∀ A : Finset ℝ², A.card = n → (A : Set ℝ²).IsIsoscelesFree → f n * (n : ℝ) ≤ (distinctDistances A : ℝ)",
+  "formal_original": ": ∃ f : ℕ → ℝ, Tendsto f atTop atTop ∧ ∀ n : ℕ, ∀ A : Finset ℝ², A.card = n → (A : Set ℝ²).IsIsoscelesFree → f n * (n : ℝ) ≤ (distinctDistances A : ℝ)",
+  "truth": "mutant",
+  "op": "forall_exists",
+  "qid": "Q13"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/355.lean",
+  "name": "erdos_355",
+  "informal": "Is there a lacunary sequence $A\\subseteq \\mathbb{N}$ (so that $A=\\{a_1 < \\cdots\\}$ and there exists some $\\lambda > 1$ such that $a_{n+1}/a_n\\geq \\lambda$ for all $n\\geq 1$) such that $$\\left\\{ \\sum_{a\\in A'}\\frac{1}{a} : A'\\subseteq A\\textrm{ finite}\\right\\}$$ contain all rationals in some open interval? Bleicher and Erdős conjectured the answer is no. In fact the answer is yes, with any lacunarity constant $\\lambda\\in (1,2)$ (though not $\\lambda=2$), as proved by van Doorn and Kova\\v{c} [DoKo25]. This was formalized in Lean by van Doorn using Aristotle.",
+  "formal": ": ∃ A : ℕ → ℕ, IsLacunary A ∧ ∃ u v : ℝ, u < v ∧ ∀ q : ℚ, ↑q ∈ Set.Ioo u v → q ∈ {∑ a ∈ A', (1 / a : ℚ) | (A' : Finset ℕ) (_ : ↑A' ⊆ Set.range A)}",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q14"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/194.lean",
+  "name": "erdos_194",
+  "informal": "Let $k\\geq 3$. Must any ordering of $\\mathbb{R}$ contain a monotone $k$-term arithmetic progression, that is, some $x_1 <\\cdots < x_k$ which forms an increasing or decreasing $k$-term arithmetic progression? The answer is no, even for $k=3$, as shown by Ardal, Brown, and Jungić [ABJ11]. -",
+  "formal": ": ¬ ∀ k ≥ 3, ∀ r : ℝ → ℝ → Prop, IsStrictTotalOrder ℝ r → ∃ s : List ℝ, s.IsAPOfLength k ∧ (s.Pairwise r ∨ s.Pairwise (flip r))",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q15"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/906.lean",
+  "name": "erdos_906",
+  "informal": "Does there exists an entire non-zero transcendental function `f : ℂ → ℂ` such that for any sequence `n₀ < n₁ < ...`, `{ z | ∃ k, iteratedDeriv (n k) f z = 0 }` is dense.",
+  "formal": ": ∃ f : ℂ → ℂ, Transcendental (Polynomial ℂ) f ∧ Differentiable ℂ f ∧ ∀ n : ℕ → ℕ, StrictMono n → Dense { z | ∃ k, iteratedDeriv (n k) f z = 0 }",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q16"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/727.lean",
+  "name": "erdos_727",
+  "informal": "Let $k ≥ 2$. Does $((n+k)!)^2∣(2n)!$ hold for infinitely many $n$?",
+  "formal": ": ∃ k ≥ 2, Set.Infinite {n : ℕ | (Nat.factorial (n + k)) ^ 2 ∣ Nat.factorial (2 * n)}",
+  "formal_original": ": ∀ k ≥ 2, Set.Infinite {n : ℕ | (Nat.factorial (n + k)) ^ 2 ∣ Nat.factorial (2 * n)}",
+  "truth": "mutant",
+  "op": "forall_exists",
+  "qid": "Q17"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/306.lean",
+  "name": "erdos_306",
+  "informal": "Let $\\frac a b\\in \\mathbb{Q}_{>0}$ with $b$ squarefree. Are there integers $1 < n_1 < \\dots < n_k$, each the product of two distinct primes, such that $\\frac{a}{b}=\\frac{1}{n_1}+\\cdots+\\frac{1}{n_k}$? The answer is yes [Li26].",
+  "formal": ": ∀ (q : ℚ), 0 < q → Squarefree q.den → ∃ k : ℕ, ∃ (n : Fin (k + 1) → ℕ), n 0 = 1 ∧ StrictMono n ∧ (∀ i ∈ Finset.Icc 1 (Fin.last k), ω (n i) = 2 ∧ Ω (n i) = 2) ∧ q = ∑ i ∈ Finset.Icc 1 (Fin.last k), (1 : ℚ) / (n i)",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q18"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/277.lean",
+  "name": "erdos_277",
+  "informal": "Is it true that, for every $c$, there exists an $n$ such that $\\sigma(n)>cn$ but there is no covering system whose moduli all divide $n$? This was answered affirmatively by Haight [Ha79].",
+  "formal": ": ∀ c : ℝ, ∃ n : ℕ, (σ 1 n : ℝ) > c * n ∨ ∀ (m : StrictCoveringSystem ℤ), ∃ i, (n : ℤ) ∉ m.moduli i",
+  "formal_original": ": ∀ c : ℝ, ∃ n : ℕ, (σ 1 n : ℝ) > c * n ∧ ∀ (m : StrictCoveringSystem ℤ), ∃ i, (n : ℤ) ∉ m.moduli i",
+  "truth": "mutant",
+  "op": "and_or",
+  "qid": "Q19"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/288.lean",
+  "name": "erdos_288",
+  "informal": "Is it true that there are only finitely many pairs of intervals $I_1$, $I_2$ such that $$ \\sum_{n_1 \\in I_1} \\frac{1}{n_1} + \\sum_{n_2 \\in I_2} \\frac{1}{n_2} \\in \\mathbb{N}? $$",
+  "formal": ": Set.Finite { I : Fin 3 → ℕ+ × ℕ+ | ∀ j, (I j).1 ≤ (I j).2 ∧ ∃ n : ℕ+, (∑ j : Fin 2, ∑ nⱼ ∈ Set.Icc (I j).1 (I j).2, (nⱼ⁻¹ : ℚ)) = n }",
+  "formal_original": ": Set.Finite { I : Fin 2 → ℕ+ × ℕ+ | ∀ j, (I j).1 ≤ (I j).2 ∧ ∃ n : ℕ+, (∑ j : Fin 2, ∑ nⱼ ∈ Set.Icc (I j).1 (I j).2, (nⱼ⁻¹ : ℚ)) = n }",
+  "truth": "mutant",
+  "op": "literal_bump",
+  "qid": "Q20"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/578.lean",
+  "name": "erdos_578",
+  "informal": "If $G$ is a random graph on $2^d$ vertices, including each edge with probability $1/2$, then $G$ almost surely contains a copy of $Q_d$ (the $d$-dimensional hypercube with $2^d$ vertices and $d2^{d-1}$ many edges). A conjecture of Erdős and Bollobás. Solved by Riordan [Ri00], who in fact proved this with any edge-probability $>1/4$. Here almost surely means that the probability tends to $1$ as $d\\to\\infty$.",
+  "formal": ": Tendsto (fun d : ℕ => binomialRandom (Fin d → Bool) ⟨1 / 2, by norm_num⟩ {G | (hypercube d).IsContained G}) atBot (nhds 1)",
+  "formal_original": ": Tendsto (fun d : ℕ => binomialRandom (Fin d → Bool) ⟨1 / 2, by norm_num⟩ {G | (hypercube d).IsContained G}) atTop (nhds 1)",
+  "truth": "mutant",
+  "op": "atTop_atBot",
+  "qid": "Q21"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/333.lean",
+  "name": "erdos_333",
+  "informal": "Let $A\\subseteq \\mathbb{N}$ be a set of density zero. Does there exist a $B$ such that $A\\subseteq B+B$ and $$\\lvert B\\cap \\{1,\\ldots,N\\}\\rvert =o(N^{1/2})$$ for all large $N$? The answer is no. Erdős and Newman [ErNe77] have proved this is true when $A$ is the set of squares. In fact, Theorem 2 of [ErNe77] already implies a negative answer to this problem, but this seems to have been overlooked by Erdős and Graham. See also [806].",
+  "formal": ": ¬ ∀ A : Set ℕ, A.HasDensity 0 → ∀ B : Set ℕ, A ⊆ B + B ∧ (fun N => ((B ∩ Set.Icc 1 N).ncard : ℝ)) =o[atTop] fun N => Real.sqrt N",
+  "formal_original": ": ¬ ∀ A : Set ℕ, A.HasDensity 0 → ∃ B : Set ℕ, A ⊆ B + B ∧ (fun N => ((B ∩ Set.Icc 1 N).ncard : ℝ)) =o[atTop] fun N => Real.sqrt N",
+  "truth": "mutant",
+  "op": "exists_forall",
+  "qid": "Q22"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/66.lean",
+  "name": "erdos_66",
+  "informal": "Is there and $A \\subset \\mathbb{N}$ is such that $$\\lim_{n\\to \\infty}\\frac{1_A\\ast 1_A(n)}{\\log n}$$ exists and is $\\ne 0$?",
+  "formal": ": ¬(∃ (A : Set ℕ) (c : ℝ), c ≠ 0 ∧ Tendsto (fun n ↦ (sumRep A n : ℝ) / Real.log n) atTop (𝓝 c))",
+  "formal_original": ": ∃ (A : Set ℕ) (c : ℝ), c ≠ 0 ∧ Tendsto (fun n ↦ (sumRep A n : ℝ) / Real.log n) atTop (𝓝 c)",
+  "truth": "mutant",
+  "op": "negate",
+  "qid": "Q23"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/268.lean",
+  "name": "erdos_268",
+  "informal": "Let `X` be the set of points in `Fin d → ℝ` of the shape `fun i : Fin d => ∑' n : A, (1 : ℝ) / (n + i)` for some infinite subset `A ⊆ ℕ` such that `1 / n` is summable over `A`. `X` has nonempty interior. This is proved in [KoTa24]. -",
+  "formal": "(d : ℕ) : (interior {x : Fin d → ℝ | ∀ A : Set ℕ, A.Infinite ∧ Summable (fun n : A => (1 : ℝ) / n ) ∧ x = fun i : Fin d => ∑' n : A, (1 : ℝ) / (n + i)}).Nonempty",
+  "formal_original": "(d : ℕ) : (interior {x : Fin d → ℝ | ∃ A : Set ℕ, A.Infinite ∧ Summable (fun n : A => (1 : ℝ) / n ) ∧ x = fun i : Fin d => ∑' n : A, (1 : ℝ) / (n + i)}).Nonempty",
+  "truth": "mutant",
+  "op": "exists_forall",
+  "qid": "Q24"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/317.lean",
+  "name": "erdos_317",
+  "informal": "Is there some constant $c>0$ such that for every $n\\geq 1$ there exists some $\\delta_k\\in \\{-1,0,1\\}$ for $1\\leq k\\leq n$ with $$0< \\left\\lvert \\sum_{1\\leq k\\leq n}\\frac{\\delta_k}{k}\\right\\rvert < \\frac{c}{2^n}?$$",
+  "formal": ": ∃ c > 0, ∀ n ≥ 1, ∃ δ : Fin n → ℚ, Set.range δ ⊆ {-1, 0, 1} ∧ letI lhs : ℝ := |∑ k, (δ k) / (k + 1)| 0 < lhs ∧ lhs < c / 2^n",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q25"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/716.lean",
+  "name": "erdos_716",
+  "informal": "Let $\\mathcal{F}$ be the family of all $3$-uniform hypergraphs with $6$ vertices and $3$ $3$-edges. Is it true that $$\\mathrm{ex}_3(n,\\mathcal{F})=o(n^2)?$$ The answer is yes, proved by Ruzsa and Szemerédi [RuSz78] (this is known as the Ruzsa-Szemerédi problem).",
+  "formal": ": (fun n ↦ (Hypergraph.configurationExtremalNumber n 3 6 3 : ℝ)) =o[atTop] (fun n ↦ (n : ℝ) ^ 2)",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q26"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/914.lean",
+  "name": "erdos_914",
+  "informal": "Let $r\\geq 2$ and $m\\geq 1$. Every graph with $rm$ vertices and minimum degree at least $m(r-1)$ contains $m$ vertex disjoint copies of $K_r$. When $r=2$ this follows from Dirac's theorem. Corrádi and Hajnal [CoHa63] proved this when $r=3$. Hajnal and Szemerédi [HaSz70] proved this for all $r\\geq 4$. A shorter proof was given by Kierstead and Kostochka [KiKo08].",
+  "formal": "{r m : ℕ} (hr : 2 ≤ r) (hm : 1 ≤ m) {V : Type*} [Fintype V] (G : SimpleGraph V) [DecidableRel G.Adj] (hV : Fintype.card V = r * m) (hdeg : m * (r - 1) ≤ G.minDegree) : ∃ K : Fin m → Finset V, (∀ i, G.IsNClique r (K i)) ∧ Pairwise fun i j => Disjoint (K i) (K j)",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q27"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/891.lean",
+  "name": "erdos_891",
+  "informal": "Let $2=p_1 < p_2 < \\cdots$ be the primes and $k\\geq 2$. Is it true that, for all sufficiently large $n$, there must exist an integer in $[n,n+p_1\\cdots p_k)$ with $>k$ many prime factors?",
+  "formal": ": ∀ k ≥ 2, ∀ᶠ n in atTop, ∃ m ∈ Ico n (n + ∏ i ∈ range k, i.nth Nat.Prime), k < ω m",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q28"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/197.lean",
+  "name": "erdos_197",
+  "informal": "Can $\\mathbb{N}$ be partitioned into two sets, each of which can be permuted to avoid monotone 3-term arithmetic progressions?",
+  "formal": ": ∃ A B : Set ℕ, IsCompl A B ∧ (∃ f : ℕ ≃ A, ¬HasMonotoneAP (Subtype.val ∘ f) 3) ∧ (∃ g : ℕ ≃ B, ¬HasMonotoneAP (Subtype.val ∘ g) 3)",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q29"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/1122.lean",
+  "name": "erdos_1122",
+  "informal": "Let $f:\\mathbb{N}\\to \\mathbb{R}$ be an additive function (i.e. $f(ab)=f(a)+f(b)$ whenever $(a,b)=1$). Let $$A=\\{ n \\geq 1: f(n+1)< f(n)\\}.$$ If $\\lvert A\\cap [1,X]\\rvert =o(X)$ then must $f(n)=c\\log n$ for some $c\\in \\mathbb{R}$? The condition $\\lvert A\\cap [1,X]\\rvert =o(X)$ says that $A$ has natural density $0$. Partial progress was made by Mangerel [Ma22], who proved that this is true for completely additive $f$ if $$\\lvert A\\cap [1,X]\\rvert \\ll \\frac{X}{(\\log X)^{2+c}}$$ for some $c>0$, and if $f(p)$ does not have very large values (in a certain technical sense). See also `erdos_491`.",
+  "formal": ": ∀ f : ℕ → ℝ, (∀ᵉ (a > 0) (b > 0), a.Coprime b → f (a * b) = f a + f b) → {n | 1 ≤ n ∧ f (n + 1) ≤ f n}.HasDensity 0 → ∃ c : ℝ, ∀ n > 0, f n = c * Real.log n",
+  "formal_original": ": ∀ f : ℕ → ℝ, (∀ᵉ (a > 0) (b > 0), a.Coprime b → f (a * b) = f a + f b) → {n | 1 ≤ n ∧ f (n + 1) < f n}.HasDensity 0 → ∃ c : ℝ, ∀ n > 0, f n = c * Real.log n",
+  "truth": "mutant",
+  "op": "strict_flip",
+  "qid": "Q30"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/312.lean",
+  "name": "erdos_312",
+  "informal": "Does there exist a constant `c > 0` such that, for any `K > 1`, whenever `A` is a sufficiently large finite multiset of integers with $\\sum_{n \\in A} 1/n > K$ there exists some $S \\subseteq A$ such that $1 - \\exp(-(c*K)) < \\sum_{n \\in S} 1/n \\le 1$?",
+  "formal": ": ∃ (c : ℝ), 0 < c ∧ ∀ (K : ℝ), 1 < K → ∃ (N₀ : ℕ), ∀ (n : ℕ) (a : Fin n → ℕ), (n ≥ N₀ ∧ (∑ i : Fin n, (a i : ℝ)⁻¹) > K) → ∃ (S : Finset (Fin n)), 1 - Real.exp (-(c * K)) < (∑ i ∈ S, (a i : ℝ)⁻¹) ∧ ∑ i ∈ S, (a i : ℝ)⁻¹ ≤ 1",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q31"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/229.lean",
+  "name": "theorem_1",
+  "informal": "Let $\\{S_k\\}$ be any sequence of sets in the complex plane, each of which has no finite limit point. Then there exists a sequence $\\{n_k\\}$ of positive integers and a transcendental entire function $f(z)$ such that $f^{(n_k)}(z) = 0$ if $z \\in S_k$.",
+  "formal": "{S : ℕ → Set ℂ} (h : ∀ (k), derivedSet (S k) = ∅) : letI := Polynomial.algebraPi ℂ ℂ ℂ ∃ (f : ℂ → ℂ) (n : ℕ → ℕ), Differentiable ℂ f ∧ Transcendental (Polynomial ℂ) f ∧ ∀ k, 0 < n k ∧ ∀ {z} (_: z ∈ S k), iteratedDeriv (n k) f z = 0",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q32"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/479.lean",
+  "name": "erdos_479",
+  "informal": "Is it true that, for every integer $k\\neq 1$, there are infinitely many $n$ such that $2^n\\equiv k\\pmod{n}$?",
+  "formal": ": ∀ᵉ (k : ℤ) (k ≠ 1), { n : ℕ | (2 : ℤ) ^ n ≡ k [ZMOD (n : ℤ)] }.Infinite",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q33"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/243.lean",
+  "name": "erdos_243",
+  "informal": "Let $a_1 < a_2 < \\dots$ be a sequence of integers such that $\\lim_{n\\to\\infty} \\frac{a_n}{a_{n-1}^2} = 1$ and $\\sum \\frac{1}{a_n} \\in \\mathbb{Q}$. Then, for all sufficiently large $n \\ge 1$, $a_n = a_{n-1}^2 - a_{n-1} + 1$.",
+  "formal": "(a : ℕ → ℕ) (ha₀ : StrictMono a) (ha₁ : Tendsto (fun n ↦ (a n : ℝ) / a (n - 1) ^ 2) atTop (𝓝 1)) (ha₂ : Summable ((1 : ℚ) / a ·)) : ∃ᶠ n in atTop, a n = a (n - 1) ^ 2 - a (n - 1) + 1",
+  "formal_original": "(a : ℕ → ℕ) (ha₀ : StrictMono a) (ha₁ : Tendsto (fun n ↦ (a n : ℝ) / a (n - 1) ^ 2) atTop (𝓝 1)) (ha₂ : Summable ((1 : ℚ) / a ·)) : ∀ᶠ n in atTop, a n = a (n - 1) ^ 2 - a (n - 1) + 1",
+  "truth": "mutant",
+  "op": "forall_exists",
+  "qid": "Q34"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/273.lean",
+  "name": "erdos_273",
+  "informal": "Is there a covering system all of whose moduli are of the form $p-1$ for some primes $p \\geq 5$?",
+  "formal": ": ∃ c : StrictCoveringSystem ℤ, ∃ i, ∃ (p : ℕ), p.Prime ∧ 5 ≤ p ∧ c.moduli i = Ideal.span {↑(p - 1)}",
+  "formal_original": ": ∃ c : StrictCoveringSystem ℤ, ∀ i, ∃ (p : ℕ), p.Prime ∧ 5 ≤ p ∧ c.moduli i = Ideal.span {↑(p - 1)}",
+  "truth": "mutant",
+  "op": "forall_exists",
+  "qid": "Q35"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/1219.lean",
+  "name": "erdos_1219",
+  "informal": "Let $(n_k)$ be an increasing sequence of integers such that $2^{\\aleph_{n_k}}$ is strictly increasing, and $2^{\\aleph_{n_0}} > \\aleph_\\omega$. Is it true that $$\\sum_k 2^{\\aleph_{n_k}} \\to (\\aleph_\\omega)^2?$$ Here $\\sum_k 2^{\\aleph_{n_k}}$ is the cardinal sum, and the partition relation is the classical one with two colours: every $2$-colouring of the pairs of a set of that cardinality has a monochromatic set of cardinality $\\aleph_\\omega$. A problem of Erdős, Hajnal, and Rado [ErHa71], proved by Shelah [Sh75].",
+  "formal": ": ∀ n : ℕ → ℕ, StrictMono n → StrictMono (fun k => (2 : Cardinal.{u}) ^ ℵ_ (n k)) → ℵ_ ω < (2 : Cardinal.{u}) ^ ℵ_ (n 0) → cardinalPartitionRel (sum fun k => (2 : Cardinal.{u}) ^ ℵ_ (n k)) 2 2 (fun _ => ℵ_ ω)",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q36"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/25.lean",
+  "name": "erdos_25",
+  "informal": "Let $n_1 < n_2 < \\dots$ be an arbitrary sequence of integers, each with an associated residue class $a_i \\pmod{n_i}$. Let $A$ be the set of integers $n$ such that for every $i$ either $n < n_i$ or $n \\not\\equiv a_i \\pmod{n_i}$. Must the logarithmic density of $A$ exist?",
+  "formal": ": ∀ (seq_n : ℕ → ℕ) (seq_a : ℕ → ℤ), (∀ i, 0 < seq_n i) → StrictMono seq_n → ∃ d, Set.HasLogDensity { x : ℕ | ∀ i, (x : ℤ) < seq_n i ∨ ¬((x : ℤ) ≡ seq_a i [ZMOD seq_n i]) } d",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q37"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/1171.lean",
+  "name": "mono_k",
+  "informal": "`OrdinalMultiColorRamsey` is monotone in the number of non-zero colors: a witness for the `k`-color version yields one for any `j ≤ k`.",
+  "formal": "{j k : ℕ} (hjk : j ≤ k) (hk : OrdinalMultiColorRamsey (ω_ 1 ^ 3) (ω_ 1 * ω) 3 k) : OrdinalMultiColorRamsey (ω_ 1 ^ 2) (ω_ 1 * ω) 3 j",
+  "formal_original": "{j k : ℕ} (hjk : j ≤ k) (hk : OrdinalMultiColorRamsey (ω_ 1 ^ 2) (ω_ 1 * ω) 3 k) : OrdinalMultiColorRamsey (ω_ 1 ^ 2) (ω_ 1 * ω) 3 j",
+  "truth": "mutant",
+  "op": "literal_bump",
+  "qid": "Q38"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/344.lean",
+  "name": "erdos_344",
+  "informal": "If $A\\subseteq \\mathbb{N}$ is a set of integers such that $$\\lvert A\\cap \\{1,\\ldots,N\\}\\rvert\\gg N^{1/2}$$ for all $N$ then must $A$ be subcomplete? That is, must $$P(A) = \\left\\{\\sum_{n\\in B}n : B\\subseteq A\\textrm{ finite }\\right\\}$$ contain an infinite arithmetic progression? This is true, and was proved by Szemerédi and Vu [SzVu06]. The implied constant is absolute, as in [SzVu06b, Corollary 1.4].",
+  "formal": ": ∃ C : ℝ, 0 < C ∧ ∀ A : Set ℕ, (∀ᶠ N : ℕ in atTop, C * Real.sqrt N ≤ A.countUpTo N) → IsSubcomplete A",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q39"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/307.lean",
+  "name": "erdos_307.barrier_sixty",
+  "informal": "A stronger machine-checked **barrier** (Bonfioli, 2026), closing the 59-prime level: any solution of Erdős 307 in fact uses at least `60` primes in total. The full `sorry`-free proof is `erdos307_sixty` in the linked repository (`Sixty.lean` at tag `v1.1.1`); its only non-logical input is a `native_decide` depth-first search establishing that no admissible 59-prime support survives the Pythagorean `plus`-value square test, with axioms `propext, Classical.choice, Quot.sound` together with that `native_decide`.",
+  "formal": "{P Q : Finset ℕ} (hP : ∀ p ∈ P, p.Prime) (hQ : ∀ q ∈ Q, q.Prime) (heq : 1 = (∑ p ∈ P, (p : ℚ)⁻¹) * (∑ q ∈ Q, (q : ℚ)⁻¹)) : 60 < #(P ∪ Q)",
+  "formal_original": "{P Q : Finset ℕ} (hP : ∀ p ∈ P, p.Prime) (hQ : ∀ q ∈ Q, q.Prime) (heq : 1 = (∑ p ∈ P, (p : ℚ)⁻¹) * (∑ q ∈ Q, (q : ℚ)⁻¹)) : 60 ≤ #(P ∪ Q)",
+  "truth": "mutant",
+  "op": "nonstrict_flip",
+  "qid": "Q40"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/221.lean",
+  "name": "erdos_221",
+  "informal": "Is there a set $A\\subset\\mathbb{N}$ such that, for all large $N$, $$\\lvert A\\cap\\{1,\\ldots,N\\}\\rvert \\ll N/\\log N$$ and such that every large integer can be written as $2^k+a$ for some $k\\geq 0$ and $a\\in A$? Lorentz [Lo54] proved there is such a set with, for all large $N$, $$\\lvert A\\cap\\{1,\\ldots,N\\}\\rvert \\ll \\frac{\\log\\log N}{\\log N}N$$ The answer is yes, proved by Ruzsa [Ru72].",
+  "formal": ": ∀ A : Set ℕ, ((fun N => ({a ∈ A | a ≤ N}.ncard : ℝ)) ≪ (fun N => (N : ℝ) / Real.log N)) ∧ ∀ᶠ N in atTop, ∃ k a, 0 ≤ k ∧ a ∈ A ∧ N = 2 ^ k + a",
+  "formal_original": ": ∃ A : Set ℕ, ((fun N => ({a ∈ A | a ≤ N}.ncard : ℝ)) ≪ (fun N => (N : ℝ) / Real.log N)) ∧ ∀ᶠ N in atTop, ∃ k a, 0 ≤ k ∧ a ∈ A ∧ N = 2 ^ k + a",
+  "truth": "mutant",
+  "op": "exists_forall",
+  "qid": "Q41"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/1083.lean",
+  "name": "erdos_1083",
+  "informal": "Let $d\\geq 3$, and let $f_d(n)$ be the minimal $m$ such that every set of $n$ points in $\\mathbb{R}^d$ determines at least $m$ distinct distances. Estimate $f_d(n)$ - in particular, is it true that $$f_d(n)=n^{\\frac{2}{d}-o(1)}?$$",
+  "formal": ": ∀ d : ℕ, 3 ≤ d → ∃ o : ℕ → ℝ, o =o[atTop] (1 : ℕ → ℝ) ∨ ∀ᶠ n : ℕ in atTop, (minimalDistinctDistances (ℝ^d) n : ℝ) = (n : ℝ) ^ ((2 : ℝ) / (d : ℝ) - o n)",
+  "formal_original": ": ∀ d : ℕ, 3 ≤ d → ∃ o : ℕ → ℝ, o =o[atTop] (1 : ℕ → ℝ) ∧ ∀ᶠ n : ℕ in atTop, (minimalDistinctDistances (ℝ^d) n : ℝ) = (n : ℝ) ^ ((2 : ℝ) / (d : ℝ) - o n)",
+  "truth": "mutant",
+  "op": "and_or",
+  "qid": "Q42"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/845.lean",
+  "name": "erdos_845",
+  "informal": "Let $C > 0$. Is it true that the set of integers of the form $n = b_1 + \\cdots + b_t$, with $b_1 < \\cdots < b_t$, where $b_i = 2^{k_i}3^{l_i}$ for $1 \\leq i\\leq t$ and $b_t \\leq Cb_1$ has density $0$? van Doorn and Everts \\cite{vDEv25} have disproved this with $C=6$ - in fact, they prove that all integers can be written as such a sum in which $b_t<6b_1$. This was formalized in Lean by Alexeev using Aristotle.",
+  "formal": ": ∀ᵉ (C : ℝ) (hC : 0 < C), let f : ℕ × ℕ → ℕ := fun (k, l) ↦ 2 ^ k * 3 ^ l { ∑ x ∈ B, f x | (B : Finset (ℕ × ℕ)) (h : B.Nonempty) (hB : B.sup f ≤ C * B.inf' h f) }.HasDensity 0",
+  "formal_original": ": ¬ ∀ᵉ (C : ℝ) (hC : 0 < C), let f : ℕ × ℕ → ℕ := fun (k, l) ↦ 2 ^ k * 3 ^ l { ∑ x ∈ B, f x | (B : Finset (ℕ × ℕ)) (h : B.Nonempty) (hB : B.sup f ≤ C * B.inf' h f) }.HasDensity 0",
+  "truth": "mutant",
+  "op": "negate",
+  "qid": "Q43"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/677.lean",
+  "name": "erdos_677",
+  "informal": "Erdős expected very few solutions for $M(n, k) = M(m, l)$, where $m \\geq n + k$ and $l > 1$. The only solutions he knew were the following. -/ @[category test, AMS 11] lemma lcmInterval_eq_example1 : lcmInterval 4 3 = lcmInterval 13 2 ∧ lcmInterval 3 4 = lcmInterval 19 2 := by decide /-- Denote by $M(n, k)$ the least common multiple of the finite set $\\{n+1, \\dotsc, n+k\\}$. Is it true that for all $m \\geq n + k$, we get $M(m, k) \\neq M(n, k)$?",
+  "formal": ": ∃ (m n k : ℕ), k > 0 → m ≥ n + k → lcmInterval m k ≠ lcmInterval n k",
+  "formal_original": ": ∀ (m n k : ℕ), k > 0 → m ≥ n + k → lcmInterval m k ≠ lcmInterval n k",
+  "truth": "mutant",
+  "op": "forall_exists",
+  "qid": "Q44"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/1149.lean",
+  "name": "erdos_1149",
+  "informal": "Let $\\alpha>0$ be a real number, not an integer. The density of integers $n\\geq 1$ for which $(n,\\lfloor n^\\alpha\\rfloor)=1$ is $6/\\pi^2$. This is true, and was proved by Bergelson and Richter [BeRi17].",
+  "formal": "(α : ℝ) (hα : 0 < α) (hα' : α ∉ Set.range ((↑) : ℤ → ℝ)) : {n : ℕ | 1 < n ∧ n.Coprime ⌊(n : ℝ) ^ α⌋₊}.HasDensity (6 / Real.pi ^ 2)",
+  "formal_original": "(α : ℝ) (hα : 0 < α) (hα' : α ∉ Set.range ((↑) : ℤ → ℝ)) : {n : ℕ | 1 ≤ n ∧ n.Coprime ⌊(n : ℝ) ^ α⌋₊}.HasDensity (6 / Real.pi ^ 2)",
+  "truth": "mutant",
+  "op": "nonstrict_flip",
+  "qid": "Q45"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/932.lean",
+  "name": "erdos_932",
+  "informal": "Let $p_k$ denote the $k$th prime. For infinitely many $r$ there are at least two integers $p_r < n < p_{r+1}$ all of whose prime factors are $< p_{r + 1} - p_r$.",
+  "formal": ": ¬({ r : ℕ | 2 ≤ (Finset.Ioo (r.nth Nat.Prime) (r.succ.nth Nat.Prime) |>.filter (fun m => m.maxPrimeFac < r.succ.nth Nat.Prime - r.nth Nat.Prime)).card }.Infinite)",
+  "formal_original": ": { r : ℕ | 2 ≤ (Finset.Ioo (r.nth Nat.Prime) (r.succ.nth Nat.Prime) |>.filter (fun m => m.maxPrimeFac < r.succ.nth Nat.Prime - r.nth Nat.Prime)).card }.Infinite",
+  "truth": "mutant",
+  "op": "negate",
+  "qid": "Q46"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/722.lean",
+  "name": "erdos_722",
+  "informal": "Let $k>r$ and $n$ be sufficiently large in terms of $k$ and $r$. Does there always exist a block $r-(n,k,1)$ design (or Steiner system with parameters $(n,k,r)$), provided the trivial necessary divisibility conditions $\\binom{k-i}{r-i}\\mid \\binom{n-i}{r-i}$ are satisfied for every $0\\leq i<r$? That is, can one find a family of $\\binom{n}{r}\\binom{k}{r}^{-1}$ many subsets of $\\{1,\\ldots,n\\}$, all of size $k$, such that any $A\\subseteq \\{1,\\ldots,n\\}$ of size $r$ is contained in exactly one set in the family? This was proved by Keevash [Ke14] for all $(r,k)$.",
+  "formal": ": ∀ r k : ℕ, 1 ≤ r → r < k → ∀ᶠ n : ℕ in atTop, (∀ i < r, (k - i).choose (r - i) ∣ (n - i).choose (r - i)) → ∀ H : Finset (Finset (Fin n)), H.IsBlockDesign r k",
+  "formal_original": ": ∀ r k : ℕ, 1 ≤ r → r < k → ∀ᶠ n : ℕ in atTop, (∀ i < r, (k - i).choose (r - i) ∣ (n - i).choose (r - i)) → ∃ H : Finset (Finset (Fin n)), H.IsBlockDesign r k",
+  "truth": "mutant",
+  "op": "exists_forall",
+  "qid": "Q47"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/130.lean",
+  "name": "erdos_130",
+  "informal": "Let $A\\subset\\mathbb{R}^2$ be an infinite set which contains no three points on a line and no four points on a circle. Consider the graph with vertices the points in $A$, where two vertices are joined by an edge if and only if they are an integer distance apart. How large can the chromatic number and clique number of this graph be? In particular, can the chromatic number be infinite? The chromatic number can be infinite: there is an infinite general-position set whose integer-distance graph admits no finite proper colouring. How large the *clique* number can be is not addressed here.",
+  "formal": ": ¬(∃ A : Set ℝ², A.Infinite ∧ InGeneralPosition A ∧ (IntegerDistancePlaneGraph A).chromaticNumber = ⊤)",
+  "formal_original": ": ∃ A : Set ℝ², A.Infinite ∧ InGeneralPosition A ∧ (IntegerDistancePlaneGraph A).chromaticNumber = ⊤",
+  "truth": "mutant",
+  "op": "negate",
+  "qid": "Q48"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/686.lean",
+  "name": "erdos_686",
+  "informal": "Can every integer $N≥2$ be written as $$N=\\frac{\\prod_{1\\leq i\\leq k}(m+i)}{\\prod_{1\\leq i\\leq k}(n+i)}$$ for some $k≥2$ and $m≥n+k$?",
+  "formal": ": ∀ N ≥ (2 : ℕ), ∀ᵉ (k ≥ 2) (n : ℕ) (m ≥ n + k), (N : ℚ) = (∏ i ∈ Finset.Icc 1 k, (m + i)) / (∏ i ∈ Finset.Icc 1 k, (n + i))",
+  "formal_original": ": ∀ N ≥ (2 : ℕ), ∃ᵉ (k ≥ 2) (n : ℕ) (m ≥ n + k), (N : ℚ) = (∏ i ∈ Finset.Icc 1 k, (m + i)) / (∏ i ∈ Finset.Icc 1 k, (n + i))",
+  "truth": "mutant",
+  "op": "exists_forall",
+  "qid": "Q49"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/75.lean",
+  "name": "erdos_75",
+  "informal": "Is there a graph of chromatic number `ℵ_ 1` with `ℵ_ 1` vertices such that for all `ε > 0`, if `n` is sufficiently large and `H` is a subgraph on `n` vertices, then `H` contains an independent set of size `> n ^ (1 - ε)`?",
+  "formal": ": ∃ (V : Type) (G : SimpleGraph V), G.chromaticCardinal = ℵ_ 1 ∧ #V = ℵ_ 1 ∧ ∀ ε > (0 : ℝ), ∀ᶠ (n : ℕ) in Filter.atTop, ∀ (H : G.Subgraph), H.verts.ncard = n → ∃ (I : Finset V), (I : Set V) ⊆ H.verts ∧ G.IsIndepSet (I : Set V) ∧ (I.card : ℝ) > (n : ℝ) ^ (1 - ε)",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q50"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/940.lean",
+  "name": "erdos_940",
+  "informal": "Let $r \\ge 3$. Is it true that the set of integers which are the sum of at most $r$ $r$-powerful numbers has density $0$?",
+  "formal": ": ∀ r ≥ 3, {n : ℕ | ∃ (S : Multiset ℕ), S.card ≤ r ∧ (∀ s ∈ S, r.Full s) ∧ n = S.sum}.HasDensity 0",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q51"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/234.lean",
+  "name": "erdos_234",
+  "informal": "Is it true that for all `c ≥ 0`, the density `f c` of integers for which `(p (n + 1) - p n) / log n < c` exists and is a continuous function of `c`?",
+  "formal": ": ∃ f : ℝ≥0 → ℝ, Continuous f ∧ ∀ c : ℝ≥0, HasDensity {n : ℕ | primeGap n / log n ≤ c} (f c)",
+  "formal_original": ": ∃ f : ℝ≥0 → ℝ, Continuous f ∧ ∀ c : ℝ≥0, HasDensity {n : ℕ | primeGap n / log n < c} (f c)",
+  "truth": "mutant",
+  "op": "strict_flip",
+  "qid": "Q52"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/502.lean",
+  "name": "erdos_502",
+  "informal": "What is the size of the largest $A\\subseteq \\mathbb{R}^n$ such that there are only two distinct distances between elements of $A$? That is, $$\\# \\{ \\lvert x-y\\rvert : x\\neq y\\in A\\} = 2.$$ Asked to Erdős by Coxeter. Bannai, Bannai, and Stanton [BBS83] have proved that $$\\lvert A\\rvert \\leq \\binom{n+2}{2}.$$ A simple proof of this upper bound was given by Petrov and Pohoata [PePo21]. The exact maximum is not known in general: a lower bound of $\\binom{n+1}{2}$ follows from the construction of Alweiss (see [503]).",
+  "formal": "(n : ℕ) (A : Set (ℝ^n)) (hA : A.Finite) (hA2 : {d : ℝ | ∃ x ∈ A, ∃ y ∈ A, x ≠ y ∧ dist x y = d}.ncard = 2) : A.ncard ≤ (n + 2).choose 2",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q53"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/656.lean",
+  "name": "erdos_656",
+  "informal": "Let $A\\subset \\mathbb{N}$ be a set with positive upper density. Must there exist an infinite set $B\\subseteq A$ and integer $t$ such that $$\\{b_1+b_2: b_1\\neq b_2\\in B\\}+t\\subseteq A?$$ Erdős [Er75b] posed this as a candidate for a density version of Hindman's theorem. This is true, and was proved by Kra, Moreira, Richter, and Robertson [KMRR24, Theorem 1.2 (i)], even for sets of positive upper Banach density and with $t \\geq 0$. The inclusion says that every $b_1+b_2+t$ is an element of `A`, as an integer.",
+  "formal": ": ∀ A : Set ℕ, 0 < A.upperDensity → ∃ B ⊆ A, B.Infinite ∧ ∃ t : ℤ, ∀ b₁ ∈ B, ∀ b₂ ∈ B, b₁ ≠ b₂ → ∃ a ∈ A, (a : ℤ) = b₁ + b₂ + t",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q54"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/699.lean",
+  "name": "sylvester_schur",
+  "informal": "Sylvester and Schur: for $1 \\le i \\le n/2$ there is a prime $p > i$ dividing `n.choose i`.",
+  "formal": "(n i : ℕ) (hi : 1 ≤ i) (hi_half : i ≤ n / 2) : ∃ p : ℕ, p.Prime ∧ i < p ∧ p ∣ Nat.choose n i",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q55"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/44.lean",
+  "name": "greedy_sidon_construction",
+  "informal": "The greedy construction gives a Sidon set `A ⊆ {1, ..., N}` of size at least $N^{1/3}$, stated here as $N \\le |A|^3$. See Section 1 of [arXiv:2103.15850](https://arxiv.org/abs/2103.15850).",
+  "formal": "(N : ℕ) (hN : 1 ≤ N) : ∃ᵉ (A ⊆ Finset.Icc 1 N), IsSidon (A : Set ℕ) ∧ N ≤ A.card ^ 3",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q56"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/1030.lean",
+  "name": "erdos_1030",
+  "informal": "Let $R(k,l)$ be the usual Ramsey number: the smallest $n$ such that if the edges of $K_n$ are coloured red and blue then there exists either a red $K_k$ or a blue $K_l$. Prove the existence of some $c>0$ such that $$\\lim_{k\\to \\infty}\\frac{R(k+1,k)}{R(k,k)}> 1+c.$$ A problem of Erdős and Sós.",
+  "formal": ": ∀ c > (0 : ℝ), ∃ L : ℝ, Tendsto (fun k : ℕ ↦ (SimpleGraph.classicalRamsey (k + 1) k : ℝ) / (SimpleGraph.classicalRamsey k k : ℝ)) atTop (nhds L) ∧ L > 1 + c",
+  "formal_original": ": ∃ c > (0 : ℝ), ∃ L : ℝ, Tendsto (fun k : ℕ ↦ (SimpleGraph.classicalRamsey (k + 1) k : ℝ) / (SimpleGraph.classicalRamsey k k : ℝ)) atTop (nhds L) ∧ L > 1 + c",
+  "truth": "mutant",
+  "op": "exists_forall",
+  "qid": "Q57"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/215.lean",
+  "name": "erdos_215",
+  "informal": "Does there exist $S\\subseteq \\mathbb{R}^2$ such that every set congruent to $S$ (that is, $S$ after some translation and rotation) contains exactly one point from $\\mathbb{Z}^2$? An old question of Steinhaus. Erdős was 'almost certain that such a set does not exist'. In fact, such a set does exist, as proved by Jackson and Mauldin [JaMa02]. Their construction depends on the axiom of choice. The plane is identified with $\\mathbb{C}$: the sets congruent to $S$ are the sets $uS + t$ with $\\lvert u\\rvert = 1$ and $t \\in \\mathbb{C}$, and $\\mathbb{Z}^2$ is the set of Gaussian integers.",
+  "formal": ": ∃ S : Set ℂ, ∀ u t : ℂ, ‖u‖ = 1 → ∃! z : ℂ, z ∈ (fun w => u * w + t) '' S ∧ ∃ a b : ℤ, z = a + b * Complex.I",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q58"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/850.lean",
+  "name": "erdos_850",
+  "informal": "Can there exist two distinct integers $x$ and $y$ such that $x,y$ have the same prime factors, $x+1,y+1$ have the same prime factors, and $x+2,y+2$ also have the same prime factors?",
+  "formal": ": ∃ x y : ℕ, x ≠ y ∧ x.primeFactors = y.primeFactors ∧ (x + 1).primeFactors = (y + 1).primeFactors ∧ (x + 2).primeFactors = (y + 2).primeFactors",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q59"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/695.lean",
+  "name": "erdos_695",
+  "informal": "Let $q_1 < q_2 < \\cdots$ be a sequence of primes such that $q_{i + 1} \\equiv 1 \\pmod{q_i}$. Is it true that $$ \\lim_{k \\to \\infty} q_k^{1/k} = \\infty? $$",
+  "formal": ": ∀ {q : ℕ → ℕ}, StrictMono q → (∀ i, (q i).Prime) → (∀ i, q (i + 1) % q i = 1) → Tendsto (fun k => (q k : ℝ) ^ (1 / k : ℝ)) atTop atTop",
+  "truth": "faithful",
+  "op": null,
+  "qid": "Q60"
+ }
+]

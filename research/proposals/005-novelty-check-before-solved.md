@@ -37,3 +37,5 @@ Share the benchmark with labels and sources, prompts, raw search logs, model ver
 
 - extend the benchmark beyond Erdős problems, for example to items in [openai/math](https://github.com/openai/math), and report candidate prior work to the original authors before publishing;
 - package the pipeline as a pre-announcement checklist that any lab or individual can run.
+
+**Runs so far:** an [exploratory pilot](../experiments/005-novelty-check-pilot/README.md) on 2026-11-20 by the proposer, using web search in place of open indexes. It found 15/21 prior results with 0/18 false flags, against 2–4/21 for one search per problem. Labels and matches still need human review.

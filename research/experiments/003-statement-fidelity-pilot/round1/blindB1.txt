@@ -1,0 +1,179 @@
+Q01
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ᶠ (xy : ℕ × ℕ) in atTop ×ˢ atTop, π (xy.1 + xy.2) ≤ π xy.1 + π xy.2
+
+Q02
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ {P L : Type} (_: Membership P L) (_ : Fintype P) (_ : Fintype L), ∀ pp : ProjectivePlane P L, IsPrimePow pp.order
+
+Q03
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ t : ℚ, t > 1 → Irrational (∑' n : ℕ+, 1 / ((t : ℝ) ^ (n : ℕ) - 1))
+
+Q04
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬(∀ p : ℕ, IsPrimePow p → ∀ H : Finset (Finset (Fin (p ^ 2 + p + 1))), H.IsPairwiseBalancedDesign → p ^ 2 + p + 1 < H.card → p ^ 2 + p + 1 + p ≤ H.card)
+
+Q05
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ (o : ℕ → ℝ), o =o[atTop] (1 : ℕ → ℝ) ∧ ∀ᶠ n in atTop, (sumRep Powerful n) ≤ (n : ℝ)^(o n)
+
+Q06
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬(∃ (c : ℝ) (_ : 0 < c) (C : ℝ), ∀ (n : ℕ), 1 ≤ n → (SimpleGraph.graphRamsey (SimpleGraph.cycleGraph 4) (SimpleGraph.completeGraph (Fin n)) : ℝ) ≤ C * (n : ℝ) ^ (2 - c))
+
+Q07
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ᵉ (n : ℕ → ℕ) (c > (1 : ℚ)), StrictMono n → (∀ k, c ≤ n (k+1) / n k) → Irrational (∑' k, 1 / (Nat.fib <| n k))
+
+Q08
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬(∀ ε : ℝ, 0 < ε → ∀ᶠ n : ℕ in atTop, ∀ H : SimpleGraph (Fin n → Bool), H ≤ hypercube n → (1 / 2 + ε) * n * 2 ^ (n - 1 : ℕ) ≤ (H.edgeSet.ncard : ℝ) → cycleGraph 4 ⊑ H)
+
+Q09
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ g : ℕ, 2 < g → ∀ᶠ n : ℕ in atTop, n % 6 = 1 ∨ n % 6 = 3 → ∃ H : Finset (Finset (Fin n)), H.IsBlockDesign 2 3 ∧ ∀ E ⊆ H, 2 ≤ E.card → E.card ≤ g → E.card + 3 ≤ (E.biUnion id).card
+
+Q10
+FORMAL (Lean 4, Mathlib; text after the theorem name): (n : ℕ) (hn : 2 < n) : ∃ x y z : ℕ, 1 ≤ x ∧ x < y ∧ y < z ∧ (4 / n : ℚ) = 1 / x + 1 / y + 1 / z
+
+Q11
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬ ∀ n ≥ 3, ∀ (V : Type*) [Fintype V] (G : SimpleGraph V), [DecidableRel G.Adj] → G.edgeFinset.card = Nat.choose (2 * n + 1) 2 - Nat.choose n 2 - 1 → ∃ (B D : SimpleGraph V), [DecidableRel B.Adj] → [DecidableRel D.Adj] → G = B ⊔ D ∧ B.IsBipartite ∧ ∀ v, D.degree v < n
+
+Q12
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬(∀ r ≥ 3, (fun n ↦ log^[r - 1] (hypergraphRamsey r n)) =Θ[atTop] (fun n ↦ (n : ℝ)))
+
+Q13
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ f : ℕ → ℝ, Tendsto f atTop atTop ∧ ∃ n : ℕ, ∀ A : Finset ℝ², A.card = n → (A : Set ℝ²).IsIsoscelesFree → f n * (n : ℝ) ≤ (distinctDistances A : ℝ)
+
+Q14
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ A : ℕ → ℕ, IsLacunary A ∧ ∃ u v : ℝ, u < v ∧ ∀ q : ℚ, ↑q ∈ Set.Ioo u v → q ∈ {∑ a ∈ A', (1 / a : ℚ) | (A' : Finset ℕ) (_ : ↑A' ⊆ Set.range A)}
+
+Q15
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬ ∀ k ≥ 3, ∀ r : ℝ → ℝ → Prop, IsStrictTotalOrder ℝ r → ∃ s : List ℝ, s.IsAPOfLength k ∧ (s.Pairwise r ∨ s.Pairwise (flip r))
+
+Q16
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ f : ℂ → ℂ, Transcendental (Polynomial ℂ) f ∧ Differentiable ℂ f ∧ ∀ n : ℕ → ℕ, StrictMono n → Dense { z | ∃ k, iteratedDeriv (n k) f z = 0 }
+
+Q17
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ k ≥ 2, Set.Infinite {n : ℕ | (Nat.factorial (n + k)) ^ 2 ∣ Nat.factorial (2 * n)}
+
+Q18
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ (q : ℚ), 0 < q → Squarefree q.den → ∃ k : ℕ, ∃ (n : Fin (k + 1) → ℕ), n 0 = 1 ∧ StrictMono n ∧ (∀ i ∈ Finset.Icc 1 (Fin.last k), ω (n i) = 2 ∧ Ω (n i) = 2) ∧ q = ∑ i ∈ Finset.Icc 1 (Fin.last k), (1 : ℚ) / (n i)
+
+Q19
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ c : ℝ, ∃ n : ℕ, (σ 1 n : ℝ) > c * n ∨ ∀ (m : StrictCoveringSystem ℤ), ∃ i, (n : ℤ) ∉ m.moduli i
+
+Q20
+FORMAL (Lean 4, Mathlib; text after the theorem name): : Set.Finite { I : Fin 3 → ℕ+ × ℕ+ | ∀ j, (I j).1 ≤ (I j).2 ∧ ∃ n : ℕ+, (∑ j : Fin 2, ∑ nⱼ ∈ Set.Icc (I j).1 (I j).2, (nⱼ⁻¹ : ℚ)) = n }
+
+Q21
+FORMAL (Lean 4, Mathlib; text after the theorem name): : Tendsto (fun d : ℕ => binomialRandom (Fin d → Bool) ⟨1 / 2, by norm_num⟩ {G | (hypercube d).IsContained G}) atBot (nhds 1)
+
+Q22
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬ ∀ A : Set ℕ, A.HasDensity 0 → ∀ B : Set ℕ, A ⊆ B + B ∧ (fun N => ((B ∩ Set.Icc 1 N).ncard : ℝ)) =o[atTop] fun N => Real.sqrt N
+
+Q23
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬(∃ (A : Set ℕ) (c : ℝ), c ≠ 0 ∧ Tendsto (fun n ↦ (sumRep A n : ℝ) / Real.log n) atTop (𝓝 c))
+
+Q24
+FORMAL (Lean 4, Mathlib; text after the theorem name): (d : ℕ) : (interior {x : Fin d → ℝ | ∀ A : Set ℕ, A.Infinite ∧ Summable (fun n : A => (1 : ℝ) / n ) ∧ x = fun i : Fin d => ∑' n : A, (1 : ℝ) / (n + i)}).Nonempty
+
+Q25
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ c > 0, ∀ n ≥ 1, ∃ δ : Fin n → ℚ, Set.range δ ⊆ {-1, 0, 1} ∧ letI lhs : ℝ := |∑ k, (δ k) / (k + 1)| 0 < lhs ∧ lhs < c / 2^n
+
+Q26
+FORMAL (Lean 4, Mathlib; text after the theorem name): : (fun n ↦ (Hypergraph.configurationExtremalNumber n 3 6 3 : ℝ)) =o[atTop] (fun n ↦ (n : ℝ) ^ 2)
+
+Q27
+FORMAL (Lean 4, Mathlib; text after the theorem name): {r m : ℕ} (hr : 2 ≤ r) (hm : 1 ≤ m) {V : Type*} [Fintype V] (G : SimpleGraph V) [DecidableRel G.Adj] (hV : Fintype.card V = r * m) (hdeg : m * (r - 1) ≤ G.minDegree) : ∃ K : Fin m → Finset V, (∀ i, G.IsNClique r (K i)) ∧ Pairwise fun i j => Disjoint (K i) (K j)
+
+Q28
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ k ≥ 2, ∀ᶠ n in atTop, ∃ m ∈ Ico n (n + ∏ i ∈ range k, i.nth Nat.Prime), k < ω m
+
+Q29
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ A B : Set ℕ, IsCompl A B ∧ (∃ f : ℕ ≃ A, ¬HasMonotoneAP (Subtype.val ∘ f) 3) ∧ (∃ g : ℕ ≃ B, ¬HasMonotoneAP (Subtype.val ∘ g) 3)
+
+Q30
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ f : ℕ → ℝ, (∀ᵉ (a > 0) (b > 0), a.Coprime b → f (a * b) = f a + f b) → {n | 1 ≤ n ∧ f (n + 1) ≤ f n}.HasDensity 0 → ∃ c : ℝ, ∀ n > 0, f n = c * Real.log n
+
+Q31
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ (c : ℝ), 0 < c ∧ ∀ (K : ℝ), 1 < K → ∃ (N₀ : ℕ), ∀ (n : ℕ) (a : Fin n → ℕ), (n ≥ N₀ ∧ (∑ i : Fin n, (a i : ℝ)⁻¹) > K) → ∃ (S : Finset (Fin n)), 1 - Real.exp (-(c * K)) < (∑ i ∈ S, (a i : ℝ)⁻¹) ∧ ∑ i ∈ S, (a i : ℝ)⁻¹ ≤ 1
+
+Q32
+FORMAL (Lean 4, Mathlib; text after the theorem name): {S : ℕ → Set ℂ} (h : ∀ (k), derivedSet (S k) = ∅) : letI := Polynomial.algebraPi ℂ ℂ ℂ ∃ (f : ℂ → ℂ) (n : ℕ → ℕ), Differentiable ℂ f ∧ Transcendental (Polynomial ℂ) f ∧ ∀ k, 0 < n k ∧ ∀ {z} (_: z ∈ S k), iteratedDeriv (n k) f z = 0
+
+Q33
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ᵉ (k : ℤ) (k ≠ 1), { n : ℕ | (2 : ℤ) ^ n ≡ k [ZMOD (n : ℤ)] }.Infinite
+
+Q34
+FORMAL (Lean 4, Mathlib; text after the theorem name): (a : ℕ → ℕ) (ha₀ : StrictMono a) (ha₁ : Tendsto (fun n ↦ (a n : ℝ) / a (n - 1) ^ 2) atTop (𝓝 1)) (ha₂ : Summable ((1 : ℚ) / a ·)) : ∃ᶠ n in atTop, a n = a (n - 1) ^ 2 - a (n - 1) + 1
+
+Q35
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ c : StrictCoveringSystem ℤ, ∃ i, ∃ (p : ℕ), p.Prime ∧ 5 ≤ p ∧ c.moduli i = Ideal.span {↑(p - 1)}
+
+Q36
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ n : ℕ → ℕ, StrictMono n → StrictMono (fun k => (2 : Cardinal.{u}) ^ ℵ_ (n k)) → ℵ_ ω < (2 : Cardinal.{u}) ^ ℵ_ (n 0) → cardinalPartitionRel (sum fun k => (2 : Cardinal.{u}) ^ ℵ_ (n k)) 2 2 (fun _ => ℵ_ ω)
+
+Q37
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ (seq_n : ℕ → ℕ) (seq_a : ℕ → ℤ), (∀ i, 0 < seq_n i) → StrictMono seq_n → ∃ d, Set.HasLogDensity { x : ℕ | ∀ i, (x : ℤ) < seq_n i ∨ ¬((x : ℤ) ≡ seq_a i [ZMOD seq_n i]) } d
+
+Q38
+FORMAL (Lean 4, Mathlib; text after the theorem name): {j k : ℕ} (hjk : j ≤ k) (hk : OrdinalMultiColorRamsey (ω_ 1 ^ 3) (ω_ 1 * ω) 3 k) : OrdinalMultiColorRamsey (ω_ 1 ^ 2) (ω_ 1 * ω) 3 j
+
+Q39
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ C : ℝ, 0 < C ∧ ∀ A : Set ℕ, (∀ᶠ N : ℕ in atTop, C * Real.sqrt N ≤ A.countUpTo N) → IsSubcomplete A
+
+Q40
+FORMAL (Lean 4, Mathlib; text after the theorem name): {P Q : Finset ℕ} (hP : ∀ p ∈ P, p.Prime) (hQ : ∀ q ∈ Q, q.Prime) (heq : 1 = (∑ p ∈ P, (p : ℚ)⁻¹) * (∑ q ∈ Q, (q : ℚ)⁻¹)) : 60 < #(P ∪ Q)
+
+Q41
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ A : Set ℕ, ((fun N => ({a ∈ A | a ≤ N}.ncard : ℝ)) ≪ (fun N => (N : ℝ) / Real.log N)) ∧ ∀ᶠ N in atTop, ∃ k a, 0 ≤ k ∧ a ∈ A ∧ N = 2 ^ k + a
+
+Q42
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ d : ℕ, 3 ≤ d → ∃ o : ℕ → ℝ, o =o[atTop] (1 : ℕ → ℝ) ∨ ∀ᶠ n : ℕ in atTop, (minimalDistinctDistances (ℝ^d) n : ℝ) = (n : ℝ) ^ ((2 : ℝ) / (d : ℝ) - o n)
+
+Q43
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ᵉ (C : ℝ) (hC : 0 < C), let f : ℕ × ℕ → ℕ := fun (k, l) ↦ 2 ^ k * 3 ^ l { ∑ x ∈ B, f x | (B : Finset (ℕ × ℕ)) (h : B.Nonempty) (hB : B.sup f ≤ C * B.inf' h f) }.HasDensity 0
+
+Q44
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ (m n k : ℕ), k > 0 → m ≥ n + k → lcmInterval m k ≠ lcmInterval n k
+
+Q45
+FORMAL (Lean 4, Mathlib; text after the theorem name): (α : ℝ) (hα : 0 < α) (hα' : α ∉ Set.range ((↑) : ℤ → ℝ)) : {n : ℕ | 1 < n ∧ n.Coprime ⌊(n : ℝ) ^ α⌋₊}.HasDensity (6 / Real.pi ^ 2)
+
+Q46
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬({ r : ℕ | 2 ≤ (Finset.Ioo (r.nth Nat.Prime) (r.succ.nth Nat.Prime) |>.filter (fun m => m.maxPrimeFac < r.succ.nth Nat.Prime - r.nth Nat.Prime)).card }.Infinite)
+
+Q47
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ r k : ℕ, 1 ≤ r → r < k → ∀ᶠ n : ℕ in atTop, (∀ i < r, (k - i).choose (r - i) ∣ (n - i).choose (r - i)) → ∀ H : Finset (Finset (Fin n)), H.IsBlockDesign r k
+
+Q48
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬(∃ A : Set ℝ², A.Infinite ∧ InGeneralPosition A ∧ (IntegerDistancePlaneGraph A).chromaticNumber = ⊤)
+
+Q49
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ N ≥ (2 : ℕ), ∀ᵉ (k ≥ 2) (n : ℕ) (m ≥ n + k), (N : ℚ) = (∏ i ∈ Finset.Icc 1 k, (m + i)) / (∏ i ∈ Finset.Icc 1 k, (n + i))
+
+Q50
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ (V : Type) (G : SimpleGraph V), G.chromaticCardinal = ℵ_ 1 ∧ #V = ℵ_ 1 ∧ ∀ ε > (0 : ℝ), ∀ᶠ (n : ℕ) in Filter.atTop, ∀ (H : G.Subgraph), H.verts.ncard = n → ∃ (I : Finset V), (I : Set V) ⊆ H.verts ∧ G.IsIndepSet (I : Set V) ∧ (I.card : ℝ) > (n : ℝ) ^ (1 - ε)
+
+Q51
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ r ≥ 3, {n : ℕ | ∃ (S : Multiset ℕ), S.card ≤ r ∧ (∀ s ∈ S, r.Full s) ∧ n = S.sum}.HasDensity 0
+
+Q52
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ f : ℝ≥0 → ℝ, Continuous f ∧ ∀ c : ℝ≥0, HasDensity {n : ℕ | primeGap n / log n ≤ c} (f c)
+
+Q53
+FORMAL (Lean 4, Mathlib; text after the theorem name): (n : ℕ) (A : Set (ℝ^n)) (hA : A.Finite) (hA2 : {d : ℝ | ∃ x ∈ A, ∃ y ∈ A, x ≠ y ∧ dist x y = d}.ncard = 2) : A.ncard ≤ (n + 2).choose 2
+
+Q54
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ A : Set ℕ, 0 < A.upperDensity → ∃ B ⊆ A, B.Infinite ∧ ∃ t : ℤ, ∀ b₁ ∈ B, ∀ b₂ ∈ B, b₁ ≠ b₂ → ∃ a ∈ A, (a : ℤ) = b₁ + b₂ + t
+
+Q55
+FORMAL (Lean 4, Mathlib; text after the theorem name): (n i : ℕ) (hi : 1 ≤ i) (hi_half : i ≤ n / 2) : ∃ p : ℕ, p.Prime ∧ i < p ∧ p ∣ Nat.choose n i
+
+Q56
+FORMAL (Lean 4, Mathlib; text after the theorem name): (N : ℕ) (hN : 1 ≤ N) : ∃ᵉ (A ⊆ Finset.Icc 1 N), IsSidon (A : Set ℕ) ∧ N ≤ A.card ^ 3
+
+Q57
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ c > (0 : ℝ), ∃ L : ℝ, Tendsto (fun k : ℕ ↦ (SimpleGraph.classicalRamsey (k + 1) k : ℝ) / (SimpleGraph.classicalRamsey k k : ℝ)) atTop (nhds L) ∧ L > 1 + c
+
+Q58
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ S : Set ℂ, ∀ u t : ℂ, ‖u‖ = 1 → ∃! z : ℂ, z ∈ (fun w => u * w + t) '' S ∧ ∃ a b : ℤ, z = a + b * Complex.I
+
+Q59
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ x y : ℕ, x ≠ y ∧ x.primeFactors = y.primeFactors ∧ (x + 1).primeFactors = (y + 1).primeFactors ∧ (x + 2).primeFactors = (y + 2).primeFactors
+
+Q60
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ {q : ℕ → ℕ}, StrictMono q → (∀ i, (q i).Prime) → (∀ i, q (i + 1) % q i = 1) → Tendsto (fun k => (q k : ℝ) ^ (1 / k : ℝ)) atTop atTop

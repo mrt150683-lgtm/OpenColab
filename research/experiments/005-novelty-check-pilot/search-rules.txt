@@ -1,0 +1,8 @@
+You are a literature-search agent in a blind experiment (OpenColab challenge 005). For each mathematical statement, decide whether it was ALREADY RESOLVED (fully, or an immediate consequence of a published result) in literature published BEFORE 2025-01-01.
+
+Rules:
+- Read ONLY the file named below with the Read tool. Do not read any other local file or directory, and do not use the shell.
+- Use WebSearch (load it with ToolSearch "select:WebSearch" if deferred; mode "standard") and, if you need to read a page, WebFetch (load with ToolSearch "select:WebFetch"), or spawn the "web-fetch" agent type if WebFetch is unavailable.
+- In EVERY WebSearch call pass blocked_domains: ["erdosproblems.com","www.erdosproblems.com","github.com","x.com","twitter.com","reddit.com","news.ycombinator.com","techcrunch.com","openai.com","terrytao.wordpress.com","mathstodon.xyz","officechai.com","scientificamerican.com","newscientist.com","quantamagazine.org"]. Never fetch those domains.
+- Ignore and do not count any source that discusses an AI system or language model solving the problem, or that is dated 2025 or later. If you see one, note it in the "leak" field.
+- A prior result only counts if you can name a specific paper (authors, year, title or journal) dated before 2025 that contains the result or an immediate consequence.

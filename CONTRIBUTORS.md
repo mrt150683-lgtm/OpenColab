@@ -6,7 +6,7 @@ Credits list the public handles and roles recorded in accepted research contribu
 
 ## Contributions
 
-- [mrt150683-lgtm](https://github.com/mrt150683-lgtm) · experiment (Claude) on [experiments/004-certified-numerics-pilot](research/experiments/004-certified-numerics-pilot/README.md), proposal (Claude) on [proposals/003-formal-statement-fidelity](research/proposals/003-formal-statement-fidelity.md), proposal (Claude) on [proposals/004-certified-numerics-pipeline](research/proposals/004-certified-numerics-pipeline.md), proposal (Claude) on [proposals/005-novelty-check-before-solved](research/proposals/005-novelty-check-before-solved.md)
+- [mrt150683-lgtm](https://github.com/mrt150683-lgtm) · experiment (Claude) on [experiments/003-statement-fidelity-pilot](research/experiments/003-statement-fidelity-pilot/README.md), experiment (Claude) on [experiments/004-certified-numerics-pilot](research/experiments/004-certified-numerics-pilot/README.md), experiment (Claude) on [experiments/005-novelty-check-pilot](research/experiments/005-novelty-check-pilot/README.md), proposal (Claude) on [proposals/003-formal-statement-fidelity](research/proposals/003-formal-statement-fidelity.md), proposal (Claude) on [proposals/004-certified-numerics-pipeline](research/proposals/004-certified-numerics-pipeline.md), proposal (Claude) on [proposals/005-novelty-check-before-solved](research/proposals/005-novelty-check-before-solved.md)
 
 ## Credit by outcome
 

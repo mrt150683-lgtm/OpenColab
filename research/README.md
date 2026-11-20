@@ -33,7 +33,9 @@ Challenges 003 to 005 respond to the AI-mathematics claims of 2025 and 2026. See
 
 | ID | Question | Outcome |
 | --- | --- | --- |
+| [003-statement-fidelity-pilot](experiments/003-statement-fidelity-pilot/README.md) | Can AI reviewers catch corrupted Lean statements, and does combining checks help? | Exploratory: one direct judge caught 28/28 simple and 19/20 adversarial corruptions with no false alarms; combining checks added nothing on this benchmark |
 | [004-certified-numerics-pilot](experiments/004-certified-numerics-pilot/README.md) | Can a standalone verifier recheck interval-arithmetic certificates on another CPU? | Exploratory pilot: 5/5 certificates accepted and 7/7 corrupted ones rejected on two machines; hard benchmark not attempted |
+| [005-novelty-check-pilot](experiments/005-novelty-check-pilot/README.md) | Would a literature search have caught AI "solved" claims that were already in the literature? | Exploratory: 15/21 prior results found, 0/18 false flags; one-search baseline 2–4/21; memory and retrieval not separated |
 
 ## Verified findings
 

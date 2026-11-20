@@ -1,0 +1,119 @@
+T01
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬ ∃ C : ℕ, ∀ᶠ n : ℕ in atTop, ∃ H : UniformHypergraph (Fin n) 3, n - C ≤ (UniformHypergraph.cliqueSizes H).ncard
+
+T02
+FORMAL (Lean 4, Mathlib; text after the theorem name): : (∀ (A : Set ℕ), 0 ∉ A → 0 < A.upperDensity → ∃ (S : Finset ℕ), ↑S ⊆ A ∧ ∑ n ∈ S, (1 / n : ℚ) = 1)
+
+T03
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬ ∃ C : ℝ, ∀ d : ℕ, ∀ (V : Type) [Fintype V] (G : SimpleGraph V), G.maxDegree ≤ d → (sizeRamsey G G : ℝ) ≤ C * Fintype.card V
+
+T04
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ {V : Type*} (G : SimpleGraph V) (k : ℕ), G.oddCycleLengths.ncard ≤ k → G.chromaticNumber ≤ (2 * k + 2 : ℕ∞) ∧ (G.chromaticNumber = (2 * k + 2 : ℕ∞) ↔ (SimpleGraph.completeGraph (Fin (2 * k + 2))).IsContained G)
+
+T05
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ (a : ℕ → ℕ), StrictMono a ∧ Minimal (fun A : Set ℕ ↦ A.IsAsymptoticAddBasisOfOrder 2) (Set.range a) ∧ ∃ (c : ℝ), c ≠ 0 ∧ Tendsto (fun n ↦ ((a n / n ^ 2 : ℕ) : ℝ)) atTop (𝓝 c)
+
+T06
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬ ∀ (V : Type*) [Fintype V] (G : SimpleGraph V), G.CliqueFree 5 → 4 ≤ G.cochromaticNumber → G.chromaticNumber ≤ G.cochromaticNumber + 2
+
+T07
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ c > 0, ∀ n : ℕ, ∀ (G : SimpleGraph (Fin (2 ^ n))) [DecidableRel G.Adj], (∀ v, (G.degree v : ℝ) > (1 - c) * 2 ^ n) → (SimpleGraph.hypercube n).IsContained G
+
+T08
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ᵉ (p : ℕ) (hp_prime : p.Prime) (hp_nontrivial : p ≠ 2), ∃ q, q.Prime ∧ q < p ∧ orderOf (q : ZMod p) = p - 1
+
+T09
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ c : ℝ, 0 < c ∧ ∀ r : ℕ, 2 ≤ r → ∀ (n : ℕ) (H : Finset (Finset (Fin n))), H.IsUniform r → H.HasHypergraphChromaticNumber 3 → ∃ v : Fin n, 1 + c ^ r ≤ (H.hypergraphDegree v : ℝ)
+
+T10
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ (k : ℕ), ∀ (hk : 3 ≤ k), ∃ (A : Finset (Fin 2 → ℝ)), ∀ (C : A → Fin 2), ∃ (S : Finset (Fin 2 → ℝ)), ∃ (hSA : S ⊆ A), Collinear ℝ (S : Set (Fin 2 → ℝ)) ∧ S.card ≥ k ∧ (∀ y ∈ A, y ∈ S → y ∈ affineSpan ℝ (S : Set (Fin 2 → ℝ))) ∧ ∃ c, ∀ x (hx : x ∈ S), C ⟨x, hSA hx⟩ = c
+
+T11
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬ ∀ f : ℝ → Fin 2, ∃ A : Set ℝ, A.Infinite ∧ ∀ᵉ (a ∈ A) (b ∈ A) (c ∈ A) (d ∈ A), a ≠ b → c ≠ d → f (a + b) = f (c + d)
+
+T12
+FORMAL (Lean 4, Mathlib; text after the theorem name): (A : Finset ℝ²) (hA : ConvexIndep (A : Set ℝ²)) : (A.card : ℝ) / 2 ≤ distinctDistances A
+
+T13
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ᶠ n in atTop, ∀ G : SimpleGraph (Set.Icc 1 n), G.CliqueFree 3 → ∃ a b c : Set.Icc 1 n, a ≠ b ∧ (a : ℕ) + (b : ℕ) = c ∧ G.IsIndepSet {a, b, c}
+
+T14
+FORMAL (Lean 4, Mathlib; text after the theorem name): : { n | Nat.maxPrimeFac (n + 1) > Nat.maxPrimeFac n }.HasDensity (1/2)
+
+T15
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ A : Set ℕ, A.Infinite → ∃ B : Set ℕ, B.HasDensity 0 ∧ ∀ᶠ n in atTop, n ∈ A + B
+
+T16
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ S : Finset ℕ, (∀ p ∈ S, p.Prime) → {n : ℕ | ∀ p ∈ S, Even (padicValNat p (n !))}.Infinite
+
+T17
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ ε : ℝ, 0 < ε → ∃ C : ℝ, 0 < C ∧ ∀ P : Finset ℝ², ∑ u ∈ distanceSet P, (distanceMultiplicity P u : ℝ) ^ 2 ≤ C * (P.card : ℝ) ^ (3 + ε)
+
+T18
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ C > (0 : ℝ), ∀ n : ℕ, (diagonalGraphRamsey (hypercube n) : ℝ) ≤ C * 2 ^ n
+
+T19
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬ ∃ A B : Set ℕ, A.Infinite ∧ B.Nonempty ∧ (A + B : Set ℕ) =ᶠ[Filter.cofinite] {n | n.Prime}
+
+T20
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ (C : ℝ) (hC : C > 0), ∃ K ≥ 3, Set.Infinite { T : ℕ × ℕ × ℕ | let (a, b, n) := T a > 0 ∧ b > 0 ∧ n > 0 ∧ (a : ℝ) + b > n + C * Real.log n ∧ ∀ p, p.Prime → p > K → padicValNat p (((n.factorial / (a.factorial * b.factorial) : ℕ) : ℚ).den) = 0 }
+
+T21
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ (n : ℕ) (color : ℕ → Fin n) (m), ∃ (A : Finset ℕ), A.card ≥ m ∧ ∃ c, ∀ (S : Finset A), S.Nonempty → color (∑ x ∈ S, x) = c ∧ color (∏ x ∈ S, x) = c
+
+T22
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ x y : ℕ, x ≥ 1 → y ≥ 1 → (∀ n : ℕ, n ≥ 1 → { p : ℕ | p.Prime ∧ p ∣ x ^ n - 1 } = { p : ℕ | p.Prime ∧ p ∣ y ^ n - 1 }) → x = y
+
+T23
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬ ∃ (n : ℕ) (a : ℕ → ℤ), let D := {d : ℕ | d ∣ n ∧ d ≥ 1} (∀ x : ℤ, ∃ d ∈ D, x ≡ a d [ZMOD d]) ∧ (∀ d ∈ D, ∀ d' ∈ D, d ≠ d' → (∃ x : ℤ, x ≡ a d [ZMOD d] ∧ x ≡ a d' [ZMOD d']) → Nat.gcd d d' = 1)
+
+T24
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ (k : ℕ) (hk : 3 ≤ k), ∀ᶠ (m : ℕ) in atTop, ∀ (W : Type) [Fintype W] (H : SimpleGraph W) [DecidableRel H.Adj], (∀ v, 0 < H.degree v) → H.edgeSet.ncard = m → SimpleGraph.graphRamsey (SimpleGraph.cycleGraph k) H ≤ 2 * m + k / 2
+
+T25
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ (f : ℕ → ℕ) (_ : Tendsto f atTop atTop), ∀ᶠ n in atTop, ∃ m, m.Composite ∧ n + f n < m ∧ m < n + n.minFac
+
+T26
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ {V : Type*} (G : SimpleGraph V), G.chromaticNumber = ⊤ → ¬ Summable (fun (a : G.oddCycleLengths) ↦ ((1 / a : ℕ) : ℝ))
+
+T27
+FORMAL (Lean 4, Mathlib; text after the theorem name): (c : ℕ → Bool) : ∃ x d, 0 < x ∧ x < d ∧ (∃ C, c x = C ∧ c (x + d) = C ∧ c (x + 2 * d) = C)
+
+T28
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬ ∀ (r q : ℕ) (H : SimpleGraph (Fin q)), 0 < r → H.IsBipartite → H.IsDegenerate r → Asymptotics.IsBigO atTop (fun n : ℕ => (extremalNumber n H : ℝ)) (fun n : ℕ => (n : ℝ) ^ ((2 - 1 / r : ℕ) : ℝ))
+
+T29
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬ ∀ ε > (0 : ℝ), ε < 1 → ∀ α > (0 : ℝ), α < 1 → ∀ᶠ D in atTop, ∀ᶠ n in atTop, ∀ G : SimpleGraph (Fin n), G.edgeSet.ncard > (n : ℝ) ^ (1 + α) → ∃ (H : Subgraph G), letI m := H.verts.ncard IsBalanced H.coe D ∧ m > (n : ℝ) ^ (1 - α) ∧ H.edgeSet.ncard > ε * m ^ (1 + α)
+
+T30
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ {V : Type*} (G : SimpleGraph V), G.chromaticNumber = ⊤ → ∀ N : ℕ, ∃ n ≥ N, 2 ^ n ∈ G.cycleLengths
+
+T31
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ (N : ℕ), ∃ (n : ℕ) (_ : N ≤ n) (G : SimpleGraph (Fin n)), ¬ G.IsRamseySizeLinear ∧ ∀ H : G.Subgraph, H < ⊤ → H.coe.IsRamseySizeLinear
+
+T32
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ (n : ℕ) (hn : 2 ≤ n) (T : SimpleGraph (Fin n)), T.IsTree → SimpleGraph.diagonalGraphRamsey T ≤ 2 * n - 2
+
+T33
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ K : ℝ, 0 < K → ∃ C : ℝ, 0 < C ∧ ∃ c : ℝ, 0 < c ∧ ∀ A : Finset ℤ, 2 ≤ A.card → ((A + A).card : ℝ) ≤ K * (A.card : ℝ) ^ 2 → c * (A.card : ℝ) ^ 2 / (Real.log (A.card : ℝ)) ^ C ≤ ((A * A).card : ℝ)
+
+T34
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬ ∀ (a : ℕ → ℕ), ((∀ n : ℕ, a n ≥ 1) ∧ Summable ((1 : ℝ) / a ·) → ∃ t ≥ (1 : ℝ), Irrational <| ∑' n, (1 : ℝ) / ((a n) + t))
+
+T35
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ α β : ℝ, liminf (fun n : ℕ ↦ (n : ℝ) * distToNearestInt (n * α) * distToNearestInt (n * β)) atTop = 0
+
+T36
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ k : ℕ, 2 ≤ k → ¬ OrdinalRamsey ((ω_ 1) ^ (2 : ℕ)) ((ω_ 1) ^ (2 : ℕ)) (k : Ordinal)
+
+T37
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ o : ℕ → ℝ, o =O[atTop] (1 : ℕ → ℝ) ∧ ∀ᶠ n in atTop, (1 - o n) * n ≤ maximalDistinctDistancesFrom n
+
+T38
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∃ h : ℕ → ℕ, Tendsto h atTop atTop ∧ ∀ n i j : ℕ, 1 ≤ i → i < j → j ≤ n / 2 → h n ≤ Nat.gcd (n.choose i) (n.choose j)
+
+T39
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ¬ ∃ (x : ℕ → GaussianInt) (C : ℤ), Function.Injective x ∧ ∀ n, Prime (x n) ∧ (x (n + 1) - x n).norm < C
+
+T40
+FORMAL (Lean 4, Mathlib; text after the theorem name): : ∀ f : ℕ → ℝ, (∀ n ≥ 1, f n = 1 ∨ f n = -1) ∧ (∀ m n, m.Coprime n → f (m * n) = f m * f n) ∧ f 1 = 1 → ∃ L, Tendsto (fun N ↦ (∑ n ∈ Finset.Icc 1 N, f n) / N) atTop (𝓝 L)

@@ -1,0 +1,362 @@
+[
+ {
+  "rid": "R01",
+  "truth": "mutant",
+  "original": ": ∀ {V : Type*} (G : SimpleGraph V), G.chromaticNumber = ⊤ → ¬ Summable (fun (a : G.oddCycleLengths) ↦ 1 / (a : ℝ))",
+  "mutated": ": ∀ {V : Type*} (G : SimpleGraph V), G.chromaticNumber = ⊤ → ¬ Summable (fun (a : G.oddCycleLengths) ↦ ((1 / a : ℕ) : ℝ))",
+  "pitfall": "nat division truncation",
+  "why_not_equivalent": "1/a computed in ℕ is 0 for every odd cycle length (all ≥3), so the function is identically 0 and always summable; the statement becomes false instead of expressing divergence of Σ1/a_i.",
+  "tid": "T26"
+ },
+ {
+  "rid": "R02",
+  "truth": "faithful",
+  "original": ": ∀ (N : ℕ), ∃ (n : ℕ) (_ : N ≤ n) (G : SimpleGraph (Fin n)), ¬ G.IsRamseySizeLinear ∧ ∀ H : G.Subgraph, H < ⊤ → H.coe.IsRamseySizeLinear",
+  "mutated": ": ∀ (N : ℕ), ∃ (n : ℕ) (_ : N ≤ n) (G : SimpleGraph (Fin n)), ¬ G.IsRamseySizeLinear ∧ ∀ H : G.Subgraph, H < ⊤ → H.coe.IsRamseySizeLinear",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T31"
+ },
+ {
+  "rid": "R03",
+  "truth": "mutant",
+  "original": ": ¬ ∀ d : ℕ, ∃ C : ℝ, ∀ (V : Type) [Fintype V] (G : SimpleGraph V), G.maxDegree ≤ d → (sizeRamsey G G : ℝ) ≤ C * Fintype.card V",
+  "mutated": ": ¬ ∃ C : ℝ, ∀ d : ℕ, ∀ (V : Type) [Fintype V] (G : SimpleGraph V), G.maxDegree ≤ d → (sizeRamsey G G : ℝ) ≤ C * Fintype.card V",
+  "pitfall": "quantifier order (∀∃ → ∃∀)",
+  "why_not_equivalent": "Original negates 'for each d there is C_d'; mutant only negates a single C uniform over all d, which is far weaker (trivially true, since sizeRamsey grows with d) and does not express that the ≪_d bound fails.",
+  "tid": "T03"
+ },
+ {
+  "rid": "R04",
+  "truth": "mutant",
+  "original": ": ∀ k : ℕ, 3 ≤ k → ¬ OrdinalRamsey ((ω_ 1) ^ (2 : ℕ)) ((ω_ 1) ^ (2 : ℕ)) (k : Ordinal)",
+  "mutated": ": ∀ k : ℕ, 2 ≤ k → ¬ OrdinalRamsey ((ω_ 1) ^ (2 : ℕ)) ((ω_ 1) ^ (2 : ℕ)) (k : Ordinal)",
+  "pitfall": "off-by-one range",
+  "why_not_equivalent": "Includes k=2, where the positive relation ω1^2 → (ω1^2,2)^2 holds (the docstring says so), so the mutant is false; it no longer matches the restricted k≥3 form.",
+  "tid": "T36"
+ },
+ {
+  "rid": "R05",
+  "truth": "faithful",
+  "original": "(c : ℕ → Bool) : ∃ x d, 0 < x ∧ x < d ∧ (∃ C, c x = C ∧ c (x + d) = C ∧ c (x + 2 * d) = C)",
+  "mutated": "(c : ℕ → Bool) : ∃ x d, 0 < x ∧ x < d ∧ (∃ C, c x = C ∧ c (x + d) = C ∧ c (x + 2 * d) = C)",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T27"
+ },
+ {
+  "rid": "R06",
+  "truth": "mutant",
+  "original": ": ∃ (a : ℕ → ℕ), StrictMono a ∧ Minimal (fun A : Set ℕ ↦ A.IsAsymptoticAddBasisOfOrder 2) (Set.range a) ∧ ∃ (c : ℝ), c ≠ 0 ∧ Tendsto (fun n ↦ (a n : ℝ) / n ^ 2) atTop (𝓝 c)",
+  "mutated": ": ∃ (a : ℕ → ℕ), StrictMono a ∧ Minimal (fun A : Set ℕ ↦ A.IsAsymptoticAddBasisOfOrder 2) (Set.range a) ∧ ∃ (c : ℝ), c ≠ 0 ∧ Tendsto (fun n ↦ ((a n / n ^ 2 : ℕ) : ℝ)) atTop (𝓝 c)",
+  "pitfall": "nat division truncation",
+  "why_not_equivalent": "a_n/n^2 is floored in ℕ; floor tends to c only for integer c (and a_n/n^2 → 1/2 would fail, while a_n/n^2 oscillating in [1,2) would pass). Different condition from lim a_k/k^2 = c≠0.",
+  "tid": "T05"
+ },
+ {
+  "rid": "R07",
+  "truth": "faithful",
+  "original": ": ¬ ∀ (V : Type*) [Fintype V] (G : SimpleGraph V), G.CliqueFree 5 → 4 ≤ G.cochromaticNumber → G.chromaticNumber ≤ G.cochromaticNumber + 2",
+  "mutated": ": ¬ ∀ (V : Type*) [Fintype V] (G : SimpleGraph V), G.CliqueFree 5 → 4 ≤ G.cochromaticNumber → G.chromaticNumber ≤ G.cochromaticNumber + 2",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T06"
+ },
+ {
+  "rid": "R08",
+  "truth": "faithful",
+  "original": ": ∀ {V : Type*} (G : SimpleGraph V), G.chromaticNumber = ⊤ → ∀ N : ℕ, ∃ n ≥ N, 2 ^ n ∈ G.cycleLengths",
+  "mutated": ": ∀ {V : Type*} (G : SimpleGraph V), G.chromaticNumber = ⊤ → ∀ N : ℕ, ∃ n ≥ N, 2 ^ n ∈ G.cycleLengths",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T30"
+ },
+ {
+  "rid": "R09",
+  "truth": "mutant",
+  "original": ": ∃ c : ℝ, 0 < c ∧ ∀ r : ℕ, 2 ≤ r → ∀ (n : ℕ) (H : Finset (Finset (Fin n))), H.IsUniform r → H.HasHypergraphChromaticNumber 3 → ∃ v : Fin n, (1 + c) ^ r ≤ (H.hypergraphDegree v : ℝ)",
+  "mutated": ": ∃ c : ℝ, 0 < c ∧ ∀ r : ℕ, 2 ≤ r → ∀ (n : ℕ) (H : Finset (Finset (Fin n))), H.IsUniform r → H.HasHypergraphChromaticNumber 3 → ∃ v : Fin n, 1 + c ^ r ≤ (H.hypergraphDegree v : ℝ)",
+  "pitfall": "wrong exponent placement",
+  "why_not_equivalent": "1+c^r ≤ 2 for c≤1, and every 3-chromatic r-uniform hypergraph (r≥2) has a vertex in ≥2 edges (pairwise-disjoint edges are 2-colourable), so the mutant is trivially true with c=1/2; it loses the exponential (1+c)^r growth.",
+  "tid": "T09"
+ },
+ {
+  "rid": "R10",
+  "truth": "mutant",
+  "original": ": ¬ ∃ C : ℕ, ∃ᶠ n : ℕ in atTop, ∃ H : UniformHypergraph (Fin n) 3, n - C ≤ (UniformHypergraph.cliqueSizes H).ncard",
+  "mutated": ": ¬ ∃ C : ℕ, ∀ᶠ n : ℕ in atTop, ∃ H : UniformHypergraph (Fin n) 3, n - C ≤ (UniformHypergraph.cliqueSizes H).ncard",
+  "pitfall": "eventually vs frequently",
+  "why_not_equivalent": "Original: for every C, for all large n no hypergraph has ≥ n−C clique sizes. Mutant: for every C, infinitely many n have no such hypergraph — strictly weaker, allows n−O(1) along an infinite subsequence.",
+  "tid": "T01"
+ },
+ {
+  "rid": "R11",
+  "truth": "faithful",
+  "original": ": { n | Nat.maxPrimeFac (n + 1) > Nat.maxPrimeFac n }.HasDensity (1/2)",
+  "mutated": ": { n | Nat.maxPrimeFac (n + 1) > Nat.maxPrimeFac n }.HasDensity (1/2)",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T14"
+ },
+ {
+  "rid": "R12",
+  "truth": "mutant",
+  "original": ": ¬ ∃ A B : Set ℕ, A.Infinite ∧ B.Infinite ∧ (A + B : Set ℕ) =ᶠ[Filter.cofinite] {n | n.Prime}",
+  "mutated": ": ¬ ∃ A B : Set ℕ, A.Infinite ∧ B.Nonempty ∧ (A + B : Set ℕ) =ᶠ[Filter.cofinite] {n | n.Prime}",
+  "pitfall": "Set.Infinite vs Set.Nonempty",
+  "why_not_equivalent": "With B={0}, A=primes gives A+B = primes, so the existence holds and the negated statement is false; the infinitude of B is essential.",
+  "tid": "T19"
+ },
+ {
+  "rid": "R13",
+  "truth": "faithful",
+  "original": ": ∀ S : Finset ℕ, (∀ p ∈ S, p.Prime) → {n : ℕ | ∀ p ∈ S, Even (padicValNat p (n !))}.Infinite",
+  "mutated": ": ∀ S : Finset ℕ, (∀ p ∈ S, p.Prime) → {n : ℕ | ∀ p ∈ S, Even (padicValNat p (n !))}.Infinite",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T16"
+ },
+ {
+  "rid": "R14",
+  "truth": "faithful",
+  "original": ": ∀ A : Set ℕ, A.Infinite → ∃ B : Set ℕ, B.HasDensity 0 ∧ ∀ᶠ n in atTop, n ∈ A + B",
+  "mutated": ": ∀ A : Set ℕ, A.Infinite → ∃ B : Set ℕ, B.HasDensity 0 ∧ ∀ᶠ n in atTop, n ∈ A + B",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T15"
+ },
+ {
+  "rid": "R15",
+  "truth": "faithful",
+  "original": ": ∃ C > (0 : ℝ), ∀ n : ℕ, (diagonalGraphRamsey (hypercube n) : ℝ) ≤ C * 2 ^ n",
+  "mutated": ": ∃ C > (0 : ℝ), ∀ n : ℕ, (diagonalGraphRamsey (hypercube n) : ℝ) ≤ C * 2 ^ n",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T18"
+ },
+ {
+  "rid": "R16",
+  "truth": "mutant",
+  "original": ": ∃ h : ℕ → ℕ, Tendsto h atTop atTop ∧ ∀ n i j : ℕ, 2 ≤ i → i < j → j ≤ n / 2 → h n ≤ Nat.gcd (n.choose i) (n.choose j)",
+  "mutated": ": ∃ h : ℕ → ℕ, Tendsto h atTop atTop ∧ ∀ n i j : ℕ, 1 ≤ i → i < j → j ≤ n / 2 → h n ≤ Nat.gcd (n.choose i) (n.choose j)",
+  "pitfall": "off-by-one range",
+  "why_not_equivalent": "Allows i=1: for n=2^k, j=2^(k-1), gcd(n, C(n,j)) = 2 (Kummer), so no h→∞ works; mutant is false, unlike the intended 2≤i statement.",
+  "tid": "T38"
+ },
+ {
+  "rid": "R17",
+  "truth": "faithful",
+  "original": ": ∀ᶠ n in atTop, ∀ G : SimpleGraph (Set.Icc 1 n), G.CliqueFree 3 → ∃ a b c : Set.Icc 1 n, a ≠ b ∧ (a : ℕ) + (b : ℕ) = c ∧ G.IsIndepSet {a, b, c}",
+  "mutated": ": ∀ᶠ n in atTop, ∀ G : SimpleGraph (Set.Icc 1 n), G.CliqueFree 3 → ∃ a b c : Set.Icc 1 n, a ≠ b ∧ (a : ℕ) + (b : ℕ) = c ∧ G.IsIndepSet {a, b, c}",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T13"
+ },
+ {
+  "rid": "R18",
+  "truth": "mutant",
+  "original": ": ∃ o : ℕ → ℝ, o =o[atTop] (1 : ℕ → ℝ) ∧ ∀ᶠ n in atTop, (1 - o n) * n ≤ maximalDistinctDistancesFrom n",
+  "mutated": ": ∃ o : ℕ → ℝ, o =O[atTop] (1 : ℕ → ℝ) ∧ ∀ᶠ n in atTop, (1 - o n) * n ≤ maximalDistinctDistancesFrom n",
+  "pitfall": "little-o vs big-O",
+  "why_not_equivalent": "With =O, o ≡ 1 is allowed, giving (1−1)n = 0 ≤ g(n) trivially; the statement no longer says g(n) ≥ (1−o(1))n.",
+  "tid": "T37"
+ },
+ {
+  "rid": "R19",
+  "truth": "faithful",
+  "original": ": ∃ c > 0, ∀ n : ℕ, ∀ (G : SimpleGraph (Fin (2 ^ n))) [DecidableRel G.Adj], (∀ v, (G.degree v : ℝ) > (1 - c) * 2 ^ n) → (SimpleGraph.hypercube n).IsContained G",
+  "mutated": ": ∃ c > 0, ∀ n : ℕ, ∀ (G : SimpleGraph (Fin (2 ^ n))) [DecidableRel G.Adj], (∀ v, (G.degree v : ℝ) > (1 - c) * 2 ^ n) → (SimpleGraph.hypercube n).IsContained G",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T07"
+ },
+ {
+  "rid": "R20",
+  "truth": "faithful",
+  "original": ": ∀ ε : ℝ, 0 < ε → ∃ C : ℝ, 0 < C ∧ ∀ P : Finset ℝ², ∑ u ∈ distanceSet P, (distanceMultiplicity P u : ℝ) ^ 2 ≤ C * (P.card : ℝ) ^ (3 + ε)",
+  "mutated": ": ∀ ε : ℝ, 0 < ε → ∃ C : ℝ, 0 < C ∧ ∀ P : Finset ℝ², ∑ u ∈ distanceSet P, (distanceMultiplicity P u : ℝ) ^ 2 ≤ C * (P.card : ℝ) ^ (3 + ε)",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T17"
+ },
+ {
+  "rid": "R21",
+  "truth": "mutant",
+  "original": "(A : Finset ℝ²) (hA : ConvexIndep (A : Set ℝ²)) : A.card / 2 ≤ distinctDistances A",
+  "mutated": "(A : Finset ℝ²) (hA : ConvexIndep (A : Set ℝ²)) : (A.card : ℝ) / 2 ≤ distinctDistances A",
+  "pitfall": "floor vs ceiling (cast moved)",
+  "why_not_equivalent": "Real division demands ≥ n/2, i.e. ⌈n/2⌉ distinct distances; a regular (2m+1)-gon has only m = ⌊n/2⌋ distances, so the mutant is false.",
+  "tid": "T12"
+ },
+ {
+  "rid": "R22",
+  "truth": "faithful",
+  "original": ": ¬ ∀ ε > (0 : ℝ), ε < 1 → ∀ α > (0 : ℝ), α < 1 → ∀ᶠ D in atTop, ∀ᶠ n in atTop, ∀ G : SimpleGraph (Fin n), G.edgeSet.ncard > (n : ℝ) ^ (1 + α) → ∃ (H : Subgraph G), letI m := H.verts.ncard IsBalanced H.coe D ∧ m > (n : ℝ) ^ (1 - α) ∧ H.edgeSet.ncard > ε * m ^ (1 + α)",
+  "mutated": ": ¬ ∀ ε > (0 : ℝ), ε < 1 → ∀ α > (0 : ℝ), α < 1 → ∀ᶠ D in atTop, ∀ᶠ n in atTop, ∀ G : SimpleGraph (Fin n), G.edgeSet.ncard > (n : ℝ) ^ (1 + α) → ∃ (H : Subgraph G), letI m := H.verts.ncard IsBalanced H.coe D ∧ m > (n : ℝ) ^ (1 - α) ∧ H.edgeSet.ncard > ε * m ^ (1 + α)",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T29"
+ },
+ {
+  "rid": "R23",
+  "truth": "mutant",
+  "original": ": ¬ ∀ (a : ℕ → ℕ), ((∀ n : ℕ, a n ≥ 1) ∧ Summable ((1 : ℝ) / a ·) → ∃ t ≥ (1 : ℕ), Irrational <| ∑' n, (1 : ℝ) / ((a n) + t))",
+  "mutated": ": ¬ ∀ (a : ℕ → ℕ), ((∀ n : ℕ, a n ≥ 1) ∧ Summable ((1 : ℝ) / a ·) → ∃ t ≥ (1 : ℝ), Irrational <| ∑' n, (1 : ℝ) / ((a n) + t))",
+  "pitfall": "wrong coercion target (ℕ → ℝ)",
+  "why_not_equivalent": "With real t, t ↦ Σ1/(a_n+t) is continuous and strictly decreasing, so it takes irrational values for some real t≥1; the inner claim is always true and the negated statement false. The problem is about integer shifts.",
+  "tid": "T34"
+ },
+ {
+  "rid": "R24",
+  "truth": "faithful",
+  "original": ": ∀ᵉ (p : ℕ) (hp_prime : p.Prime) (hp_nontrivial : p ≠ 2), ∃ q, q.Prime ∧ q < p ∧ orderOf (q : ZMod p) = p - 1",
+  "mutated": ": ∀ᵉ (p : ℕ) (hp_prime : p.Prime) (hp_nontrivial : p ≠ 2), ∃ q, q.Prime ∧ q < p ∧ orderOf (q : ZMod p) = p - 1",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T08"
+ },
+ {
+  "rid": "R25",
+  "truth": "mutant",
+  "original": ": ¬ ∀ f : ℝ → Fin 2, ∃ A : Set ℝ, ¬ A.Countable ∧ ∀ᵉ (a ∈ A) (b ∈ A) (c ∈ A) (d ∈ A), a ≠ b → c ≠ d → f (a + b) = f (c + d)",
+  "mutated": ": ¬ ∀ f : ℝ → Fin 2, ∃ A : Set ℝ, A.Infinite ∧ ∀ᵉ (a ∈ A) (b ∈ A) (c ∈ A) (d ∈ A), a ≠ b → c ≠ d → f (a + b) = f (c + d)",
+  "pitfall": "uncountable vs infinite",
+  "why_not_equivalent": "By Ramsey's theorem on pairs (colour {a,b} by f(a+b)) every 2-colouring has an infinite (countable) set with monochromatic pair sums, so the inner ∀ holds and the negation is false; Komjáth's result is about uncountable sets.",
+  "tid": "T11"
+ },
+ {
+  "rid": "R26",
+  "truth": "mutant",
+  "original": ": ∀ (C : ℝ) (hC : C > 0), ∃ K ≥ 3, Set.Infinite { T : ℕ × ℕ × ℕ | let (a, b, n) := T a > 0 ∧ b > 0 ∧ n > 0 ∧ (a : ℝ) + b > n + C * Real.log n ∧ ∀ p, p.Prime → p > K → padicValNat p ((n.factorial / (a.factorial * b.factorial) : ℚ).den) = 0 }",
+  "mutated": ": ∀ (C : ℝ) (hC : C > 0), ∃ K ≥ 3, Set.Infinite { T : ℕ × ℕ × ℕ | let (a, b, n) := T a > 0 ∧ b > 0 ∧ n > 0 ∧ (a : ℝ) + b > n + C * Real.log n ∧ ∀ p, p.Prime → p > K → padicValNat p (((n.factorial / (a.factorial * b.factorial) : ℕ) : ℚ).den) = 0 }",
+  "pitfall": "nat division truncation",
+  "why_not_equivalent": "Division done in ℕ then cast: denominator is always 1, so the prime condition is vacuous and a=b=n trivially gives infinitely many triples.",
+  "tid": "T20"
+ },
+ {
+  "rid": "R27",
+  "truth": "mutant",
+  "original": ": ¬ ∃ (n : ℕ) (a : ℕ → ℤ), let D := {d : ℕ | d ∣ n ∧ d > 1} (∀ x : ℤ, ∃ d ∈ D, x ≡ a d [ZMOD d]) ∧ (∀ d ∈ D, ∀ d' ∈ D, d ≠ d' → (∃ x : ℤ, x ≡ a d [ZMOD d] ∧ x ≡ a d' [ZMOD d']) → Nat.gcd d d' = 1)",
+  "mutated": ": ¬ ∃ (n : ℕ) (a : ℕ → ℤ), let D := {d : ℕ | d ∣ n ∧ d ≥ 1} (∀ x : ℤ, ∃ d ∈ D, x ≡ a d [ZMOD d]) ∧ (∀ d ∈ D, ∀ d' ∈ D, d ≠ d' → (∃ x : ℤ, x ≡ a d [ZMOD d] ∧ x ≡ a d' [ZMOD d']) → Nat.gcd d d' = 1)",
+  "pitfall": "off-by-one range",
+  "why_not_equivalent": "Including d=1 makes covering trivial (every x ≡ a_1 mod 1) and gcd(1,d')=1; n prime gives D={1,p} which works, so the negated statement becomes false.",
+  "tid": "T23"
+ },
+ {
+  "rid": "R28",
+  "truth": "mutant",
+  "original": ": ∀ {V : Type*} (G : SimpleGraph V) (k : ℕ), G.oddCycleLengths.Finite → G.oddCycleLengths.ncard ≤ k → G.chromaticNumber ≤ (2 * k + 2 : ℕ∞) ∧ (G.chromaticNumber = (2 * k + 2 : ℕ∞) ↔ (SimpleGraph.completeGraph (Fin (2 * k + 2))).IsContained G)",
+  "mutated": ": ∀ {V : Type*} (G : SimpleGraph V) (k : ℕ), G.oddCycleLengths.ncard ≤ k → G.chromaticNumber ≤ (2 * k + 2 : ℕ∞) ∧ (G.chromaticNumber = (2 * k + 2 : ℕ∞) ↔ (SimpleGraph.completeGraph (Fin (2 * k + 2))).IsContained G)",
+  "pitfall": "missing hypothesis (ncard junk value)",
+  "why_not_equivalent": "Without finiteness, ncard of an infinite set is 0 ≤ k; disjoint union of all odd cycles (χ=3) with k=0 violates χ ≤ 2, so the mutant is false.",
+  "tid": "T04"
+ },
+ {
+  "rid": "R29",
+  "truth": "faithful",
+  "original": ": ∀ (n : ℕ) (color : ℕ → Fin n) (m), ∃ (A : Finset ℕ), A.card ≥ m ∧ ∃ c, ∀ (S : Finset A), S.Nonempty → color (∑ x ∈ S, x) = c ∧ color (∏ x ∈ S, x) = c",
+  "mutated": ": ∀ (n : ℕ) (color : ℕ → Fin n) (m), ∃ (A : Finset ℕ), A.card ≥ m ∧ ∃ c, ∀ (S : Finset A), S.Nonempty → color (∑ x ∈ S, x) = c ∧ color (∏ x ∈ S, x) = c",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T21"
+ },
+ {
+  "rid": "R30",
+  "truth": "faithful",
+  "original": ": ¬ ∃ (x : ℕ → GaussianInt) (C : ℤ), Function.Injective x ∧ ∀ n, Prime (x n) ∧ (x (n + 1) - x n).norm < C",
+  "mutated": ": ¬ ∃ (x : ℕ → GaussianInt) (C : ℤ), Function.Injective x ∧ ∀ n, Prime (x n) ∧ (x (n + 1) - x n).norm < C",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T39"
+ },
+ {
+  "rid": "R31",
+  "truth": "faithful",
+  "original": ": ∀ x y : ℕ, x ≥ 1 → y ≥ 1 → (∀ n : ℕ, n ≥ 1 → { p : ℕ | p.Prime ∧ p ∣ x ^ n - 1 } = { p : ℕ | p.Prime ∧ p ∣ y ^ n - 1 }) → x = y",
+  "mutated": ": ∀ x y : ℕ, x ≥ 1 → y ≥ 1 → (∀ n : ℕ, n ≥ 1 → { p : ℕ | p.Prime ∧ p ∣ x ^ n - 1 } = { p : ℕ | p.Prime ∧ p ∣ y ^ n - 1 }) → x = y",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T22"
+ },
+ {
+  "rid": "R32",
+  "truth": "mutant",
+  "original": ": ∃ (f : ℕ → ℕ) (_ : Tendsto f atTop atTop), ∀ᶠ n in atTop, ∃ m, m.Composite ∧ n + f n < m ∧ m < n + m.minFac",
+  "mutated": ": ∃ (f : ℕ → ℕ) (_ : Tendsto f atTop atTop), ∀ᶠ n in atTop, ∃ m, m.Composite ∧ n + f n < m ∧ m < n + n.minFac",
+  "pitfall": "swapped argument (p(m) → p(n))",
+  "why_not_equivalent": "For even n, n.minFac = 2 forces m < n+2 while m > n+f(n) ≥ n+1 eventually: impossible. Mutant is false; it is a different problem.",
+  "tid": "T25"
+ },
+ {
+  "rid": "R33",
+  "truth": "mutant",
+  "original": ": ∀ (k : ℕ) (hk : 3 ≤ k), ∀ᶠ (m : ℕ) in atTop, ∀ (W : Type) [Fintype W] (H : SimpleGraph W) [DecidableRel H.Adj], (∀ v, 0 < H.degree v) → H.edgeSet.ncard = m → SimpleGraph.graphRamsey (SimpleGraph.cycleGraph k) H ≤ 2 * m + (k - 1) / 2",
+  "mutated": ": ∀ (k : ℕ) (hk : 3 ≤ k), ∀ᶠ (m : ℕ) in atTop, ∀ (W : Type) [Fintype W] (H : SimpleGraph W) [DecidableRel H.Adj], (∀ v, 0 < H.degree v) → H.edgeSet.ncard = m → SimpleGraph.graphRamsey (SimpleGraph.cycleGraph k) H ≤ 2 * m + k / 2",
+  "pitfall": "floor vs ceiling",
+  "why_not_equivalent": "k/2 = ⌈(k−1)/2⌉, one larger than ⌊(k−1)/2⌋ for every even k; the mutant is a strictly weaker bound in the even case (the one EFRS proved, where the bound is sharp).",
+  "tid": "T24"
+ },
+ {
+  "rid": "R34",
+  "truth": "mutant",
+  "original": ": ∀ K : ℝ, 0 < K → ∃ C : ℝ, 0 < C ∧ ∃ c : ℝ, 0 < c ∧ ∀ A : Finset ℤ, 2 ≤ A.card → ((A + A).card : ℝ) ≤ K * (A.card : ℝ) → c * (A.card : ℝ) ^ 2 / (Real.log (A.card : ℝ)) ^ C ≤ ((A * A).card : ℝ)",
+  "mutated": ": ∀ K : ℝ, 0 < K → ∃ C : ℝ, 0 < C ∧ ∃ c : ℝ, 0 < c ∧ ∀ A : Finset ℤ, 2 ≤ A.card → ((A + A).card : ℝ) ≤ K * (A.card : ℝ) ^ 2 → c * (A.card : ℝ) ^ 2 / (Real.log (A.card : ℝ)) ^ C ≤ ((A * A).card : ℝ)",
+  "pitfall": "wrong exponent (vacuous hypothesis)",
+  "why_not_equivalent": "|A+A| ≤ |A|^2 always, so the doubling hypothesis is vacuous for K≥1; the claim then fails for geometric progressions (|AA| = 2|A|−1), so the mutant is false.",
+  "tid": "T33"
+ },
+ {
+  "rid": "R35",
+  "truth": "faithful",
+  "original": ": ∀ (n : ℕ) (hn : 2 ≤ n) (T : SimpleGraph (Fin n)), T.IsTree → SimpleGraph.diagonalGraphRamsey T ≤ 2 * n - 2",
+  "mutated": ": ∀ (n : ℕ) (hn : 2 ≤ n) (T : SimpleGraph (Fin n)), T.IsTree → SimpleGraph.diagonalGraphRamsey T ≤ 2 * n - 2",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T32"
+ },
+ {
+  "rid": "R36",
+  "truth": "faithful",
+  "original": ": ∀ f : ℕ → ℝ, (∀ n ≥ 1, f n = 1 ∨ f n = -1) ∧ (∀ m n, m.Coprime n → f (m * n) = f m * f n) ∧ f 1 = 1 → ∃ L, Tendsto (fun N ↦ (∑ n ∈ Finset.Icc 1 N, f n) / N) atTop (𝓝 L)",
+  "mutated": ": ∀ f : ℕ → ℝ, (∀ n ≥ 1, f n = 1 ∨ f n = -1) ∧ (∀ m n, m.Coprime n → f (m * n) = f m * f n) ∧ f 1 = 1 → ∃ L, Tendsto (fun N ↦ (∑ n ∈ Finset.Icc 1 N, f n) / N) atTop (𝓝 L)",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T40"
+ },
+ {
+  "rid": "R37",
+  "truth": "mutant",
+  "original": ": ¬ ∀ (r q : ℕ) (H : SimpleGraph (Fin q)), 0 < r → H.IsBipartite → H.IsDegenerate r → Asymptotics.IsBigO atTop (fun n : ℕ => (extremalNumber n H : ℝ)) (fun n : ℕ => (n : ℝ) ^ ((2 : ℝ) - 1 / (r : ℝ)))",
+  "mutated": ": ¬ ∀ (r q : ℕ) (H : SimpleGraph (Fin q)), 0 < r → H.IsBipartite → H.IsDegenerate r → Asymptotics.IsBigO atTop (fun n : ℕ => (extremalNumber n H : ℝ)) (fun n : ℕ => (n : ℝ) ^ ((2 - 1 / r : ℕ) : ℝ))",
+  "pitfall": "nat division truncation",
+  "why_not_equivalent": "In ℕ, 1/r = 0 for r≥2 so the exponent is 2 and ex(n;H)=O(n^2) trivially; r=1 gives forests with ex=O(n). The ∀ becomes true and the negation false.",
+  "tid": "T28"
+ },
+ {
+  "rid": "R38",
+  "truth": "faithful",
+  "original": ": (∀ (A : Set ℕ), 0 ∉ A → 0 < A.upperDensity → ∃ (S : Finset ℕ), ↑S ⊆ A ∧ ∑ n ∈ S, (1 / n : ℚ) = 1)",
+  "mutated": ": (∀ (A : Set ℕ), 0 ∉ A → 0 < A.upperDensity → ∃ (S : Finset ℕ), ↑S ⊆ A ∧ ∑ n ∈ S, (1 / n : ℚ) = 1)",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T02"
+ },
+ {
+  "rid": "R39",
+  "truth": "mutant",
+  "original": ": ∀ (k : ℕ), ∀ (hk : 3 ≤ k), ∃ (A : Finset (Fin 2 → ℝ)), ∀ (C : A → Fin 2), ∃ (S : Finset (Fin 2 → ℝ)), ∃ (hSA : S ⊆ A), Collinear ℝ (S : Set (Fin 2 → ℝ)) ∧ S.card ≥ k ∧ (∀ y ∈ A, y ∈ affineSpan ℝ (S : Set (Fin 2 → ℝ)) → y ∈ S) ∧ ∃ c, ∀ x (hx : x ∈ S), C ⟨x, hSA hx⟩ = c",
+  "mutated": ": ∀ (k : ℕ), ∀ (hk : 3 ≤ k), ∃ (A : Finset (Fin 2 → ℝ)), ∀ (C : A → Fin 2), ∃ (S : Finset (Fin 2 → ℝ)), ∃ (hSA : S ⊆ A), Collinear ℝ (S : Set (Fin 2 → ℝ)) ∧ S.card ≥ k ∧ (∀ y ∈ A, y ∈ S → y ∈ affineSpan ℝ (S : Set (Fin 2 → ℝ))) ∧ ∃ c, ∀ x (hx : x ∈ S), C ⟨x, hSA hx⟩ = c",
+  "pitfall": "reversed implication (lost maximality)",
+  "why_not_equivalent": "The reversed clause is trivially true, so only 'k monochromatic collinear points' is needed; any A containing 2k−1 collinear points works by pigeonhole. Requirement that all of A on the line is monochromatic is lost.",
+  "tid": "T10"
+ },
+ {
+  "rid": "R40",
+  "truth": "faithful",
+  "original": ": ∀ α β : ℝ, liminf (fun n : ℕ ↦ (n : ℝ) * distToNearestInt (n * α) * distToNearestInt (n * β)) atTop = 0",
+  "mutated": ": ∀ α β : ℝ, liminf (fun n : ℕ ↦ (n : ℝ) * distToNearestInt (n * α) * distToNearestInt (n * β)) atTop = 0",
+  "pitfall": "",
+  "why_not_equivalent": "",
+  "tid": "T35"
+ }
+]
