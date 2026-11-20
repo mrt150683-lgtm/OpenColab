@@ -9,7 +9,7 @@
 }
 -->
 
-**Outcome: inconclusive under the proposal's own rule, although both numeric thresholds were met.** The rule requires at least 40 usable items and the benchmark has 39. There are also serious caveats, set out below. The benchmark has 39 Erdős problems where an AI contribution is documented: 21 had their answer in earlier literature and 18 were genuinely new. A multi-search agent pipeline named the correct prior paper for **15 of 21 (71%)** of the first group. It flagged **0 of 18** genuinely new results. The one-search baseline found 2 to 4 of 21.
+**Outcome after round 2: the decision rule is met, but only just, and the result is still exploratory.** On an extended, double-labelled benchmark of 54 items, the pipeline named the correct earlier paper for **21 of 30 (70%)** problems whose answer was already in the literature. It wrongly flagged **0 of 24** genuinely new results. The threshold is 70%, so one fewer hit would fail it. Two controls did much worse. The no-restatement control found 8 of 30, with 1 false flag, and the one-search baseline found 2 of 20 on the items it covered. That gap suggests that most of the pipeline's advantage comes from translating a problem into standard terminology and from the model's background knowledge, not from searching more. Every labeller and searcher was from the same model family, and the sandbox blocked the open indexes. *Round 1, below, was inconclusive on its own, because it had 39 items and the rule needs 40.*
 
 The thresholds were 70% detection and at most 20% false flags. However, the open indexes named in the proposal were unreachable from the sandbox and were replaced by general web search, and the pipeline agents did not keep to their search budget. Most hits probably came from the model's own memory of classical papers rather than retrieval. The labels were also made by an agent from the same model family. Treat this as evidence that the idea is worth a proper run, not as a verified finding.
 
@@ -63,11 +63,38 @@ Several of these are exactly the hard case the proposal is about: a result burie
 
 **Leaks.** Searchers reported many 2025–2026 papers that discuss the AI results. Examples are arXiv 2604.06609, 2605.00301 and 2603.29961, plus an erdosproblems mirror on a domain that was not blocked. Their verdicts say these were not counted. The block list should add mirrors such as erdosproblems.ai.
 
+## Round 2: extended benchmark and no-restatement control
+
+The protocol for this round was registered before any round-2 search: see [`round2/PROTOCOL-v2.md`](round2/PROTOCOL-v2.md). The key's SHA-256 is `94a43310…`.
+
+- **Second labeller.** An independent agent checked all 39 round-1 items against Tao's wiki and erdosproblems.com. It agreed with 37 labels and was unsure of 2 (281, 1091). It also found one wrong paraphrase (1217) and corrected several citations. Those 3 items were dropped. The agent added 18 new items (10 PRIOR, 8 NEW), giving **54 items: 30 PRIOR and 24 NEW**. The full check is in `round2/label_check.json`.
+- **Pipeline.** The 36 kept items reuse their round-1 verdicts unchanged. The 18 new items got a fresh blind run, which used at least 3 searches per statement this time.
+- **No-restatement control.** For all 54 items, the agent used up to 4 searches built only from the statement's own words. It could read pages but not name papers from memory: a citation had to appear in something it retrieved. This separates "search harder" from "know what to search for".
+
+| Condition | Items | PRIOR found | NEW wrongly flagged |
+| --- | --- | --- | --- |
+| Pipeline | 54 | **21 / 30 (70%)** | **0 / 24** |
+| No-restatement control | 54 | 8 / 30 (27%) | 1 / 24 |
+| Pipeline | 36 (round-1 items kept) | 15 / 20 (75%) | 0 / 16 |
+| One-search baseline | 36 | 2 / 20 (10%) | 0 / 16 |
+| No-restatement control | 36 | 6 / 20 (30%) | 0 / 16 |
+| Pipeline, S47 removed (sensitivity) | 53 | 21 / 29 (72%) | 0 / 24 |
+
+Run `python round2/score_v2.py` to reproduce every row.
+
+**Things a reviewer should know:**
+
+- **Agents shared a tool limit.** The agents shared an hourly page-fetch limit, and it ran out partway through round 2. Later verdicts rest on search snippets only. Most no-restatement statements got 1–3 searches rather than 4.
+- **S23 was excluded from the control.** The control agent itself reported that its S23 hit came from a query naming authors it had not yet seen in any result, which breaks the rule. That hit is not counted.
+- **S47 conflicts with the search rule.** Its labelled prior work is a 2025 arXiv paper, but searchers were told to count only work from before 2025. The pipeline correctly found nothing earlier. The sensitivity row shows the result without it.
+- **S45 rests on a deduction.** The pipeline's hit cites the labelled paper (Rödl 1982), but the agent rated it at 50% confidence and derived the answer itself rather than reading it.
+- **New misses.** The pipeline missed 4 of the 10 new PRIOR items: Konieczny 2016, Vose 1984, Lazebnik–Ustimenko–Woldar 1994, and the out-of-window S47.
+
 ## Interpretation and limitations
 
 - **Memory versus retrieval.** The pipeline agents often "recognised" a classical result and confirmed it with one search. That is what a careful expert does, but it cannot be separated from training-data knowledge of the same episodes. The searchers may have seen discussion of these cases during training. A fair test needs problems whose AI episode postdates the model's training cutoff, or a model with a known cutoff.
 - **Selection bias.** PRIOR items are mostly classical, well-cited problems, which are easier to find. The NEW items are newer and more obscure.
-- **No ablation.** The planned "pipeline without restatement" control was not run. The gap between the pipeline and the baseline mixes the effect of restating, more searches, reading pages and background knowledge.
+- **The ablation came in round 2.** The no-restatement control (round 2, above) found 27% against the pipeline's 70%. Restating the problem in standard terminology, together with the model's background knowledge, accounts for most of the gap. The two cannot be separated without a model that has a known training cutoff.
 - **Same model family throughout.** Labeller and searchers were the same family. Label errors would likely be correlated with search errors.
 - **Index deviation.** The arXiv, OpenAlex and zbMATH Open APIs were blocked by the sandbox proxy, so general web search stood in for open indexes.
 

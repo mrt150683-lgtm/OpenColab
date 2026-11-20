@@ -1,0 +1,327 @@
+[
+ {
+  "sid": "S01",
+  "queries": [
+   "ordinary lines no k collinear r points all connecting lines ordinary o(n^2)",
+   "no k collinear points ordinary lines r points every connecting line ordinary threshold theorem paper"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 30,
+  "leak": "arXiv 2604.06609 (2026, 'Short proofs in combinatorics, probability and number theory II') appeared; ignored as post-2025"
+ },
+ {
+  "sid": "S02",
+  "queries": [
+   "φ(m)=n largest smallest m max f_max(n)/f_min(n) asymptotic Euler totient",
+   "number of m with φ(m)=n largest and smallest solution ratio maximum n ≤ x",
+   "inverse totient largest smallest preimage ratio φ(m)=n f_max f_min Erdős"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 30,
+  "leak": "sites.pitt.edu 'OpenAI Mathematics Searchable Preprint Catalogue' appeared in results (AI-related); ignored"
+ },
+ {
+  "sid": "S03",
+  "queries": [
+   "liminf a_n^{1/2^n} > 1 sum 1/(a_n a_{n+1}) irrational"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 30,
+  "leak": "arXiv 2601.21442 (2026, 'Irrationality of rapidly converging series: A problem of Erdős and Graham') appeared; ignored as post-2025"
+ },
+ {
+  "sid": "S04",
+  "queries": [
+   "convex polygon vertices distance occurs f(u_i) times sum f(u_i)^2 n^3",
+   "vertices of convex polygon distances multiplicities sum of squares f(u)^2 ≪ n^3 proof"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 30,
+  "leak": "arXiv 2505.04283 (2025, 'On multiplicities of interpoint distances') appeared; ignored as 2025"
+ },
+ {
+  "sid": "S05",
+  "queries": [
+   "additive function limsup f(p^k)/log p^k = ∞ limsup (f(n+1)-f(n))/log n = ∞",
+   "additive arithmetic function f(n+1) − f(n) log n limsup infinite f(p^k)/log p^k unbounded theorem"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 25,
+  "leak": null
+ },
+ {
+  "sid": "S06",
+  "queries": [
+   "every sufficiently large integer n = x^2 + y^2 − z^2 with max(x^2,y^2,z^2) ≤ n"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 40,
+  "leak": "arXiv 2603.18087 (Chojecki, 2026, 'Bounded Representations by x^2+y^2-z^2', claims to settle Erdős Problem 1148); ignored as post-2025"
+ },
+ {
+  "sid": "S07",
+  "queries": [
+   "integers of the form n + φ(n) positive lower density",
+   "n + φ(n) values density Euler totient lower density theorem"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 25,
+  "leak": null
+ },
+ {
+  "sid": "S08",
+  "queries": [
+   "polynomial n nonzero coefficients discrepancy of root arguments (n log M)^{1/2} |a_0| |a_d|",
+   "roots of polynomial with n nonzero coefficients angular discrepancy bound sqrt(n log M) lacunary"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 25,
+  "leak": null
+ },
+ {
+  "sid": "S09",
+  "queries": [
+   "graph at least ex(n;K_r) edges vertex of degree d neighbourhood spans ex(d;K_{r-1}) edges",
+   "Turán number ex(n;K_r) edges vertex degree d ≫ n neighbourhood ex(d;K_{r-1}) edges r ≥ 4"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 25,
+  "leak": null
+ },
+ {
+  "sid": "S10",
+  "queries": [
+   "n = p^2+p+1 pairwise balanced design linear space t > n then t ≥ n + p",
+   "linear space n = p^2+p+1 points more than n lines at least n + p lines theorem",
+   "every pair lies in exactly one A_i, n = p^2+p+1 subsets t > n implies t ≥ n + p proof"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 30,
+  "leak": null
+ },
+ {
+  "sid": "S11",
+  "queries": [
+   "infinitely many n such that n − k^2 is prime for every k with gcd(n,k)=1 and k^2 < n",
+   "n − k^2 prime for all k coprime to n k^2 < n infinitely many n",
+   "arXiv 2002.02292 n − k^2 prime"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 25,
+  "leak": null
+ },
+ {
+  "sid": "S12",
+  "queries": [
+   "bad interval largest prime factor of product of integers in [u,v] appears to a power > 1 P(n)^2 | n",
+   "interval [u,v] largest prime factor product of integers divides to power greater than one count n ≤ x P(n)^2 divides n"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 25,
+  "leak": "arXiv 2603.27990 (2026, 'Products of consecutive integers with unusual anatomy') appeared; ignored as post-2025"
+ },
+ {
+  "sid": "S13",
+  "queries": [
+   "multiset of sums of k distinct elements of A uniquely determine A complex numbers k > 2"
+  ],
+  "verdict": "PRIOR",
+  "citation": "B. Gordon, A. S. Fraenkel, E. G. Straus, 'On the determination of sets by the sets of sums of a certain order', Pacific J. Math. 12 (1962) 187-196: for each s>2 only finitely many exceptional n (valid over fields of characteristic zero, incl. complex numbers); surveyed in arXiv 1709.06046 (Amer. Math. Monthly 126 (2019))",
+  "where_found": "https://arxiv.org/pdf/1709.06046",
+  "confidence": 85,
+  "leak": null
+ },
+ {
+  "sid": "S14",
+  "queries": [
+   "every prime p ≤ (2+ε) log n divides (n+1)(n+2)...(n+⌊log n⌋) infinitely many n",
+   "primes p ≤ (2+ε) log n divide product (n+1)...(n+log n) infinitely many n paper"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 25,
+  "leak": null
+ },
+ {
+  "sid": "S15",
+  "queries": [
+   "α1(G) + τ1(G) ≤ n^2/4 edge set at most one edge of every triangle, edge set meeting every triangle"
+  ],
+  "verdict": "PRIOR",
+  "citation": "S. Norin and Y. R. Sun, 'Triangle-independent sets vs. cuts' (arXiv 1602.04370, 2016) proved alpha1(G)+tau1(G) <= n^2/4 (Erdős-Gallai-Tuza conjecture); stated in G. J. Puleo, 'Graphs with alpha_1 and tau_1 both large' (arXiv 1705.04745, 2017)",
+  "where_found": "https://arxiv.org/abs/1705.04745",
+  "confidence": 85,
+  "leak": "arXiv 2608.15561 (2026) appeared; ignored"
+ },
+ {
+  "sid": "S16",
+  "queries": [
+   "set A density zero exists B with A ⊆ B+B |B ∩ {1,...,N}| = o(N^{1/2})",
+   "A ⊆ B+B density zero B thin o(N^{1/2}) additive complement sumset cover"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 25,
+  "leak": null
+ },
+ {
+  "sid": "S17",
+  "queries": [
+   "primitive set A ⊆ [x,∞) sum 1/(a log a) < 1 + o(1)"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 35,
+  "leak": "alphaxiv 2605.00301 (2026, 'Primitive sets and von Mangoldt chains: Erdős Problem #1196') and ulam.ai note on Erdős #1196 appeared; ignored (post-2025 / AI site). Lichtman 2022 (primitive set conjecture) appeared but does not give the tail 1+o(1) statement"
+ },
+ {
+  "sid": "S18",
+  "queries": [
+   "monic polynomial lemniscate {z : |f(z)| ≤ 1} orthogonal projection onto line length at most 2",
+   "lemniscate |f(z)| ≤ 1 projection onto some line measure at most 2 monic polynomial proof"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 30,
+  "leak": "several 2026 arXiv lemniscate papers (2606.19178, 2606.24875, 2610.00240, 2611.12830) appeared; ignored"
+ },
+ {
+  "sid": "S19",
+  "queries": [
+   "products of central binomial coefficients prod C(2m_i,m_i) = prod C(2n_j,n_j) distinct finitely many solutions",
+   "product of central binomial coefficients equal distinct indices equation finitely many solutions theorem"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 25,
+  "leak": null
+ },
+ {
+  "sid": "S20",
+  "queries": [
+   "sufficiently large n = 2^k + m Ω(m) < log log m",
+   "2^k + m with Ω(m) < log log m every large integer representation paper"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 25,
+  "leak": null
+ },
+ {
+  "sid": "S21",
+  "queries": [
+   "2-colouring positive integers monochromatic 3-term arithmetic progression x, x+d, x+2d with d > x"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 30,
+  "leak": null
+ },
+ {
+  "sid": "S22",
+  "queries": [
+   "transcendental entire function path C tending to infinity integral |f(z)|^{-λ} |dz| finite every λ > 0",
+   "Lewis Rossi Weitsman entire function path tending to infinity integral |f|^{-λ} finite"
+  ],
+  "verdict": "PRIOR",
+  "citation": "J. L. Lewis, J. Rossi, A. Weitsman (pre-2021 paper, cited as [14] in J. K. Langley, 'Complex flows, escape to infinity and a question of Rubel', arXiv 2105.05452, 2021): for any transcendental entire f there is a path to infinity with integral of |f|^{-λ}|dz| finite for all λ>0",
+  "where_found": "https://arxiv.org/html/2105.05452",
+  "confidence": 70,
+  "leak": null
+ },
+ {
+  "sid": "S23",
+  "queries": [
+   "Lebesgue constant Lagrange interpolation minimal node set local maxima equal characterization",
+   "Lebesgue constant optimal nodes equal local maxima conjecture proved Kilgore de Boor Pinkus"
+  ],
+  "verdict": "PRIOR",
+  "citation": "C. de Boor and A. Pinkus, 'Proof of the conjectures of Bernstein and Erdős concerning the optimal nodes for polynomial interpolation', J. Approx. Theory 24 (1978) 289-303 (with T. A. Kilgore's companion work)",
+  "where_found": "https://pinkus.net.technion.ac.il/files/2021/02/conj.pdf",
+  "confidence": 80,
+  "leak": null
+ },
+ {
+  "sid": "S24",
+  "queries": [
+   "k primes p_1<...<p_k<n^{1−ε} (p_i−1)/2 residue classes removed at most εn integers survive sieve",
+   "sieve (p−1)/2 residue classes removed each prime p < n^{1−ε} at most εn survive large sieve theorem",
+   "\"On a variant of the large sieve\" Green abstract Erdős question residue classes k primes",
+   "Green \"variant of the large sieve\" (p-1)/2 residue classes Erdős question answer"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 30,
+  "leak": "arXiv 2609.08528 (2026) appeared; ignored. B. Green 'On a variant of the large sieve' (arXiv 0807.5037, 2008) appeared but content could not be checked (fetch budget exhausted)"
+ },
+ {
+  "sid": "S26",
+  "queries": [
+   "graph chromatic number aleph_1 edge e cycle of length n through e all sufficiently large n",
+   "chromatic number aleph_1 graph contains cycles of all sufficiently large lengths through an edge",
+   "Thomassen \"Cycles in graphs of uncountable chromatic number\" edge cycle all lengths sufficiently large"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 40,
+  "leak": "arXiv 2607.15501 (2026) appeared; ignored. C. Thomassen, 'Cycles in graphs of uncountable chromatic number', Combinatorica (1983) appeared but its content could not be verified (fetch budget exhausted)"
+ },
+ {
+  "sid": "S28",
+  "queries": [
+   "sequence x_j in (0,1) A_k = limsup |sum_{j≤n} e(k x_j)| limsup_k A_k = ∞ A_k = o(k)",
+   "exponential sums sum e(k x_j) bounded partial sums every k sequence in (0,1) limsup A_k infinity paper",
+   "\"A note on bounded exponential sums\" 1912.08626 abstract limsup k x_j"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 25,
+  "leak": null
+ },
+ {
+  "sid": "S29",
+  "queries": [
+   "A+A positive upper density split A into A_1, A_2 both A_i+A_i positive upper density basis of order 2 bounded gaps",
+   "basis of order 2 cannot be split into two parts A_1+A_1 A_2+A_2 bounded gaps positive upper density partition sumset"
+  ],
+  "verdict": "NO_PRIOR_FOUND",
+  "citation": null,
+  "where_found": null,
+  "confidence": 25,
+  "leak": "arXiv 2603.29961 (2026, 'Short proofs in combinatorics and number theory') appeared; ignored"
+ }
+]
