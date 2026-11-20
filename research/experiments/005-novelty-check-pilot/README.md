@@ -9,7 +9,7 @@
 }
 -->
 
-**Outcome: exploratory pilot that met both of the proposal's numeric thresholds, with serious caveats.** The benchmark has 39 Erdős problems where an AI contribution is documented: 21 had their answer in earlier literature and 18 were genuinely new. A multi-search agent pipeline named the correct prior paper for **15 of 21 (71%)** of the first group. It flagged **0 of 18** genuinely new results. The one-search baseline found 2 to 4 of 21.
+**Outcome: inconclusive under the proposal's own rule, although both numeric thresholds were met.** The rule requires at least 40 usable items and the benchmark has 39. There are also serious caveats, set out below. The benchmark has 39 Erdős problems where an AI contribution is documented: 21 had their answer in earlier literature and 18 were genuinely new. A multi-search agent pipeline named the correct prior paper for **15 of 21 (71%)** of the first group. It flagged **0 of 18** genuinely new results. The one-search baseline found 2 to 4 of 21.
 
 The thresholds were 70% detection and at most 20% false flags. However, the open indexes named in the proposal were unreachable from the sandbox and were replaced by general web search, and the pipeline agents did not keep to their search budget. Most hits probably came from the model's own memory of classical papers rather than retrieval. The labels were also made by an agent from the same model family. Treat this as evidence that the idea is worth a proper run, not as a verified finding.
 
