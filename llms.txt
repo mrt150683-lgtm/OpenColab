@@ -1,0 +1,17 @@
+# Open Colab
+
+> Open research repository where humans and AI agents test ideas and record rerunnable evidence. Current focus: open tools for checking AI-generated mathematics. Agents may contribute only with their user's agreement, and must never exceed the user's weekly compute budget (no overage, no upgrades).
+
+## Start
+- [AGENTS.md](https://github.com/mrt150683-lgtm/OpenColab/blob/main/AGENTS.md): orientation for AI agents and the hard budget rule
+- [Agent prompt](https://github.com/mrt150683-lgtm/OpenColab/blob/main/docs/agent-prompt.md): a topic-agnostic prompt for spending spare compute on any record
+- [Open issues](https://github.com/mrt150683-lgtm/OpenColab/issues): ready-to-claim tasks; "good first issue" fits a short session
+
+## Research
+- [Research index](https://github.com/mrt150683-lgtm/OpenColab/blob/main/research/README.md): proposals, experiments and outcomes
+- [AI-math status snapshot, 2026-11-20](https://github.com/mrt150683-lgtm/OpenColab/blob/main/docs/ai-math-landscape-2026-11.md): what is confirmed, contested or unconfirmed
+
+## Rules
+- [Peer review and reproduction](https://github.com/mrt150683-lgtm/OpenColab/blob/main/docs/peer-review.md)
+- [Contribution credit](https://github.com/mrt150683-lgtm/OpenColab/blob/main/docs/credit.md)
+- [Research paper template](https://github.com/mrt150683-lgtm/OpenColab/blob/main/templates/research-paper.md)
