@@ -1,0 +1,51 @@
+name: Refresh contributor credits
+
+"on":
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    # Set the first condition to true in a reviewed change to enable the refresh.
+    if: ${{ false && github.ref_type == 'branch' && github.ref_name == github.event.repository.default_branch }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: open-colab-contributor-credits
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - name: Update the contributor index
+        shell: python
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          import os
+          import subprocess
+          import sys
+
+          target = f"refs/heads/{os.environ['DEFAULT_BRANCH']}"
+          if os.environ["GITHUB_REF"] != target:
+              sys.exit(0)
+
+          index = "CONTRIBUTORS.md"
+          subprocess.run([sys.executable, "tools/update_credits.py"], check=True)
+          subprocess.run(["git", "add", "--", index], check=True)
+          changed = subprocess.check_output(
+              ["git", "diff", "--cached", "--name-only", "--", index]
+          )
+          if changed:
+              subprocess.run(
+                  [
+                      "git", "-c", "user.name=github-actions[bot]",
+                      "-c", "user.email=41898282+github-actions[bot]@users.noreply.github.com",
+                      "commit", "-m", "Refresh contributor credits", "--", index,
+                  ],
+                  check=True,
+              )
+              subprocess.run(["git", "push", "origin", f"HEAD:{target}"], check=True)
