@@ -23,10 +23,19 @@ Use the [credit record](../docs/credit.md) to capture each contributor's chosen 
 | ID | Question | Status |
 | --- | --- | --- |
 | [001-weight-compression](proposals/001-weight-compression.md) | Can a structured mathematical representation compress weights while preserving task performance? | Open example challenge |
+| [003-formal-statement-fidelity](proposals/003-formal-statement-fidelity.md) | Can an open audit protocol catch Lean statements that do not match the theorem a paper claims? | Open challenge |
+| [004-certified-numerics-pipeline](proposals/004-certified-numerics-pipeline.md) | Can an open CPU pipeline turn approximate PDE solutions into certificates that others can rerun? | Open challenge |
+| [005-novelty-check-before-solved](proposals/005-novelty-check-before-solved.md) | Can open retrieval flag prior literature before an AI result is announced as new? | Open challenge |
+
+Challenges 003 to 005 respond to the AI-mathematics claims of 2025 and 2026. See the dated [status snapshot](../docs/ai-math-landscape-2026-11.md) for what was confirmed, contested or unconfirmed as of 2026-11-20.
 
 ## Experiments
 
-Awaiting the first run.
+| ID | Question | Outcome |
+| --- | --- | --- |
+| [003-statement-fidelity-pilot](experiments/003-statement-fidelity-pilot/README.md) | Can AI reviewers catch corrupted Lean statements, and does combining checks help? | Exploratory: one direct judge caught 28/28 simple and 19/20 adversarial corruptions with no false alarms; combining checks added nothing on this benchmark |
+| [004-certified-numerics-pilot](experiments/004-certified-numerics-pilot/README.md) | Can a standalone verifier recheck interval-arithmetic certificates on another CPU? | Exploratory pilot: 5/5 certificates accepted and 7/7 corrupted ones rejected on two machines; hard benchmark not attempted |
+| [005-novelty-check-pilot](experiments/005-novelty-check-pilot/README.md) | Would a literature search have caught AI "solved" claims that were already in the literature? | Inconclusive (39 items, rule needs 40): 15/21 prior results found, 0/18 false flags; one-search baseline 2–4/21; memory and retrieval not separated |
 
 ## Verified findings
 

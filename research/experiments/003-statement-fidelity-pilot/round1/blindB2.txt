@@ -1,0 +1,239 @@
+Q01
+INFORMAL: Erdős Problem 855 (Segal's conjecture): $\pi(x + y) \le \pi(x) + \pi(y)$ for all sufficiently large $x, y$, i.e. for all $x, y \ge N$ for some $N$.
+TRANSLATION OF THE FORMAL STATEMENT: For all pairs (x,y) of natural numbers with both x and y sufficiently large (eventually in the product filter atTop × atTop), π(x+y) ≤ π(x) + π(y), where π is the prime-counting function.
+
+Q02
+INFORMAL: If there is a finite projective plane of order $n$ then must $n$ be a prime power?
+TRANSLATION OF THE FORMAL STATEMENT: For all types P and L, with a membership relation of P in L, P finite and L finite, and every projective plane structure pp on (P, L), the order of pp is a prime power.
+
+Q03
+INFORMAL: Let $t>1$ be a rational number. Is $\sum_{n=1}^\infty\frac{1}{t^n-1}=\sum_{n=1}^\infty \frac{\tau(n)}{t^n}$ irrational, where $\tau(n)$ counts the divisors of $n$? A conjecture of Chowla.
+TRANSLATION OF THE FORMAL STATEMENT: There exists a rational number t such that: if t > 1, then the real number ∑_{n ∈ ℕ+} 1/(t^n − 1) is irrational.
+
+Q04
+INFORMAL: Let $n=p^2+p+1$ for some prime power $p$, and let $A_1,\ldots,A_t\subseteq \{1,\ldots,n\}$ be a block design (so that every pair $x,y\in \{1,\ldots,n\}$ is contained in exactly one $A_i$). Is it true that if $t>n$ then $t\geq n+p$? This is true, and was proved by Erdős, Fowler, Sós, and Wilson [EFSW85].
+TRANSLATION OF THE FORMAL STATEMENT: It is not the case that: for every natural p that is a prime power, and every family H of subsets of Fin(p^2+p+1) that is a pairwise balanced design, if p^2+p+1 < |H|, then p^2+p+1+p ≤ |H|.
+
+Q05
+INFORMAL: Let $A$ be the set of powerful numbers. Is is true that $1_A\ast 1_A(n)=n^{o(1)}$ for every $n$?
+TRANSLATION OF THE FORMAL STATEMENT: There exists a function o: ℕ → ℝ with o(n) = o(1) as n → ∞ (little-o of the constant function 1 at atTop) such that for all sufficiently large n, sumRep(Powerful, n) ≤ n^{o(n)}, where sumRep(Powerful, n) is the number of representations of n as a sum of elements of the set of powerful numbers (as defined by sumRep).
+
+Q06
+INFORMAL: There exists some constant $c>0$ such that $$R(C_4,K_n) \ll n^{2-c}.$$ The prize of $100 is offered in [Er78] for a proof or disproof. This problem is #17 in Ramsey Theory in the graphs problem collection.
+TRANSLATION OF THE FORMAL STATEMENT: There do not exist real numbers c > 0 and C such that for all natural n ≥ 1, the graph Ramsey number R(C_4, K_n) (with C_4 the 4-cycle and K_n the complete graph on n vertices), as a real number, is ≤ C · n^{2−c}.
+
+Q07
+INFORMAL: Let $F_1=F_2=1$ and $F_{n+1} = F_n + F_{n-1}$ be the Fibonacci sequence. Let $n_1 < n_2 < \dots$ be an infinite sequence with $\frac{n_{k+1}}{n_k} \ge c > 1$. Must $\sum_k \frac 1 {F_{n_k}}$ be irrational?
+TRANSLATION OF THE FORMAL STATEMENT: For every sequence n: ℕ → ℕ and every rational c > 1: if n is strictly increasing and for all k, c ≤ n(k+1)/n(k) (as rationals), then the real number ∑_{k} 1/F_{n(k)} is irrational, where F_m is the m-th Fibonacci number.
+
+Q08
+INFORMAL: Let $Q_n$ be the $n$-dimensional hypercube graph (so that $Q_n$ has $2^n$ vertices and $n2^{n-1}$ edges). Is it true that every subgraph of $Q_n$ with $$\geq \left(\frac{1}{2}+o(1)\right)n2^{n-1}$$ many edges contains a $C_4$?
+TRANSLATION OF THE FORMAL STATEMENT: It is not the case that: for every real ε > 0, for all sufficiently large n, every subgraph H of the n-dimensional hypercube graph (on vertex set Fin n → Bool) with |E(H)| ≥ (1/2 + ε) · n · 2^{n−1} contains the 4-cycle C_4 as a subgraph.
+
+Q09
+INFORMAL: For any $g\geq 2$, if $n$ is sufficiently large and $\equiv 1,3\pmod{6}$ then there exists a 3-uniform hypergraph on $n$ vertices such that - every pair of vertices is contained in exactly one edge (i.e. the graph is a Steiner triple system) and - for any $2\leq j\leq g$ any collection of $j$ edges contains at least $j+3$ vertices. Proved by Kwan, Sah, Sawhney, and Simkin [KSSS22b].
+TRANSLATION OF THE FORMAL STATEMENT: For every natural g > 2, for all sufficiently large n: if n ≡ 1 (mod 6) or n ≡ 3 (mod 6), then there exists a family H of subsets of Fin n which is a block design with parameters (2, 3) (i.e. a Steiner triple system: every pair lies in exactly one 3-element block) such that every subfamily E ⊆ H with 2 ≤ |E| ≤ g satisfies |E| + 3 ≤ |⋃_{e ∈ E} e|.
+
+Q10
+INFORMAL: For every $n>2$ there exist distinct integers $1 ≤ x < y < z$ such that $\frac 4 n = \frac 1 x + \frac 1 y + \frac 1 z$.
+TRANSLATION OF THE FORMAL STATEMENT: For every natural n > 2, there exist natural numbers x, y, z with 1 ≤ x < y < z and 4/n = 1/x + 1/y + 1/z (in ℚ).
+
+Q11
+INFORMAL: **Erdős Problem 613:** Let $n \geq 3$ and $G$ be a graph with $\binom{2n+1}{2} - \binom{n}{2} - 1$ edges. Must $G$ be the union of a bipartite graph and a graph with maximum degree less than $n$?
+TRANSLATION OF THE FORMAL STATEMENT: It is not the case that: for every n ≥ 3, every finite type V and every simple graph G on V (with decidable adjacency), if the number of edges of G equals C(2n+1, 2) − C(n, 2) − 1 (natural-number subtraction), then there exist simple graphs B, D on V such that (given decidable adjacency instances for B and D) G = B ⊔ D (edge union), B is bipartite, and every vertex v has degree in D strictly less than n.
+
+Q12
+INFORMAL: Let $R_r(n)$ denote the $r$-uniform hypergraph Ramsey number: the minimal $m$ such that if we $2$-colour all edges of the complete $r$-uniform hypergraph on $m$ vertices then there must be some monochromatic copy of the complete $r$-uniform hypergraph on $n$ vertices. Prove that, for $r \ge 3$, $$ \log_{r-1} R_r(n) \asymp_r n, $$ where $\log_{r-1}$ denotes the $(r-1)$-fold iterated logarithm.
+TRANSLATION OF THE FORMAL STATEMENT: It is not the case that: for every r ≥ 3, the function n ↦ log^{∘(r−1)}(hypergraphRamsey r n) (the logarithm iterated r−1 times applied to the r-uniform hypergraph Ramsey number) is Θ(n) as n → ∞ (atTop).
+
+Q13
+INFORMAL: Is it true that if $A\subset \mathbb{R}^2$ is a set of $n$ points such that every subset of $3$ points determines $3$ distinct distances (that is, $A$ has no isosceles triangles, degenerate ones included) then $A$ determines at least $f(n)n$ distinct distances, for some function $f$ with $f(n)\to \infty$?
+TRANSLATION OF THE FORMAL STATEMENT: There exists f: ℕ → ℝ with f(n) → ∞ as n → ∞, and there exists a natural number n such that every finite set A ⊆ ℝ² with |A| = n that is isosceles-free satisfies f(n) · n ≤ (number of distinct distances determined by A).
+
+Q14
+INFORMAL: Is there a lacunary sequence $A\subseteq \mathbb{N}$ (so that $A=\{a_1 < \cdots\}$ and there exists some $\lambda > 1$ such that $a_{n+1}/a_n\geq \lambda$ for all $n\geq 1$) such that $$\left\{ \sum_{a\in A'}\frac{1}{a} : A'\subseteq A\textrm{ finite}\right\}$$ contain all rationals in some open interval? Bleicher and Erdős conjectured the answer is no. In fact the answer is yes, with any lacunarity constant $\lambda\in (1,2)$ (though not $\lambda=2$), as proved by van Doorn and Kova\v{c} [DoKo25]. This was formalized in Lean by van Doorn using Aristotle.
+TRANSLATION OF THE FORMAL STATEMENT: There exists a lacunary sequence A: ℕ → ℕ and real numbers u < v such that every rational q with q ∈ (u, v) (open interval) equals ∑_{a ∈ A'} 1/a (computed in ℚ) for some finite set A' ⊆ ℕ contained in the range of A.
+
+Q15
+INFORMAL: Let $k\geq 3$. Must any ordering of $\mathbb{R}$ contain a monotone $k$-term arithmetic progression, that is, some $x_1 <\cdots < x_k$ which forms an increasing or decreasing $k$-term arithmetic progression? The answer is no, even for $k=3$, as shown by Ardal, Brown, and Jungić [ABJ11]. -
+TRANSLATION OF THE FORMAL STATEMENT: It is not the case that: for every k ≥ 3 and every strict total order r on ℝ, there exists a list s of reals which is an arithmetic progression of length k and such that either s is pairwise r-related (each earlier element r-precedes each later one) or s is pairwise related by the flipped relation flip r.
+
+Q16
+INFORMAL: Does there exists an entire non-zero transcendental function `f : ℂ → ℂ` such that for any sequence `n₀ < n₁ < ...`, `{ z | ∃ k, iteratedDeriv (n k) f z = 0 }` is dense.
+TRANSLATION OF THE FORMAL STATEMENT: There exists f: ℂ → ℂ that is transcendental over the polynomial ring ℂ[X] and complex-differentiable everywhere (entire), such that for every strictly increasing sequence n: ℕ → ℕ, the set {z ∈ ℂ : there exists k with f^{(n(k))}(z) = 0} is dense in ℂ.
+
+Q17
+INFORMAL: Let $k ≥ 2$. Does $((n+k)!)^2∣(2n)!$ hold for infinitely many $n$?
+TRANSLATION OF THE FORMAL STATEMENT: There exists a natural k ≥ 2 such that the set of natural numbers n with ((n+k)!)^2 dividing (2n)! is infinite.
+
+Q18
+INFORMAL: Let $\frac a b\in \mathbb{Q}_{>0}$ with $b$ squarefree. Are there integers $1 < n_1 < \dots < n_k$, each the product of two distinct primes, such that $\frac{a}{b}=\frac{1}{n_1}+\cdots+\frac{1}{n_k}$? The answer is yes [Li26].
+TRANSLATION OF THE FORMAL STATEMENT: For every rational q > 0 whose denominator is squarefree, there exist a natural k and a strictly increasing function n: Fin(k+1) → ℕ with n(0) = 1 such that for every i in [1, k] (i from 1 to the last index k), ω(n(i)) = 2 and Ω(n(i)) = 2, and q = ∑_{i=1}^{k} 1/n(i) (in ℚ).
+
+Q19
+INFORMAL: Is it true that, for every $c$, there exists an $n$ such that $\sigma(n)>cn$ but there is no covering system whose moduli all divide $n$? This was answered affirmatively by Haight [Ha79].
+TRANSLATION OF THE FORMAL STATEMENT: For every real c, there exists a natural number n such that either σ(n) > c · n (σ the sum-of-divisors function σ_1), or for every strict covering system m of ℤ there exists an index i such that n (as an integer) does not belong to the modulus ideal m.moduli(i).
+
+Q20
+INFORMAL: Is it true that there are only finitely many pairs of intervals $I_1$, $I_2$ such that $$ \sum_{n_1 \in I_1} \frac{1}{n_1} + \sum_{n_2 \in I_2} \frac{1}{n_2} \in \mathbb{N}? $$
+TRANSLATION OF THE FORMAL STATEMENT: The set of triples I: Fin 3 → ℕ+ × ℕ+ such that for every j, (I j).1 ≤ (I j).2 and there exists a positive integer n with ∑_{j ∈ Fin 2} ∑_{m ∈ [(I j).1, (I j).2]} 1/m = n (in ℚ; the inner sum uses only the first two intervals, with the bound variable j re-bound over Fin 2) is finite.
+
+Q21
+INFORMAL: If $G$ is a random graph on $2^d$ vertices, including each edge with probability $1/2$, then $G$ almost surely contains a copy of $Q_d$ (the $d$-dimensional hypercube with $2^d$ vertices and $d2^{d-1}$ many edges). A conjecture of Erdős and Bollobás. Solved by Riordan [Ri00], who in fact proved this with any edge-probability $>1/4$. Here almost surely means that the probability tends to $1$ as $d\to\infty$.
+TRANSLATION OF THE FORMAL STATEMENT: The probability that the binomial random graph on vertex set Fin d → Bool with edge probability 1/2 contains the d-dimensional hypercube graph as a subgraph tends to 1 as d → atBot (the bottom filter on ℕ).
+
+Q22
+INFORMAL: Let $A\subseteq \mathbb{N}$ be a set of density zero. Does there exist a $B$ such that $A\subseteq B+B$ and $$\lvert B\cap \{1,\ldots,N\}\rvert =o(N^{1/2})$$ for all large $N$? The answer is no. Erdős and Newman [ErNe77] have proved this is true when $A$ is the set of squares. In fact, Theorem 2 of [ErNe77] already implies a negative answer to this problem, but this seems to have been overlooked by Erdős and Graham. See also [806].
+TRANSLATION OF THE FORMAL STATEMENT: It is not the case that: for every A ⊆ ℕ with natural density 0, for every B ⊆ ℕ, both A ⊆ B + B and |B ∩ [1, N]| = o(√N) as N → ∞.
+
+Q23
+INFORMAL: Is there and $A \subset \mathbb{N}$ is such that $$\lim_{n\to \infty}\frac{1_A\ast 1_A(n)}{\log n}$$ exists and is $\ne 0$?
+TRANSLATION OF THE FORMAL STATEMENT: There do not exist a set A ⊆ ℕ and a real c ≠ 0 such that sumRep(A, n)/log n → c as n → ∞, where sumRep(A, n) is the number of representations of n as a sum of elements of A (as defined by sumRep).
+
+Q24
+INFORMAL: Let `X` be the set of points in `Fin d → ℝ` of the shape `fun i : Fin d => ∑' n : A, (1 : ℝ) / (n + i)` for some infinite subset `A ⊆ ℕ` such that `1 / n` is summable over `A`. `X` has nonempty interior. This is proved in [KoTa24]. -
+TRANSLATION OF THE FORMAL STATEMENT: For a natural d, the interior (in ℝ^d) of the set of x ∈ ℝ^d such that for every A ⊆ ℕ, A is infinite, ∑_{n ∈ A} 1/n is summable, and x_i = ∑_{n ∈ A} 1/(n+i) for every i ∈ Fin d, is nonempty.
+
+Q25
+INFORMAL: Is there some constant $c>0$ such that for every $n\geq 1$ there exists some $\delta_k\in \{-1,0,1\}$ for $1\leq k\leq n$ with $$0< \left\lvert \sum_{1\leq k\leq n}\frac{\delta_k}{k}\right\rvert < \frac{c}{2^n}?$$
+TRANSLATION OF THE FORMAL STATEMENT: There exists c > 0 such that for every n ≥ 1, there exists δ: Fin n → ℚ with all values in {−1, 0, 1} such that, letting L = |∑_{k=0}^{n−1} δ_k/(k+1)| (a real number), 0 < L and L < c/2^n.
+
+Q26
+INFORMAL: Let $\mathcal{F}$ be the family of all $3$-uniform hypergraphs with $6$ vertices and $3$ $3$-edges. Is it true that $$\mathrm{ex}_3(n,\mathcal{F})=o(n^2)?$$ The answer is yes, proved by Ruzsa and Szemerédi [RuSz78] (this is known as the Ruzsa-Szemerédi problem).
+TRANSLATION OF THE FORMAL STATEMENT: The function n ↦ Hypergraph.configurationExtremalNumber n 3 6 3 (as a real) is o(n^2) as n → ∞.
+
+Q27
+INFORMAL: Let $r\geq 2$ and $m\geq 1$. Every graph with $rm$ vertices and minimum degree at least $m(r-1)$ contains $m$ vertex disjoint copies of $K_r$. When $r=2$ this follows from Dirac's theorem. Corrádi and Hajnal [CoHa63] proved this when $r=3$. Hajnal and Szemerédi [HaSz70] proved this for all $r\geq 4$. A shorter proof was given by Kierstead and Kostochka [KiKo08].
+TRANSLATION OF THE FORMAL STATEMENT: Let r ≥ 2 and m ≥ 1 be natural numbers, and G a simple graph on a finite vertex set V with |V| = r·m and minimum degree ≥ m(r−1). Then there exist vertex sets K_1, ..., K_m (indexed by Fin m) such that each K_i is an r-clique in G and the K_i are pairwise disjoint.
+
+Q28
+INFORMAL: Let $2=p_1 < p_2 < \cdots$ be the primes and $k\geq 2$. Is it true that, for all sufficiently large $n$, there must exist an integer in $[n,n+p_1\cdots p_k)$ with $>k$ many prime factors?
+TRANSLATION OF THE FORMAL STATEMENT: For every k ≥ 2, for all sufficiently large n, there exists m with n ≤ m < n + ∏_{i=0}^{k−1} p_i (where p_i is the i-th prime, 0-indexed, so p_0 = 2) such that ω(m) > k.
+
+Q29
+INFORMAL: Can $\mathbb{N}$ be partitioned into two sets, each of which can be permuted to avoid monotone 3-term arithmetic progressions?
+TRANSLATION OF THE FORMAL STATEMENT: There exist sets A, B ⊆ ℕ that are complements of each other, such that there is a bijection f: ℕ ≃ A for which the sequence i ↦ f(i) has no monotone arithmetic progression of length 3 (¬HasMonotoneAP ... 3), and there is a bijection g: ℕ ≃ B for which the sequence i ↦ g(i) has no monotone arithmetic progression of length 3.
+
+Q30
+INFORMAL: Let $f:\mathbb{N}\to \mathbb{R}$ be an additive function (i.e. $f(ab)=f(a)+f(b)$ whenever $(a,b)=1$). Let $$A=\{ n \geq 1: f(n+1)< f(n)\}.$$ If $\lvert A\cap [1,X]\rvert =o(X)$ then must $f(n)=c\log n$ for some $c\in \mathbb{R}$? The condition $\lvert A\cap [1,X]\rvert =o(X)$ says that $A$ has natural density $0$. Partial progress was made by Mangerel [Ma22], who proved that this is true for completely additive $f$ if $$\lvert A\cap [1,X]\rvert \ll \frac{X}{(\log X)^{2+c}}$$ for some $c>0$, and if $f(p)$ does not have very large values (in a certain technical sense). See also `erdos_491`.
+TRANSLATION OF THE FORMAL STATEMENT: For every f: ℕ → ℝ: if f(ab) = f(a) + f(b) for all a > 0, b > 0 with gcd(a,b) = 1, and the set {n : n ≥ 1 and f(n+1) ≤ f(n)} has natural density 0, then there exists a real c such that f(n) = c · log n for all n > 0.
+
+Q31
+INFORMAL: Does there exist a constant `c > 0` such that, for any `K > 1`, whenever `A` is a sufficiently large finite multiset of integers with $\sum_{n \in A} 1/n > K$ there exists some $S \subseteq A$ such that $1 - \exp(-(c*K)) < \sum_{n \in S} 1/n \le 1$?
+TRANSLATION OF THE FORMAL STATEMENT: There exists real c > 0 such that for every real K > 1 there exists N₀ ∈ ℕ such that for all n and all a: Fin n → ℕ, if n ≥ N₀ and ∑_i 1/a_i > K (in ℝ), then there exists S ⊆ Fin n with 1 − e^{−cK} < ∑_{i∈S} 1/a_i and ∑_{i∈S} 1/a_i ≤ 1.
+
+Q32
+INFORMAL: Let $\{S_k\}$ be any sequence of sets in the complex plane, each of which has no finite limit point. Then there exists a sequence $\{n_k\}$ of positive integers and a transcendental entire function $f(z)$ such that $f^{(n_k)}(z) = 0$ if $z \in S_k$.
+TRANSLATION OF THE FORMAL STATEMENT: Let S: ℕ → Set ℂ be such that for every k the derived set (set of accumulation points) of S_k is empty. Then (with the algebra structure Polynomial.algebraPi on ℂ → ℂ) there exist f: ℂ → ℂ and n: ℕ → ℕ such that f is entire, f is transcendental over ℂ[X], and for every k, n(k) > 0 and f^{(n(k))}(z) = 0 for every z ∈ S_k.
+
+Q33
+INFORMAL: Is it true that, for every integer $k\neq 1$, there are infinitely many $n$ such that $2^n\equiv k\pmod{n}$?
+TRANSLATION OF THE FORMAL STATEMENT: For every integer k ≠ 1, the set of natural numbers n with 2^n ≡ k (mod n) (as integers) is infinite.
+
+Q34
+INFORMAL: Let $a_1 < a_2 < \dots$ be a sequence of integers such that $\lim_{n\to\infty} \frac{a_n}{a_{n-1}^2} = 1$ and $\sum \frac{1}{a_n} \in \mathbb{Q}$. Then, for all sufficiently large $n \ge 1$, $a_n = a_{n-1}^2 - a_{n-1} + 1$.
+TRANSLATION OF THE FORMAL STATEMENT: Let a: ℕ → ℕ be strictly increasing, with a(n)/a(n−1)^2 → 1 as n → ∞ (in ℝ, n−1 natural subtraction), and with the sequence 1/a(n) (in ℚ) summable. Then for infinitely many n (frequently at atTop), a(n) = a(n−1)^2 − a(n−1) + 1 (natural-number arithmetic).
+
+Q35
+INFORMAL: Is there a covering system all of whose moduli are of the form $p-1$ for some primes $p \geq 5$?
+TRANSLATION OF THE FORMAL STATEMENT: There exists a strict covering system c of ℤ, an index i, and a prime p ≥ 5 such that the modulus ideal c.moduli(i) equals the ideal generated by p − 1, i.e. (p−1)ℤ.
+
+Q36
+INFORMAL: Let $(n_k)$ be an increasing sequence of integers such that $2^{\aleph_{n_k}}$ is strictly increasing, and $2^{\aleph_{n_0}} > \aleph_\omega$. Is it true that $$\sum_k 2^{\aleph_{n_k}} \to (\aleph_\omega)^2?$$ Here $\sum_k 2^{\aleph_{n_k}}$ is the cardinal sum, and the partition relation is the classical one with two colours: every $2$-colouring of the pairs of a set of that cardinality has a monochromatic set of cardinality $\aleph_\omega$. A problem of Erdős, Hajnal, and Rado [ErHa71], proved by Shelah [Sh75].
+TRANSLATION OF THE FORMAL STATEMENT: For every strictly increasing n: ℕ → ℕ: if k ↦ 2^{ℵ_{n(k)}} is strictly increasing (as cardinals in universe u) and ℵ_ω < 2^{ℵ_{n(0)}}, then the cardinal partition relation cardinalPartitionRel(∑_k 2^{ℵ_{n(k)}}, 2, 2, (all colors ↦ ℵ_ω)) holds, i.e. κ → (ℵ_ω)^2_2 for κ the cardinal sum ∑_k 2^{ℵ_{n(k)}}.
+
+Q37
+INFORMAL: Let $n_1 < n_2 < \dots$ be an arbitrary sequence of integers, each with an associated residue class $a_i \pmod{n_i}$. Let $A$ be the set of integers $n$ such that for every $i$ either $n < n_i$ or $n \not\equiv a_i \pmod{n_i}$. Must the logarithmic density of $A$ exist?
+TRANSLATION OF THE FORMAL STATEMENT: For all sequences n: ℕ → ℕ and a: ℕ → ℤ, if n(i) > 0 for all i and n is strictly increasing, then there exists d such that the set {x ∈ ℕ : for every i, x < n(i) or x ≢ a(i) (mod n(i))} has logarithmic density d.
+
+Q38
+INFORMAL: `OrdinalMultiColorRamsey` is monotone in the number of non-zero colors: a witness for the `k`-color version yields one for any `j ≤ k`.
+TRANSLATION OF THE FORMAL STATEMENT: Let j ≤ k be natural numbers. If OrdinalMultiColorRamsey(ω_1^3, ω_1·ω, 3, k) holds, then OrdinalMultiColorRamsey(ω_1^2, ω_1·ω, 3, j) holds.
+
+Q39
+INFORMAL: If $A\subseteq \mathbb{N}$ is a set of integers such that $$\lvert A\cap \{1,\ldots,N\}\rvert\gg N^{1/2}$$ for all $N$ then must $A$ be subcomplete? That is, must $$P(A) = \left\{\sum_{n\in B}n : B\subseteq A\textrm{ finite }\right\}$$ contain an infinite arithmetic progression? This is true, and was proved by Szemerédi and Vu [SzVu06]. The implied constant is absolute, as in [SzVu06b, Corollary 1.4].
+TRANSLATION OF THE FORMAL STATEMENT: There exists real C > 0 such that every A ⊆ ℕ satisfying, for all sufficiently large N, C·√N ≤ A.countUpTo(N) (the number of elements of A up to N) is subcomplete.
+
+Q40
+INFORMAL: A stronger machine-checked **barrier** (Bonfioli, 2026), closing the 59-prime level: any solution of Erdős 307 in fact uses at least `60` primes in total. The full `sorry`-free proof is `erdos307_sixty` in the linked repository (`Sixty.lean` at tag `v1.1.1`); its only non-logical input is a `native_decide` depth-first search establishing that no admissible 59-prime support survives the Pythagorean `plus`-value square test, with axioms `propext, Classical.choice, Quot.sound` together with that `native_decide`.
+TRANSLATION OF THE FORMAL STATEMENT: Let P, Q be finite sets of natural numbers consisting of primes, such that 1 = (∑_{p∈P} 1/p) · (∑_{q∈Q} 1/q) in ℚ. Then |P ∪ Q| > 60.
+
+Q41
+INFORMAL: Is there a set $A\subset\mathbb{N}$ such that, for all large $N$, $$\lvert A\cap\{1,\ldots,N\}\rvert \ll N/\log N$$ and such that every large integer can be written as $2^k+a$ for some $k\geq 0$ and $a\in A$? Lorentz [Lo54] proved there is such a set with, for all large $N$, $$\lvert A\cap\{1,\ldots,N\}\rvert \ll \frac{\log\log N}{\log N}N$$ The answer is yes, proved by Ruzsa [Ru72].
+TRANSLATION OF THE FORMAL STATEMENT: For every A ⊆ ℕ: |{a ∈ A : a ≤ N}| ≪ N/log N (as functions of N), and for all sufficiently large N there exist k and a with k ≥ 0, a ∈ A, and N = 2^k + a.
+
+Q42
+INFORMAL: Let $d\geq 3$, and let $f_d(n)$ be the minimal $m$ such that every set of $n$ points in $\mathbb{R}^d$ determines at least $m$ distinct distances. Estimate $f_d(n)$ - in particular, is it true that $$f_d(n)=n^{\frac{2}{d}-o(1)}?$$
+TRANSLATION OF THE FORMAL STATEMENT: For every natural d ≥ 3, there exists o: ℕ → ℝ such that either o = o(1) as n → ∞, or for all sufficiently large n, minimalDistinctDistances(ℝ^d, n) = n^{2/d − o(n)}.
+
+Q43
+INFORMAL: Let $C > 0$. Is it true that the set of integers of the form $n = b_1 + \cdots + b_t$, with $b_1 < \cdots < b_t$, where $b_i = 2^{k_i}3^{l_i}$ for $1 \leq i\leq t$ and $b_t \leq Cb_1$ has density $0$? van Doorn and Everts \cite{vDEv25} have disproved this with $C=6$ - in fact, they prove that all integers can be written as such a sum in which $b_t<6b_1$. This was formalized in Lean by Alexeev using Aristotle.
+TRANSLATION OF THE FORMAL STATEMENT: For every real C > 0, with f(k, l) = 2^k · 3^l on ℕ × ℕ, the set {∑_{x∈B} f(x) : B a nonempty finite subset of ℕ × ℕ with max_{x∈B} f(x) ≤ C · min_{x∈B} f(x)} has natural density 0.
+
+Q44
+INFORMAL: Erdős expected very few solutions for $M(n, k) = M(m, l)$, where $m \geq n + k$ and $l > 1$. The only solutions he knew were the following. -/ @[category test, AMS 11] lemma lcmInterval_eq_example1 : lcmInterval 4 3 = lcmInterval 13 2 ∧ lcmInterval 3 4 = lcmInterval 19 2 := by decide /-- Denote by $M(n, k)$ the least common multiple of the finite set $\{n+1, \dotsc, n+k\}$. Is it true that for all $m \geq n + k$, we get $M(m, k) \neq M(n, k)$?
+TRANSLATION OF THE FORMAL STATEMENT: There exist natural numbers m, n, k such that: if k > 0, then (if m ≥ n + k then lcmInterval(m, k) ≠ lcmInterval(n, k)).
+
+Q45
+INFORMAL: Let $\alpha>0$ be a real number, not an integer. The density of integers $n\geq 1$ for which $(n,\lfloor n^\alpha\rfloor)=1$ is $6/\pi^2$. This is true, and was proved by Bergelson and Richter [BeRi17].
+TRANSLATION OF THE FORMAL STATEMENT: Let α be a real number with α > 0 and α not an integer. Then the set {n ∈ ℕ : n > 1 and gcd(n, ⌊n^α⌋) = 1} (⌊·⌋ the natural floor) has natural density 6/π².
+
+Q46
+INFORMAL: Let $p_k$ denote the $k$th prime. For infinitely many $r$ there are at least two integers $p_r < n < p_{r+1}$ all of whose prime factors are $< p_{r + 1} - p_r$.
+TRANSLATION OF THE FORMAL STATEMENT: It is not the case that the set of natural numbers r for which there are at least 2 integers m with p_r < m < p_{r+1} whose largest prime factor is < p_{r+1} − p_r is infinite, where p_r denotes the r-th prime (0-indexed).
+
+Q47
+INFORMAL: Let $k>r$ and $n$ be sufficiently large in terms of $k$ and $r$. Does there always exist a block $r-(n,k,1)$ design (or Steiner system with parameters $(n,k,r)$), provided the trivial necessary divisibility conditions $\binom{k-i}{r-i}\mid \binom{n-i}{r-i}$ are satisfied for every $0\leq i<r$? That is, can one find a family of $\binom{n}{r}\binom{k}{r}^{-1}$ many subsets of $\{1,\ldots,n\}$, all of size $k$, such that any $A\subseteq \{1,\ldots,n\}$ of size $r$ is contained in exactly one set in the family? This was proved by Keevash [Ke14] for all $(r,k)$.
+TRANSLATION OF THE FORMAL STATEMENT: For all natural r, k with 1 ≤ r < k, for all sufficiently large n: if C(k−i, r−i) divides C(n−i, r−i) for every i < r, then every family H of subsets of Fin n is a block design with parameters (r, k).
+
+Q48
+INFORMAL: Let $A\subset\mathbb{R}^2$ be an infinite set which contains no three points on a line and no four points on a circle. Consider the graph with vertices the points in $A$, where two vertices are joined by an edge if and only if they are an integer distance apart. How large can the chromatic number and clique number of this graph be? In particular, can the chromatic number be infinite? The chromatic number can be infinite: there is an infinite general-position set whose integer-distance graph admits no finite proper colouring. How large the *clique* number can be is not addressed here.
+TRANSLATION OF THE FORMAL STATEMENT: There does not exist an infinite set A ⊆ ℝ² in general position such that the integer-distance graph on A (points adjacent when their distance is an integer) has chromatic number ⊤ (infinite).
+
+Q49
+INFORMAL: Can every integer $N≥2$ be written as $$N=\frac{\prod_{1\leq i\leq k}(m+i)}{\prod_{1\leq i\leq k}(n+i)}$$ for some $k≥2$ and $m≥n+k$?
+TRANSLATION OF THE FORMAL STATEMENT: For every natural N ≥ 2, every k ≥ 2, every natural n, and every m ≥ n + k, N = ∏_{i=1}^{k} (m+i) / ∏_{i=1}^{k} (n+i) (in ℚ).
+
+Q50
+INFORMAL: Is there a graph of chromatic number `ℵ_ 1` with `ℵ_ 1` vertices such that for all `ε > 0`, if `n` is sufficiently large and `H` is a subgraph on `n` vertices, then `H` contains an independent set of size `> n ^ (1 - ε)`?
+TRANSLATION OF THE FORMAL STATEMENT: There exist a type V and a simple graph G on V such that the chromatic cardinal of G is ℵ_1, |V| = ℵ_1, and for every real ε > 0, for all sufficiently large n, every subgraph H of G with exactly n vertices contains a finite set I ⊆ V(H) that is independent in G with |I| > n^{1−ε}.
+
+Q51
+INFORMAL: Let $r \ge 3$. Is it true that the set of integers which are the sum of at most $r$ $r$-powerful numbers has density $0$?
+TRANSLATION OF THE FORMAL STATEMENT: For every r ≥ 3, the set of n ∈ ℕ that can be written as the sum of a multiset S of natural numbers with |S| ≤ r and every element of S r-full has natural density 0.
+
+Q52
+INFORMAL: Is it true that for all `c ≥ 0`, the density `f c` of integers for which `(p (n + 1) - p n) / log n < c` exists and is a continuous function of `c`?
+TRANSLATION OF THE FORMAL STATEMENT: There exists a continuous function f: ℝ≥0 → ℝ such that for every c ∈ ℝ≥0, the set {n ∈ ℕ : primeGap(n)/log n ≤ c} has natural density f(c).
+
+Q53
+INFORMAL: What is the size of the largest $A\subseteq \mathbb{R}^n$ such that there are only two distinct distances between elements of $A$? That is, $$\# \{ \lvert x-y\rvert : x\neq y\in A\} = 2.$$ Asked to Erdős by Coxeter. Bannai, Bannai, and Stanton [BBS83] have proved that $$\lvert A\rvert \leq \binom{n+2}{2}.$$ A simple proof of this upper bound was given by Petrov and Pohoata [PePo21]. The exact maximum is not known in general: a lower bound of $\binom{n+1}{2}$ follows from the construction of Alweiss (see [503]).
+TRANSLATION OF THE FORMAL STATEMENT: Let n be natural and A a finite subset of ℝ^n such that the set of distances {dist(x,y) : x, y ∈ A, x ≠ y} has exactly 2 elements. Then |A| ≤ C(n+2, 2).
+
+Q54
+INFORMAL: Let $A\subset \mathbb{N}$ be a set with positive upper density. Must there exist an infinite set $B\subseteq A$ and integer $t$ such that $$\{b_1+b_2: b_1\neq b_2\in B\}+t\subseteq A?$$ Erdős [Er75b] posed this as a candidate for a density version of Hindman's theorem. This is true, and was proved by Kra, Moreira, Richter, and Robertson [KMRR24, Theorem 1.2 (i)], even for sets of positive upper Banach density and with $t \geq 0$. The inclusion says that every $b_1+b_2+t$ is an element of `A`, as an integer.
+TRANSLATION OF THE FORMAL STATEMENT: For every A ⊆ ℕ with positive upper density, there exist an infinite B ⊆ A and an integer t such that for all b₁, b₂ ∈ B with b₁ ≠ b₂, there exists a ∈ A with a = b₁ + b₂ + t.
+
+Q55
+INFORMAL: Sylvester and Schur: for $1 \le i \le n/2$ there is a prime $p > i$ dividing `n.choose i`.
+TRANSLATION OF THE FORMAL STATEMENT: For natural numbers n, i with 1 ≤ i and i ≤ ⌊n/2⌋, there exists a prime p with p > i and p dividing C(n, i).
+
+Q56
+INFORMAL: The greedy construction gives a Sidon set `A ⊆ {1, ..., N}` of size at least $N^{1/3}$, stated here as $N \le |A|^3$. See Section 1 of [arXiv:2103.15850](https://arxiv.org/abs/2103.15850).
+TRANSLATION OF THE FORMAL STATEMENT: For every natural N ≥ 1, there exists A ⊆ {1, ..., N} that is a Sidon set with N ≤ |A|^3.
+
+Q57
+INFORMAL: Let $R(k,l)$ be the usual Ramsey number: the smallest $n$ such that if the edges of $K_n$ are coloured red and blue then there exists either a red $K_k$ or a blue $K_l$. Prove the existence of some $c>0$ such that $$\lim_{k\to \infty}\frac{R(k+1,k)}{R(k,k)}> 1+c.$$ A problem of Erdős and Sós.
+TRANSLATION OF THE FORMAL STATEMENT: For every real c > 0, there exists a real L such that R(k+1, k)/R(k, k) → L as k → ∞ (R the classical two-color Ramsey number) and L > 1 + c.
+
+Q58
+INFORMAL: Does there exist $S\subseteq \mathbb{R}^2$ such that every set congruent to $S$ (that is, $S$ after some translation and rotation) contains exactly one point from $\mathbb{Z}^2$? An old question of Steinhaus. Erdős was 'almost certain that such a set does not exist'. In fact, such a set does exist, as proved by Jackson and Mauldin [JaMa02]. Their construction depends on the axiom of choice. The plane is identified with $\mathbb{C}$: the sets congruent to $S$ are the sets $uS + t$ with $\lvert u\rvert = 1$ and $t \in \mathbb{C}$, and $\mathbb{Z}^2$ is the set of Gaussian integers.
+TRANSLATION OF THE FORMAL STATEMENT: There exists S ⊆ ℂ such that for all u, t ∈ ℂ with |u| = 1, there exists exactly one z ∈ ℂ such that z ∈ {u·w + t : w ∈ S} and z = a + b·i for some integers a, b.
+
+Q59
+INFORMAL: Can there exist two distinct integers $x$ and $y$ such that $x,y$ have the same prime factors, $x+1,y+1$ have the same prime factors, and $x+2,y+2$ also have the same prime factors?
+TRANSLATION OF THE FORMAL STATEMENT: There exist natural numbers x ≠ y such that x and y have the same set of prime factors, x+1 and y+1 have the same set of prime factors, and x+2 and y+2 have the same set of prime factors.
+
+Q60
+INFORMAL: Let $q_1 < q_2 < \cdots$ be a sequence of primes such that $q_{i + 1} \equiv 1 \pmod{q_i}$. Is it true that $$ \lim_{k \to \infty} q_k^{1/k} = \infty? $$
+TRANSLATION OF THE FORMAL STATEMENT: For every strictly increasing q: ℕ → ℕ such that every q(i) is prime and q(i+1) mod q(i) = 1 for all i, q(k)^{1/k} → ∞ as k → ∞ (with 1/k a real number).

@@ -1,0 +1,282 @@
+[
+ {
+  "file": "FormalConjectures/ErdosProblems/57.lean",
+  "name": "erdos_57",
+  "informal": "If $G$ is a graph with infinite chromatic number and $a_1 < a_2 < \\cdots$ are lengths of the odd cycles of $G$ then $\\sum \\frac{1}{a_i} = \\infty$. Conjectured by Erdős and Hajnal [ErHa66], and solved by Liu and Montgomery [LiMo20]. The linked formal proof (Codex and GPT-5.6 Sol) states the conclusion as `¬ Summable (oddCycleReciprocal G)`, where `oddCycleReciprocal G n` is `n⁻¹` if `n` is an odd cycle length of `G` and `0` otherwise; this is the indicator form of the sum below.",
+  "formal": ": ∀ {V : Type*} (G : SimpleGraph V), G.chromaticNumber = ⊤ → ¬ Summable (fun (a : G.oddCycleLengths) ↦ 1 / (a : ℝ))",
+  "rid": "R01"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/79.lean",
+  "name": "erdos_79",
+  "informal": "We say $G$ is Ramsey size linear if $R(G,H)\\ll m$ for all graphs $H$ with $m$ edges and no isolated vertices. Are there infinitely many graphs $G$ which are not Ramsey size linear but such that all of its proper subgraphs are? Asked by Erdős, Faudree, Rousseau, and Schelp [EFRS93]. $K_4$ was long the only known example. Wigderson [Wi24] proved that there are infinitely many such graphs.",
+  "formal": ": ∀ (N : ℕ), ∃ (n : ℕ) (_ : N ≤ n) (G : SimpleGraph (Fin n)), ¬ G.IsRamseySizeLinear ∧ ∀ H : G.Subgraph, H < ⊤ → H.coe.IsRamseySizeLinear",
+  "rid": "R02"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/559.lean",
+  "name": "erdos_559",
+  "informal": "Let $\\hat{R}(G)$ denote the size Ramsey number, the minimal number of edges $m$ such that there is a graph $H$ with $m$ edges that is Ramsey for $G$. If $G$ has $n$ vertices and maximum degree $d$ then prove that $$\\hat{R}(G)\\ll_d n.$$ This was disproved for $d=3$ by Rödl and Szemerédi [RoSz00], who constructed a graph on $n$ vertices with maximum degree $3$ such that $\\hat{R}(G)\\gg n(\\log n)^{c}$ for some absolute constant $c>0$.",
+  "formal": ": ¬ ∀ d : ℕ, ∃ C : ℝ, ∀ (V : Type) [Fintype V] (G : SimpleGraph V), G.maxDegree ≤ d → (sizeRamsey G G : ℝ) ≤ C * Fintype.card V",
+  "rid": "R03"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/1169.lean",
+  "name": "finite_blue_target",
+  "informal": "The finite-blue-target form asks whether $\\omega_1^2 \\not\\to (\\omega_1^2, k)^2$ for every $k \\ge 3$. The restriction excludes $k \\le 2$, where the positive relation holds. A colouring witnessing the negative relation with blue target $3$ also witnesses this form.",
+  "formal": ": ∀ k : ℕ, 3 ≤ k → ¬ OrdinalRamsey ((ω_ 1) ^ (2 : ℕ)) ((ω_ 1) ^ (2 : ℕ)) (k : Ordinal)",
+  "rid": "R04"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/645.lean",
+  "name": "erdos_645",
+  "informal": "If ℕ is $2$-coloured then there must exist a monochromatic three-term arithmetic progression $x,x+d,x+2d$ such that $d>x$. This was first proved by Brown and Landman [BrLa99], who in fact show that this is always possible with $d>f(x)$ for any increasing function $f$. This was formalized in Lean by Alexeev using Aristotle and ChatGPT.",
+  "formal": "(c : ℕ → Bool) : ∃ x d, 0 < x ∧ x < d ∧ (∃ C, c x = C ∧ c (x + d) = C ∧ c (x + 2 * d) = C)",
+  "rid": "R05"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/326.lean",
+  "name": "erdos_326",
+  "informal": "Does there exist $A = \\{a_1 < a_2 < \\cdots\\} \\subset \\mathbb{N}$ which is a minimal basis of order $2$ (i.e. every large integer is the sum of $2$ elements from $A$, and no proper subset of $A$ has this property), such that $$\\lim_{k\\to\\infty} \\frac{a_k}{k^2} = c$$ for some $c \\neq 0$? Erdős and Graham conjectured a negative answer to this question [ErGr80]. \"Minimal basis of order $2$\" is formalised as `Minimal` for the predicate `Set.IsAsymptoticAddBasisOfOrder · 2` on sets of naturals ordered by inclusion.",
+  "formal": ": ∃ (a : ℕ → ℕ), StrictMono a ∧ Minimal (fun A : Set ℕ ↦ A.IsAsymptoticAddBasisOfOrder 2) (Set.range a) ∧ ∃ (c : ℝ), c ≠ 0 ∧ Tendsto (fun n ↦ (a n : ℝ) / n ^ 2) atTop (𝓝 c)",
+  "rid": "R06"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/762.lean",
+  "name": "erdos_762",
+  "informal": "The cochromatic number of $G$, denoted by $\\zeta(G)$, is the minimum number of colours needed to colour the vertices of $G$ such that each colour class induces either a complete graph or empty graph. Is it true that if $G$ has no $K_5$ and $\\zeta(G)\\geq 4$ then $\\chi(G) \\leq \\zeta(G)+2$? This has been disproved by Steiner [St24b], who constructed a graph $G$ with $\\omega(G)=4$, $\\zeta(G)=4$, and $\\chi(G)=7$.",
+  "formal": ": ¬ ∀ (V : Type*) [Fintype V] (G : SimpleGraph V), G.CliqueFree 5 → 4 ≤ G.cochromaticNumber → G.chromaticNumber ≤ G.cochromaticNumber + 2",
+  "rid": "R07"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/63.lean",
+  "name": "erdos_63",
+  "informal": "Does every graph with infinite chromatic number contain a cycle of length $2^n$ for infinitely many $n$? Conjectured by Mihók and Erdős. Solved affirmatively following the work of Liu and Montgomery [LiMo20]. The linked formal proof (Codex) states the conclusion as `{n | HasCycleLength G (2 ^ n)}.Infinite`, with `HasCycleLength G m` unfolding to `m ∈ G.cycleLengths`.",
+  "formal": ": ∀ {V : Type*} (G : SimpleGraph V), G.chromaticNumber = ⊤ → ∀ N : ℕ, ∃ n ≥ N, 2 ^ n ∈ G.cycleLengths",
+  "rid": "R08"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/833.lean",
+  "name": "erdos_833",
+  "informal": "Does there exist an absolute constant $c>0$ such that, for all $r\\geq 2$, in any $r$-uniform hypergraph with chromatic number $3$ there is a vertex contained in at least $(1+c)^r$ many edges? This was solved by Erdős and Lovász [ErLo75], who proved in particular that there is a vertex contained in at least $\\frac{2^{r-1}}{4r}$ many edges.",
+  "formal": ": ∃ c : ℝ, 0 < c ∧ ∀ r : ℕ, 2 ≤ r → ∀ (n : ℕ) (H : Finset (Finset (Fin n))), H.IsUniform r → H.HasHypergraphChromaticNumber 3 → ∃ v : Fin n, (1 + c) ^ r ≤ (H.hypergraphDegree v : ℝ)",
+  "rid": "R09"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/775.lean",
+  "name": "erdos_775",
+  "informal": "Is there a $3$-uniform hypergraph on $n$ vertices which contains at least $n-O(1)$ different sizes of cliques (maximal complete subgraphs)? The answer is no, as proved by Gao [Ga25]: more generally, for any $k\\geq 3$, every $k$-uniform hypergraph on $n$ vertices contains at most $n-f_k(n)$ different sizes of cliques, where $f_k(n)\\to \\infty$ as $n\\to \\infty$.",
+  "formal": ": ¬ ∃ C : ℕ, ∃ᶠ n : ℕ in atTop, ∃ H : UniformHypergraph (Fin n) 3, n - C ≤ (UniformHypergraph.cliqueSizes H).ncard",
+  "rid": "R10"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/371.lean",
+  "name": "erdos_371",
+  "informal": "Let $P(n)$ denote the largest prime factor of $n$. Show that the set of $n$ with $P(n+1) > P(n)$ has density $\\frac{1}{2}$. This was proved by an internal OpenAI model in September 2026 [OAI26a]; see the linked Lean proof.",
+  "formal": ": { n | Nat.maxPrimeFac (n + 1) > Nat.maxPrimeFac n }.HasDensity (1/2)",
+  "rid": "R11"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/431.lean",
+  "name": "erdos_431",
+  "informal": "Are there two infinite sets $A$ and $B$ such that $A+B$ agrees with the primes up to finitely many exceptions? This was disproved by an internal OpenAI model in September 2026 [OAI26a]; see the linked Lean proof.",
+  "formal": ": ¬ ∃ A B : Set ℕ, A.Infinite ∧ B.Infinite ∧ (A + B : Set ℕ) =ᶠ[Filter.cofinite] {n | n.Prime}",
+  "rid": "R12"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/646.lean",
+  "name": "erdos_646",
+  "informal": "Let $p_1,\\ldots,p_k$ be distinct primes. Are there infinitely many $n$ such that $n!$ is divisible by an even power of each of the $p_i$? The answer is yes, proved by Berend [Be97], who further proved that the sequence of such $n$ has bounded gaps (where the bound depends on the initial set of primes).",
+  "formal": ": ∀ S : Finset ℕ, (∀ p ∈ S, p.Prime) → {n : ℕ | ∀ p ∈ S, Even (padicValNat p (n !))}.Infinite",
+  "rid": "R13"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/31.lean",
+  "name": "erdos_31",
+  "informal": "Given any infinite set $A\\subset \\mathbb{N}$ there is a set $B$ of density $0$ such that $A+B$ contains all except finitely many integers. Conjectured by Erdős and Straus. Proved by Lorentz [Lo54].",
+  "formal": ": ∀ A : Set ℕ, A.Infinite → ∃ B : Set ℕ, B.HasDensity 0 ∧ ∀ᶠ n in atTop, n ∈ A + B",
+  "rid": "R14"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/181.lean",
+  "name": "erdos_181",
+  "informal": "Let $Q_n$ be the $n$-dimensional hypercube graph (so that $Q_n$ has $2^n$ vertices and $n2^{n-1}$ edges). Prove that $$R(Q_n) \\ll 2^n.$$",
+  "formal": ": ∃ C > (0 : ℝ), ∀ n : ℕ, (diagonalGraphRamsey (hypercube n) : ℝ) ≤ C * 2 ^ n",
+  "rid": "R15"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/698.lean",
+  "name": "erdos_698",
+  "informal": "Is there some $h(n)\\to \\infty$ such that for all $2\\leq i<j\\leq n/2$ $$\\textrm{gcd}\\left( \\binom{n}{i},\\binom{n}{j}\\right) \\geq h(n)?$$ This was resolved by Bergman [Be11], who proved that for any $2\\leq i<j\\leq n/2$ $$\\textrm{gcd}\\left( \\binom{n}{i},\\binom{n}{j}\\right) \\gg n^{1/2}\\frac{2^i}{i^{3/2}},$$ where the implied constant is absolute. The linked formal proof (van Doorn and Aristotle, see `erdos_698.variants.bergman`) gives the explicit bound $\\gcd > \\frac{2^i \\sqrt n}{4 i \\sqrt{i - 1}}$, so $h(n) = \\lfloor \\sqrt n / 4 \\rfloor$ works since $i \\sqrt{i - 1} \\le 2^i$ for $i \\ge 2$.",
+  "formal": ": ∃ h : ℕ → ℕ, Tendsto h atTop atTop ∧ ∀ n i j : ℕ, 2 ≤ i → i < j → j ≤ n / 2 → h n ≤ Nat.gcd (n.choose i) (n.choose j)",
+  "rid": "R16"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/895.lean",
+  "name": "erdos_895",
+  "informal": "Is it true that, for all sufficiently large $n$, if $G$ is a triangle-free graph on $\\{1,\\ldots,n\\}$ then there must exist three independent points $a,b,a+b$? A problem of Erdős and Hajnal [Er95d]. The stated problem has been resolved by Barber (personal communication) who verified using a SAT solver that this is true for all $n\\geq 18$.",
+  "formal": ": ∀ᶠ n in atTop, ∀ G : SimpleGraph (Set.Icc 1 n), G.CliqueFree 3 → ∃ a b c : Set.Icc 1 n, a ≠ b ∧ (a : ℕ) + (b : ℕ) = c ∧ G.IsIndepSet {a, b, c}",
+  "rid": "R17"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/653.lean",
+  "name": "erdos_653",
+  "informal": "Let $x_1,\\ldots,x_n\\in \\mathbb{R}^2$ and let $R(x_i)=\\#\\{ \\lvert x_j-x_i\\rvert : j\\neq i\\}$, where the points are ordered such that $$R(x_1)\\leq \\cdots \\leq R(x_n).$$ Let $g(n)$ be the maximum number of distinct values the $R(x_i)$ can take. Is it true that $g(n) \\geq (1-o(1))n$?",
+  "formal": ": ∃ o : ℕ → ℝ, o =o[atTop] (1 : ℕ → ℝ) ∧ ∀ᶠ n in atTop, (1 - o n) * n ≤ maximalDistinctDistancesFrom n",
+  "rid": "R18"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/1035.lean",
+  "name": "erdos_1035",
+  "informal": "Is there a constant $c > 0$ such that every graph on $2^n$ vertices with minimum degree $> (1-c) \\cdot 2^n$ contains the $n$-dimensional hypercube $Q_n$? This is Erdős's question [Er93, p. 345]. See also [576] for the extremal number of edges that guarantee a $Q_n$.",
+  "formal": ": ∃ c > 0, ∀ n : ℕ, ∀ (G : SimpleGraph (Fin (2 ^ n))) [DecidableRel G.Adj], (∀ v, (G.degree v : ℝ) > (1 - c) * 2 ^ n) → (SimpleGraph.hypercube n).IsContained G",
+  "rid": "R19"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/95.lean",
+  "name": "erdos_95",
+  "informal": "Let $x_1,\\ldots,x_n\\in\\mathbb{R}^2$ determine the set of distances $\\{u_1,\\ldots,u_t\\}$. Suppose $u_i$ appears as the distance between $f(u_i)$ many pairs of points. Then for all $\\epsilon>0$ $$\\sum_i f(u_i)^2 \\ll_\\epsilon n^{3+\\epsilon}.$$ The case when the points determine a convex polygon was solved by Altman [Al63]. Note it is trivial that $\\sum f(u_i)=\\binom{n}{2}$. Solved by Guth and Katz [GuKa15] who proved the upper bound $$\\sum_i f(u_i)^2 \\ll n^3\\log n.$$ See also [94](https://www.erdosproblems.com/94).",
+  "formal": ": ∀ ε : ℝ, 0 < ε → ∃ C : ℝ, 0 < C ∧ ∀ P : Finset ℝ², ∑ u ∈ distanceSet P, (distanceMultiplicity P u : ℝ) ^ 2 ≤ C * (P.card : ℝ) ^ (3 + ε)",
+  "rid": "R20"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/93.lean",
+  "name": "erdos_93",
+  "informal": "If $n$ distinct points in $\\mathbb{R}^2$ form a convex polygon then they determine at least $\\lfloor \\frac{n}{2}\\rfloor$ distinct distances. Solved by Altman [Al63].",
+  "formal": "(A : Finset ℝ²) (hA : ConvexIndep (A : Set ℝ²)) : A.card / 2 ≤ distinctDistances A",
+  "rid": "R21"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/1077.lean",
+  "name": "erdos_1077",
+  "informal": "We call a graph $D$-balanced (or $D$-almost-regular) if the maximum degree is at most $D$ times the minimum degree. Let $ε, α > 0$ and $D$ and $n$ be sufficiently large. If $G$ is a graph on $n$ vertices with at least $n^{1+α}$ edges, then must $G$ contain a $D$-balanced subgraph on $m > n^{1-α}$ vertices with at least $εm^{1+α}$ edges?",
+  "formal": ": ¬ ∀ ε > (0 : ℝ), ε < 1 → ∀ α > (0 : ℝ), α < 1 → ∀ᶠ D in atTop, ∀ᶠ n in atTop, ∀ G : SimpleGraph (Fin n), G.edgeSet.ncard > (n : ℝ) ^ (1 + α) → ∃ (H : Subgraph G), letI m := H.verts.ncard IsBalanced H.coe D ∧ m > (n : ℝ) ^ (1 - α) ∧ H.edgeSet.ncard > ε * m ^ (1 + α)",
+  "rid": "R22"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/266.lean",
+  "name": "erdos_266",
+  "informal": "Let $a_n$ be an infinite sequence of positive integers such that $\\sum \\frac{1}{a_n}$ converges. There exists some integer $t \\ge 1$ such that $\\sum \\frac{1}{a_n + t}$ is irrational. This was disproven by Kovač and Tao in [KoTa24]. [KoTa24] Kovač, V. and Tao T., On several irrationality problems for Ahmes series. [arXiv:2406.17593](https://arxiv.org/abs/2406.17593) (2024).",
+  "formal": ": ¬ ∀ (a : ℕ → ℕ), ((∀ n : ℕ, a n ≥ 1) ∧ Summable ((1 : ℝ) / a ·) → ∃ t ≥ (1 : ℕ), Irrational <| ∑' n, (1 : ℝ) / ((a n) + t))",
+  "rid": "R23"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/985.lean",
+  "name": "erdos_985",
+  "informal": "Is it true that, for every prime $p$, there is a prime $q \\leq p$ which is a primitive root modulo $p$?",
+  "formal": ": ∀ᵉ (p : ℕ) (hp_prime : p.Prime) (hp_nontrivial : p ≠ 2), ∃ q, q.Prime ∧ q < p ∧ orderOf (q : ZMod p) = p - 1",
+  "rid": "R24"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/965.lean",
+  "name": "erdos_965",
+  "informal": "Erdős asks in [Er75b] if for every 2-coloring of ℝ, there is an uncountable set $A ⊆ ℝ$ such that all sums $a + b$ for $a, b ∈ A, a ≠ b$ have the same colour. In [Ko16] Péter Komjáth constructed a counterexample. The same result was proven independently in [SWCol] by Sokoup and Weiss.",
+  "formal": ": ¬ ∀ f : ℝ → Fin 2, ∃ A : Set ℝ, ¬ A.Countable ∧ ∀ᵉ (a ∈ A) (b ∈ A) (c ∈ A) (d ∈ A), a ≠ b → c ≠ d → f (a + b) = f (c + d)",
+  "rid": "R25"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/729.lean",
+  "name": "erdos_729",
+  "informal": "Let $C>0$ be a constant. Are there infinitely many integers $a,b,n$ with $a+b> n+C\\log n$ such that the denominator of $$\\frac{n!}{a!b!}$$contains only primes $\\ll_C 1$? Erdős [Er68c] proved that if $a!b!\\mid n!$ then $a+b\\leq n+O(\\log n)$. This has been proved in the affirmative by Barreto and Leeham, using ChatGPT and Aristotle, with a modification of the argument used for [728].",
+  "formal": ": ∀ (C : ℝ) (hC : C > 0), ∃ K ≥ 3, Set.Infinite { T : ℕ × ℕ × ℕ | let (a, b, n) := T a > 0 ∧ b > 0 ∧ n > 0 ∧ (a : ℝ) + b > n + C * Real.log n ∧ ∀ p, p.Prime → p > K → padicValNat p ((n.factorial / (a.factorial * b.factorial) : ℚ).den) = 0 }",
+  "rid": "R26"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/204.lean",
+  "name": "erdos_204",
+  "informal": "Are there $n$ such that there is a covering system with moduli the divisors of $n$ which is 'as disjoint as possible'? That is, for all $d\\mid n$ with $d>1$ there is an associated $a_d$ such that every integer is congruent to some $a_d\\pmod{d}$, and if there is some integer $x$ with $$x\\equiv a_d\\pmod{d}\\textrm{ and }x\\equiv a_{d'}\\pmod{d'}$$then $(d,d')=1$. The density of such $n$ is zero. Erdős and Graham believed that no such $n$ exist. Adenwalla [Ad25] has proved there are no such $n$. This was formalized by van Doorn in Lean using Aristotle.",
+  "formal": ": ¬ ∃ (n : ℕ) (a : ℕ → ℤ), let D := {d : ℕ | d ∣ n ∧ d > 1} (∀ x : ℤ, ∃ d ∈ D, x ≡ a d [ZMOD d]) ∧ (∀ d ∈ D, ∀ d' ∈ D, d ≠ d' → (∃ x : ℤ, x ≡ a d [ZMOD d] ∧ x ≡ a d' [ZMOD d']) → Nat.gcd d d' = 1)",
+  "rid": "R27"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/58.lean",
+  "name": "erdos_58",
+  "informal": "If $G$ is a graph which contains odd cycles of $\\leq k$ different lengths then $\\chi(G)\\leq 2k+2$, with equality if and only if $G$ contains $K_{2k+2}$. Conjectured by Bollobás and Erdős. Proved by Gyárfás [Gy92].",
+  "formal": ": ∀ {V : Type*} (G : SimpleGraph V) (k : ℕ), G.oddCycleLengths.Finite → G.oddCycleLengths.ncard ≤ k → G.chromaticNumber ≤ (2 * k + 2 : ℕ∞) ∧ (G.chromaticNumber = (2 * k + 2 : ℕ∞) ↔ (SimpleGraph.completeGraph (Fin (2 * k + 2))).IsContained G)",
+  "rid": "R28"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/172.lean",
+  "name": "erdos_172",
+  "informal": "Is it true that in any finite colouring of $\\mathbb{N}$ there exist arbitrarily large finite $A$ such that all sums and products of distinct elements in $A$ are the same colour?",
+  "formal": ": ∀ (n : ℕ) (color : ℕ → Fin n) (m), ∃ (A : Finset ℕ), A.card ≥ m ∧ ∃ c, ∀ (S : Finset A), S.Nonempty → color (∑ x ∈ S, x) = c ∧ color (∏ x ∈ S, x) = c",
+  "rid": "R29"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/952.lean",
+  "name": "erdos_952",
+  "informal": "Is there an infinite sequence of distinct Gaussian primes $x_1,x_2,\\ldots$ such that $\\lvert x_{n+1}-x_n\\rvert \\ll 1$? No. This was disproved by an internal OpenAI model in September 2026 [OAI26a]; see the linked Lean proof.",
+  "formal": ": ¬ ∃ (x : ℕ → GaussianInt) (C : ℤ), Function.Injective x ∧ ∀ n, Prime (x n) ∧ (x (n + 1) - x n).norm < C",
+  "rid": "R30"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/1214.lean",
+  "name": "erdos_1214",
+  "informal": "Let $x,y\\geq 1$ be integers such that, for all $n\\geq 1$, the set of primes dividing $x^{n}-1$ is equal to the set of primes dividing $y^n-1$. Must $x=y$? Erdős asked this at a 1988 number theory conference in Banff. A positive answer was given by Corrales-Rodrigáñez and Schoof [CoSc97].",
+  "formal": ": ∀ x y : ℕ, x ≥ 1 → y ≥ 1 → (∀ n : ℕ, n ≥ 1 → { p : ℕ | p.Prime ∧ p ∣ x ^ n - 1 } = { p : ℕ | p.Prime ∧ p ∣ y ^ n - 1 }) → x = y",
+  "rid": "R31"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/463.lean",
+  "name": "erdos_463",
+  "informal": "Is there a function $f$ with $f(n)\\to\\infty$ as $n\\to\\infty$ such that, for all large $n$, there is a composite number $m$ such that $$ n + f(n) < m < n + p(m) $$ Here $p(m)$ is the least prime factor of $m$.",
+  "formal": ": ∃ (f : ℕ → ℕ) (_ : Tendsto f atTop atTop), ∀ᶠ n in atTop, ∃ m, m.Composite ∧ n + f n < m ∧ m < n + m.minFac",
+  "rid": "R32"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/570.lean",
+  "name": "erdos_570",
+  "informal": "Let $k\\geq 3$. Is it true that, if $m$ is sufficiently large, for any graph $H$ on $m$ edges without isolated vertices, $$R(C_k,H) \\leq 2m+\\left\\lfloor\\frac{k-1}{2}\\right\\rfloor?$$ This was proved for even $k$ by Erdős, Faudree, Rousseau, and Schelp [EFRS93]. This was proved for $k=3$ independently by Goddard and Kleitman [GoKl94] and Sidorenko [Si91]. This was proved for $k=5$ by Jayawardene [Ja99]. Finally it was proved for all odd $k\\geq 7$ by Cambie, Freschi, Morawski, Petrova, and Pokrovskiy [CFMPP26]. This problem is #35 in Ramsey Theory in the graphs problem collection.",
+  "formal": ": ∀ (k : ℕ) (hk : 3 ≤ k), ∀ᶠ (m : ℕ) in atTop, ∀ (W : Type) [Fintype W] (H : SimpleGraph W) [DecidableRel H.Adj], (∀ v, 0 < H.degree v) → H.edgeSet.ncard = m → SimpleGraph.graphRamsey (SimpleGraph.cycleGraph k) H ≤ 2 * m + (k - 1) / 2",
+  "rid": "R33"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/818.lean",
+  "name": "erdos_818",
+  "informal": "Let $A$ be a finite set of integers such that $\\lvert A+A\\rvert \\ll \\lvert A\\rvert$. Is it true that $$\\lvert AA\\rvert \\gg \\frac{\\lvert A\\rvert^2}{(\\log \\lvert A\\rvert)^C}$$ for some constant $C>0$? This was proved by Solymosi [So09d], in the strong form $$\\lvert AA\\rvert \\gg \\frac{\\lvert A\\rvert^2}{\\log \\lvert A\\rvert}.$$ See also [52].",
+  "formal": ": ∀ K : ℝ, 0 < K → ∃ C : ℝ, 0 < C ∧ ∃ c : ℝ, 0 < c ∧ ∀ A : Finset ℤ, 2 ≤ A.card → ((A + A).card : ℝ) ≤ K * (A.card : ℝ) → c * (A.card : ℝ) ^ 2 / (Real.log (A.card : ℝ)) ^ C ≤ ((A * A).card : ℝ)",
+  "rid": "R34"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/547.lean",
+  "name": "erdos_547",
+  "informal": "If $T$ is a tree on $n$ vertices then $$R(T) \\leq 2n-2.$$ This problem is #14 in Ramsey Theory in the graphs problem collection. Solved: the bound follows from the Erdős–Sós theorem (Erdős problem 548) by the pigeonhole principle, as noted on the problem page.",
+  "formal": ": ∀ (n : ℕ) (hn : 2 ≤ n) (T : SimpleGraph (Fin n)), T.IsTree → SimpleGraph.diagonalGraphRamsey T ≤ 2 * n - 2",
+  "rid": "R35"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/239.lean",
+  "name": "erdos_239",
+  "informal": "Let $f:\\mathbb{N}\\to \\{-1,1\\}$ be a multiplicative function. Is it true that $$ \\lim_{N\\to \\infty}\\frac{1}{N}\\sum_{n\\leq N}f(n)$$ always exists? The answer is yes, as proved by Wirsing [Wi67], and generalised by Halász [Ha68].",
+  "formal": ": ∀ f : ℕ → ℝ, (∀ n ≥ 1, f n = 1 ∨ f n = -1) ∧ (∀ m n, m.Coprime n → f (m * n) = f m * f n) ∧ f 1 = 1 → ∃ L, Tendsto (fun N ↦ (∑ n ∈ Finset.Icc 1 N, f n) / N) atTop (𝓝 L)",
+  "rid": "R36"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/146.lean",
+  "name": "erdos_146",
+  "informal": "If $H$ is bipartite and is $r$-degenerate, that is, every induced subgraph of $H$ has minimum degree $\\leq r$, then $$\\mathrm{ex}(n;H) \\ll n^{2-1/r}.$$ The answer is no. OpenAI [OpenAI26] give a connected bipartite `2`-degenerate `H` and constants `c, ε > 0` with $\\mathrm{ex}(n;H)\\geq cn^{3/2+\\epsilon}$ for all large `n`, which exceeds the conjectured $n^{2-1/2}=n^{3/2}$. See `erdos_146.variants.two_degenerate_counterexample`.",
+  "formal": ": ¬ ∀ (r q : ℕ) (H : SimpleGraph (Fin q)), 0 < r → H.IsBipartite → H.IsDegenerate r → Asymptotics.IsBigO atTop (fun n : ℕ => (extremalNumber n H : ℝ)) (fun n : ℕ => (n : ℝ) ^ ((2 : ℝ) - 1 / (r : ℝ)))",
+  "rid": "R37"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/298.lean",
+  "name": "erdos_298",
+  "informal": "Does every set $A \\subseteq \\mathbb{N}$ of positive density contain some finite $S \\subset A$ such that $\\sum_{n \\in S} \\frac{1}{n} = 1$? The answer is yes, proved by Bloom [Bl21] (even if 'positive density' is interpreted as 'positive upper density', which is likely what Erdős intended). The theorem below uses the positive-upper-density interpretation; the literal natural-density interpretation is recorded separately. This was formalized in Lean 3 by Bloom and Mehta.",
+  "formal": ": (∀ (A : Set ℕ), 0 ∉ A → 0 < A.upperDensity → ∃ (S : Finset ℕ), ↑S ⊆ A ∧ ∑ n ∈ S, (1 / n : ℚ) = 1)",
+  "rid": "R38"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/1090.lean",
+  "name": "erdos_1090",
+  "informal": "Let $k\\geq 3$. Does there exist a finite set $A\\subset \\mathbb{R}^2$ such that, in any $2$-colouring of $A$, there exists a line which contains at least $k$ points from $A$, and all the points of $A$ on the line have the same colour? Erdős [Er75f] says Graham and Selfridge proved the answer is yes when $k=3$. Hunter has observed that, for sufficiently large $n$, a generic projection of $[k]^n$ into $\\mathbb{R}^2$ has this property, by the Hales-Jewett theorem.",
+  "formal": ": ∀ (k : ℕ), ∀ (hk : 3 ≤ k), ∃ (A : Finset (Fin 2 → ℝ)), ∀ (C : A → Fin 2), ∃ (S : Finset (Fin 2 → ℝ)), ∃ (hSA : S ⊆ A), Collinear ℝ (S : Set (Fin 2 → ℝ)) ∧ S.card ≥ k ∧ (∀ y ∈ A, y ∈ affineSpan ℝ (S : Set (Fin 2 → ℝ)) → y ∈ S) ∧ ∃ c, ∀ x (hx : x ∈ S), C ⟨x, hSA hx⟩ = c",
+  "rid": "R39"
+ },
+ {
+  "file": "FormalConjectures/ErdosProblems/495.lean",
+  "name": "erdos_495",
+  "informal": "Let $\\alpha,\\beta \\in \\mathbb{R}$. Is it true that$$\\liminf_{n\\to \\infty} n \\| n\\alpha \\| \\| n\\beta\\| =0$$? This is also known as the Littlewood conjecture.",
+  "formal": ": ∀ α β : ℝ, liminf (fun n : ℕ ↦ (n : ℝ) * distToNearestInt (n * α) * distToNearestInt (n * β)) atTop = 0",
+  "rid": "R40"
+ }
+]
