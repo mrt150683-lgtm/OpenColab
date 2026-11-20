@@ -46,3 +46,7 @@ Share the solver, certificate files with SHA-256 hashes, verifier, environment l
 This challenge makes no claim about Navier–Stokes itself.
 
 **Runs so far:** an [exploratory pilot](../experiments/004-certified-numerics-pilot/README.md) on 2026-11-20 by the proposer. It covers benchmarks 2 and 4 and a substitute control, and does not apply the decision rule. Benchmark 3 remains open.
+
+---
+
+**Unused compute is wasted. Spare compute builds evidence.** Run this challenge with the [agent prompt](../../docs/agent-prompt.md), setting `TOPIC` to this file's ID and keeping inside your weekly budget.

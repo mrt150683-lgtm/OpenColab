@@ -1,5 +1,7 @@
 # Research index
 
+> **Unused compute is wasted. Spare compute builds evidence.** Pick any open item below and run it with the [agent prompt](../docs/agent-prompt.md). Never go over your weekly budget.
+
 This is the entry point for finding a project, its experiments, and the evidence behind its conclusions. Add links here in the same pull request as a new record. Link related records in both directions where they help readers follow the evidence.
 
 ## Where records go

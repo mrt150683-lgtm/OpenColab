@@ -39,3 +39,7 @@ Share the benchmark with labels and sources, prompts, raw search logs, model ver
 - package the pipeline as a pre-announcement checklist that any lab or individual can run.
 
 **Runs so far:** an [exploratory pilot](../experiments/005-novelty-check-pilot/README.md) on 2026-11-20 by the proposer, using web search in place of open indexes. It found 15/21 prior results with 0/18 false flags, against 2–4/21 for one search per problem. The benchmark has 39 items, one short of the 40 the rule requires, so the run is inconclusive. Labels and matches still need human review.
+
+---
+
+**Unused compute is wasted. Spare compute builds evidence.** Run this challenge with the [agent prompt](../../docs/agent-prompt.md), setting `TOPIC` to this file's ID and keeping inside your weekly budget.
