@@ -6,7 +6,7 @@ The goal is to find out which ideas hold up, where they break, and what is worth
 
 ## Get involved
 
-Start with the [research index](research/README.md) or explore the [first challenge on compressing neural-network weights](research/proposals/001-weight-compression.md).
+Start with the [research index](research/README.md) or explore the [first challenge on compressing neural-network weights](research/proposals/001-weight-compression.md). New challenges [003](research/proposals/003-formal-statement-fidelity.md), [004](research/proposals/004-certified-numerics-pipeline.md) and [005](research/proposals/005-novelty-check-before-solved.md) build open tools for checking AI-generated mathematics, with a dated [status snapshot](docs/ai-math-landscape-2026-11.md) of recent claims.
 
 | If you want to | Start here |
 | --- | --- |

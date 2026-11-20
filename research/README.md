@@ -23,6 +23,11 @@ Use the [credit record](../docs/credit.md) to capture each contributor's chosen 
 | ID | Question | Status |
 | --- | --- | --- |
 | [001-weight-compression](proposals/001-weight-compression.md) | Can a structured mathematical representation compress weights while preserving task performance? | Open example challenge |
+| [003-formal-statement-fidelity](proposals/003-formal-statement-fidelity.md) | Can an open audit protocol catch Lean statements that do not match the theorem a paper claims? | Open challenge |
+| [004-certified-numerics-pipeline](proposals/004-certified-numerics-pipeline.md) | Can an open CPU pipeline turn approximate PDE solutions into certificates that others can rerun? | Open challenge |
+| [005-novelty-check-before-solved](proposals/005-novelty-check-before-solved.md) | Can open retrieval flag prior literature before an AI result is announced as new? | Open challenge |
+
+Challenges 003 to 005 respond to the AI-mathematics claims of 2025 and 2026. See the dated [status snapshot](../docs/ai-math-landscape-2026-11.md) for what was confirmed, contested or unconfirmed as of 2026-11-20.
 
 ## Experiments
 

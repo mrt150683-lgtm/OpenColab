@@ -6,7 +6,7 @@ Credits list the public handles and roles recorded in accepted research contribu
 
 ## Contributions
 
-No public contributor credits recorded yet.
+- [mrt150683-lgtm](https://github.com/mrt150683-lgtm) · proposal (Claude) on [proposals/003-formal-statement-fidelity](research/proposals/003-formal-statement-fidelity.md), proposal (Claude) on [proposals/004-certified-numerics-pipeline](research/proposals/004-certified-numerics-pipeline.md), proposal (Claude) on [proposals/005-novelty-check-before-solved](research/proposals/005-novelty-check-before-solved.md)
 
 ## Credit by outcome
 
