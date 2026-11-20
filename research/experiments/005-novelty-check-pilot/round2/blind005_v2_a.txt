@@ -1,0 +1,53 @@
+S01: For fixed r,k ≥ 2 and n points in the plane with no k collinear, determine the threshold number of ordinary lines (lines through exactly 2 points) that forces r points all of whose C(r,2) connecting lines are ordinary; in particular is it o(n^2)?
+
+S02: For n in the image of Euler's φ, let f_max(n), f_min(n) be the largest and smallest m with φ(m)=n. Determine the asymptotic size of max_{n ≤ x} f_max(n)/f_min(n).
+
+S03: If a_1 < a_2 < ... are integers with liminf a_n^{1/2^n} > 1, must sum_n 1/(a_n a_{n+1}) be irrational?
+
+S04: Suppose n points in the plane form the vertices of a convex polygon, and the distance u_i occurs f(u_i) times among pairs. Is sum_i f(u_i)^2 ≪ n^3?
+
+S05: Let f be an additive arithmetic function with limsup over prime powers of f(p^k)/log(p^k) = ∞. Must limsup_n (f(n+1) − f(n))/log n = ∞, or even limsup_n f(n+1)/f(n) = ∞?
+
+S06: Can every sufficiently large integer n be written as x^2 + y^2 − z^2 with max(x^2, y^2, z^2) ≤ n?
+
+S07: Does the set of integers of the form n + φ(n), with φ Euler's totient function, have positive lower density?
+
+S08: For a complex polynomial with n nonzero coefficients and M = (|a_0|+...+|a_d|)/sqrt(|a_0||a_d|), is the discrepancy of root arguments in every arc I bounded by |#{θ_i ∈ I} − |I|d/2π| ≪ (n log M)^{1/2}?
+
+S09: Let r ≥ 4. If a graph G on n vertices has at least ex(n; K_r) (Turán number) edges, must G contain a vertex of degree d ≫_r n whose neighbourhood spans at least ex(d; K_{r-1}) edges?
+
+S10: Let n = p^2+p+1 with p a prime power, and let A_1,...,A_t be subsets of {1,...,n} such that every pair of elements lies in exactly one A_i (a pairwise balanced design / linear space). Is it true that if t > n then t ≥ n + p?
+
+S11: Are there infinitely many n such that n − k^2 is prime for every k with gcd(n,k)=1 and k^2 < n?
+
+S12: Call an interval [u,v] bad if the largest prime factor of the product of the integers in [u,v] appears to a power > 1. Is the number of n ≤ x lying in some bad interval asymptotic to #{n ≤ x : P(n)^2 | n}, P(n) the largest prime factor?
+
+S13: For a finite set A of complex numbers and k ≥ 1, let A_k be the multiset of sums of k distinct elements of A. For k > 2 (and |A| sufficiently large), does A_k together with |A| uniquely determine A?
+
+S14: Is there ε > 0 such that for infinitely many n, every prime p ≤ (2+ε) log n divides the product (n+1)(n+2)...(n+⌊log n⌋)?
+
+S15: For a graph G on n vertices, let α1(G) be the maximum size of an edge set containing at most one edge of every triangle, and τ1(G) the minimum size of an edge set meeting every triangle. Is α1(G) + τ1(G) ≤ n^2/4?
+
+S16: Let A be a set of natural numbers of natural density zero. Must there exist a set B with A contained in B+B such that |B ∩ {1,...,N}| = o(N^{1/2}) for all large N?
+
+S17: Is it true that for primitive sets A ⊆ [x, ∞) (no element divides another), sum_{a∈A} 1/(a log a) < 1 + o(1) as x → ∞?
+
+S18: Let f be a monic non-constant complex polynomial. Must there be a line ℓ such that the orthogonal projection of the lemniscate region {z : |f(z)| ≤ 1} onto ℓ has length (measure) at most 2?
+
+S19: Are there only finitely many solutions to products of central binomial coefficients prod_i C(2m_i, m_i) = prod_j C(2n_j, n_j) with all the m_i, n_j distinct?
+
+S20: Can all sufficiently large n be written as 2^k + m with k ≥ 0 and Ω(m) < log log m (Ω = number of prime factors with multiplicity)?
+
+S21: In every 2-colouring of the positive integers, must there be a monochromatic 3-term arithmetic progression x, x+d, x+2d with d > x?
+
+S22: Let f be a transcendental entire function (not a polynomial). Is there a locally rectifiable path C tending to infinity such that the integral of |f(z)|^{-λ} |dz| along C is finite for every λ > 0?
+
+S23: For nodes x_1..x_n in [−1,1], let Λ be the Lebesgue constant max_x sum_k |l_k(x)| of Lagrange interpolation. Characterise the node sets minimising Λ — in particular, is the minimiser characterised by all local maxima λ_i of sum_k|l_k| between consecutive nodes being equal?
+
+S24: Given ε>0, is there k such that for any k primes p_1<...<p_k<n^{1−ε}, each with a set of (p_i−1)/2 residue classes removed, at most εn integers m ≤ n survive the sieve?
+
+S26: Let G be a graph with chromatic number aleph_1. Must there be an edge e such that, for all sufficiently large n, G contains a cycle of length n through e?
+
+S28: For a sequence x_j in (0,1) let A_k = limsup_n |sum_{j≤n} e(k x_j)|. Is limsup_k A_k = ∞? Is A_k = o(k) possible?
+
+S29: If A ⊆ N and A+A has positive upper density, can A always be split into two parts A_1, A_2 with A_1+A_1 and A_2+A_2 both of positive upper density? Also: is there a basis of order 2 that cannot be split so both A_i+A_i have bounded gaps?

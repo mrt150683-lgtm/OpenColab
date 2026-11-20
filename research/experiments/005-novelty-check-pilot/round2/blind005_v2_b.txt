@@ -1,0 +1,53 @@
+S30: Does every graph with m edges contain a C_4-free subgraph with ≫ m^{2/3} edges?
+
+S31: Let A be an additive basis of order r of the natural numbers. Must the set of integers representable as a sum of exactly r distinct elements of A have positive lower density?
+
+S32: Let A be the integers whose base-3 digits are all 0 or 1, and B those whose base-4 digits are all 0 or 1. Does A+B have positive lower density?
+
+S33: For k ≥ 3, let G_k be the 1-subdivision of K_k (k vertices, plus one vertex for each pair joined to exactly that pair). Is ex(n, G_k) ≪ n^{3/2 − c_k} for some c_k > 0?
+
+S34: For fixed k ≥ 3, does the off-diagonal Ramsey number satisfy R(k, l+1)/R(k, l) → 1 as l → ∞?
+
+S35: Is there a set B of natural numbers that is not an additive basis but such that, for some f(α)>0, every A ⊆ N of Schnirelmann density α ∈ (0,1) and every N admit b ∈ B with |(A ∪ (A+b)) ∩ [1,N]| ≥ (α + f(α))N?
+
+S36: Given positive integers a_1..a_r, b_1..b_r with sum 1/a_i > 1, define T on finite integer sequences by T(x_1..x_n) = (a_i x_j + b_i) over all i, j. Starting from A_1 = (1) and A_{k+1} = T(A_k), must some A_k contain a repeated element?
+
+S37: Is there k such that every finite unit-distance graph in the plane with girth at least k has chromatic number at most 3?
+
+S39: Let f_d(n) be the maximum number of pairs at distance exactly 1 among n points in R^d of diameter 1 (maximum number of diameters). Determine or estimate f_d(n).
+
+S40: Let x_1 < x_2 < ... be any increasing sequence of integers. Is it true that for almost every α ∈ [0,1] the discrepancy D(N) = max_I |#{n ≤ N : {αx_n} ∈ I} − |I|N| satisfies D(N) ≪ N^{1/2}(log N)^{o(1)}?
+
+S41: For every 2-colouring of the real numbers, must there exist a set A ⊆ ℝ of cardinality ℵ_1 such that all sums a+b with a ≠ b in A have the same colour?
+
+S42: Let E ⊂ (0,∞) have positive measure. Is it true that for almost every x > 0 and all sufficiently large integers n there is an integer r ≥ 1 with nx ∈ r·E?
+
+S43: For nodes x_1,...,x_n in [−1,1] with Lagrange basis polynomials l_k, set x_0 = −1, x_{n+1} = 1 and Υ = min_{0≤i≤n} max_{x∈[x_i,x_{i+1}]} Σ_k |l_k(x)|. Is Υ ≪ log n, and which node sets maximise Υ (are they characterised by all the interval maxima being equal)?
+
+S44: Let δ>0. Is it true that, for all sufficiently large n, every K_5-free graph on n vertices with at least δn² edges contains a set of ≫_δ n vertices spanning no triangle? Equivalently, is the Ramsey–Turán density lim_{ε→0} lim_n RT_3(n, K_5, εn)/n² equal to 0?
+
+S45: Let f_r(n) be maximal such that any graph G in which every m-vertex subgraph is the union of a graph of chromatic number ≤ r and a graph with ≤ f_r(m) edges has chromatic number ≤ r+1. Is f_2(n) ≫ n, and more generally f_r(n) ≫_r n?
+
+S46: Let C > 0. Are there infinitely many integers a, b, n with a + b > n + C log n such that the denominator of n!/(a! b!) contains only primes bounded in terms of C?
+
+S47: Let f_k(n) be the number of elements of order k in the symmetric group S_n. For which k is f_k(n) maximal, and how large is the maximum?
+
+S48: Let h(n) be the longest chain of primes p_1 < ... < p_ℓ dividing n with p_{i+1} ≡ 1 mod p_i, and H(n) the longest chain of divisors d_1 < ... < d_u of n with d_{i+1} ≡ 1 mod d_i. Estimate h(n) and H(n); is H(n)/h(n) → ∞ for almost all n?
+
+S49: Let a_1, a_2, ... be positive integers with a_n → ∞. Is Σ_n τ(n)/(a_1 a_2 ⋯ a_n) irrational, where τ(n) is the number of divisors of n?
+
+S50: For nodes x_1,...,x_n in [−1,1] with Lagrange basis polynomials l_k, let λ(x) = Σ_k |l_k(x)|. Is it true that for every fixed −1 ≤ a < b ≤ 1, max_{x∈[a,b]} λ(x) > (2/π − o(1)) log n?
+
+S51: Let α > 0 be irrational. Is the set of n ≥ 1 with ‖αn²‖ < 1/log n (distance to the nearest integer) an additive basis of order 2?
+
+S52: Let α be the ordinal ω^{ω²}. In every red/blue colouring of the edges of the complete graph on α, must there be either a red complete subgraph of order type α or a blue triangle (i.e. does α → (α,3)² hold)?
+
+S53: Let 1 = d_1 < ... < d_τ(n) = n be the divisors of n and, for α > 1, h_α(n) = Σ_i (d_{i+1}/d_i − 1)^α. Is liminf_{n→∞} h_α(n) bounded by a constant depending only on α?
+
+S54: Let S ⊂ ℝ be a set of infinite Lebesgue measure such that x/y is never an integer for distinct x, y ∈ S. How fast can |S ∩ (0,x)| tend to infinity?
+
+S55: For A, B ⊆ {1,...,N}, let F(A,B) be the number of integers m having exactly one representation m = ab with a ∈ A, b ∈ B. Estimate the maximum of F(A,B).
+
+S56: Let A ⊆ {1,...,N} contain no solution to at = b with a, b ∈ A where the smallest prime factor of t exceeds a. Estimate the maximum of (1/log N) Σ_{n∈A} 1/n.
+
+S57: For k ≥ 2, is the maximum number of edges in an n-vertex graph containing neither a cycle of length 2k−1 nor one of length 2k equal to (1+o(1))(n/2)^{1+1/k}?

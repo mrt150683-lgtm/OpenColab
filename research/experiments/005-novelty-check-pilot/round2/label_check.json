@@ -1,0 +1,477 @@
+{
+ "checks": [
+  {
+   "id": 960,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": null,
+   "note": "Wiki 1(a) full solution (OpenAI internal, 9 Apr 2026); page cites only APSSV26b, no prior result."
+  },
+  {
+   "id": 694,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": null,
+   "note": "Wiki 1(a) GPT-5.5 Pro; page credits GPT-5.5 Pro/Price, no prior literature."
+  },
+  {
+   "id": 1051,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": null,
+   "note": "Wiki 1(a) Aletheia (Lean); only partial prior results (Er88c)."
+  },
+  {
+   "id": 94,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a) GPT-5 found it. Title: Lefmann & Theile, 'Point sets with distinct distances', Combinatorica 15 (1995)."
+  },
+  {
+   "id": 897,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 1(b), Wirsing (1981), Similar=Yes; page says the construction first appeared in Wi81."
+  },
+  {
+   "id": 1148,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": null,
+   "note": "Wiki 1(d), page: Chojecki + GPT-5.4 Pro via ELMV12 form of Duke's theorem; no prior solution."
+  },
+  {
+   "id": 822,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a) GPT-5 found it. Title confirmed: 'Numbers of the form k+f(k)', arXiv:2306.16035 (posted 2023; site cites it as GIL24)."
+  },
+  {
+   "id": 990,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": null,
+   "note": "Wiki 1(a) disproof; earlier work (Erdős–Turán 1950, Hayman 1972) only partial."
+  },
+  {
+   "id": 1079,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a); page: Bollobás–Thomason [BoTh81] (except for the Turán graph itself), strengthened by Bondy [Bo83b]."
+  },
+  {
+   "id": 903,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a); page: Erdős, Fowler, Sós, Wilson [EFSW85] proved it."
+  },
+  {
+   "id": 1141,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": null,
+   "note": "Wiki 1(a). The page says it follows from Pollack [Po17], so it sits at the edge of 'prior' (compare 281, labelled PRIOR). Borderline, but NEW is defensible."
+  },
+  {
+   "id": 380,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": null,
+   "note": "Wiki 1(d) Tao + GPT-5.4 Pro; page cites only Ta26c."
+  },
+  {
+   "id": 494,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a); GFS62 is in Pacific J. Math. 12 (1962), confirmed on msp.org (a different paper with a similar title is in Canad. J. Math.). The 'sufficiently large |A|' qualifier is not in the original statement, but it is needed and the key already notes it."
+  },
+  {
+   "id": 457,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": null,
+   "note": "Wiki 1(a) Aristotle+GPT-5.2 Pro; page cites no prior solution."
+  },
+  {
+   "id": 621,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a); page: Norin–Sun [NoSu16] proved the stronger α1+τ_B ≤ n²/4."
+  },
+  {
+   "id": 333,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 1(b) Erdős–Newman 1977, Similar=Yes; page: Theorem 2 of ErNe77 already implies the negative answer."
+  },
+  {
+   "id": 1196,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": null,
+   "note": "Wiki 1(a) GPT-5.4 Pro; Lichtman 2023 only weaker 1.399 bound."
+  },
+  {
+   "id": 1043,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a) GPT-5 found Pommerenke [Po61] (counterexample, projections ≥ 2.386)."
+  },
+  {
+   "id": 397,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 1(b) China TST 2012, Similar=Yes. The site page cites only Somani/ChatGPT plus a MathOverflow answer by Elkies, not the TST, so the citation rests on the wiki alone."
+  },
+  {
+   "id": 205,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": null,
+   "note": "Wiki 1(a); page credits Barreto/Leeham with ChatGPT+Aristotle, no prior result."
+  },
+  {
+   "id": 645,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a); page: first proved by Brown & Landman [BrLa99] (stronger d > f(x))."
+  },
+  {
+   "id": 515,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a); page: Lewis–Rossi–Weitsman [LRW84] general case, Huber 1957 per-λ, Zhang 1977 finite order."
+  },
+  {
+   "id": 1129,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a) GPT-5.2 Pro; page: Kilgore [Ki77] characterisation, de Boor–Pinkus [dBPi78] uniqueness (also Kilgore–Cheney 1976 existence)."
+  },
+  {
+   "id": 1202,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": null,
+   "note": "Wiki 1(a) GPT-5.4 Pro (page: 'Price and GPT-5.4 Pro'); no prior literature. The paraphrase drops the auxiliary η, which is harmless."
+  },
+  {
+   "id": 1091,
+   "label_verdict": "unsure",
+   "statement_ok": false,
+   "citation_ok": null,
+   "note": "The paraphrase includes the first part, already settled by Larson 1979 (one diagonal) and Voss 1982 (two diagonals), so a literature search would rightly flag it as prior. Keep only the general f(r) part, which the OpenAI model answered negatively (≤10 diagonals); that part is NEW."
+  },
+  {
+   "id": 737,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a) GPT-5; page: Thomassen [Th83]."
+  },
+  {
+   "id": 1217,
+   "label_verdict": "agree",
+   "statement_ok": false,
+   "citation_ok": null,
+   "note": "Label is fine (wiki 1(a) GPT-5.4 Pro; page credits ABLLPSTT26 with independent proofs). The statement is wrong: the question compares limsup (1/loglog x)·#{chain elements < x} with limsup (1/loglog x)·Σ_{a_n<x} 1/(a_n log a_n). The key's 'count ≫ (1/loglog x)·Σ' puts the loglog normalisation on the wrong side and replaces ≥ with ≫."
+  },
+  {
+   "id": 987,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": null,
+   "note": "Wiki 1(a); page: OpenAI internal model built A_k ≪ (k log k)^{1/2}; Clunie 1967 had only A_k ≤ k."
+  },
+  {
+   "id": 741,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": null,
+   "note": "Wiki 1(a) DeepMind (Lean) full solution 16 Apr 2026; no prior literature on page."
+  },
+  {
+   "id": 1008,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a) GPT-5. CFS14b is very likely Conlon, Fox, Sudakov, 'Large subgraphs without complete bipartite graphs' (arXiv:1401.6711, 2014); the arXiv abstract is about the largest K_{r,s}-free subgraph in m-edge graphs."
+  },
+  {
+   "id": 339,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a); page: Hegyvári–Hennecart–Plagne [HHP03]."
+  },
+  {
+   "id": 125,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": null,
+   "note": "Wiki 1(a) DeepMind (Lean) disproof; Melfi 2001 and Hasler–Melfi 2024 only partial."
+  },
+  {
+   "id": 1021,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a) 'previously noted'. Confirmed: Conlon & Lee, 'On the extremal number of subdivisions', IMRN 2021(12), 9122–9145 (c_k = 6^{-k}); Janzer improved to 1/(4k−6)."
+  },
+  {
+   "id": 1014,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": null,
+   "note": "Wiki 1(a) OpenAI internal; page cites no prior literature."
+  },
+  {
+   "id": 38,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": null,
+   "note": "Wiki 1(a) GPT-5.5 Pro; page credits GPT-5.5 Pro/gebyjaff, no prior answer."
+  },
+  {
+   "id": 481,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a). Title: D. A. Klarner, 'A sufficient condition for certain semigroups to be free', J. Algebra 74 (1982) 140–148; Kolpakov & Talambutsa, 'On free semigroups of affine maps on the real line' (arXiv:2105.09387)."
+  },
+  {
+   "id": 705,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a). Correct source: P. O'Donnell, 'High girth unit-distance graphs', PhD thesis, Rutgers, 1999; the Geombinatorics papers (c. 2000) follow from it. Earlier Wormald 1979 (girth 5)."
+  },
+  {
+   "id": 281,
+   "label_verdict": "unsure",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 1(b) with Similar=No: the result is not stated in DaEr36 or Rogers/HaRo66. It follows quickly by combining them (page: 'strange that this natural argument was overlooked'). Borderline, and labelled inconsistently with 1141 (NEW). Consider dropping it or marking it low-confidence."
+  },
+  {
+   "id": 223,
+   "label_verdict": "agree",
+   "statement_ok": true,
+   "citation_ok": true,
+   "note": "Wiki 2(a) GPT-5; page: Hopf–Pannwitz 1934, Grünbaum/Heppes/Straszewicz 1956–57, Erdős 1960, Swanepoel 2009. 'Estimate' problem, assembled from several papers."
+  }
+ ],
+ "new_items": [
+  {
+   "id": 533,
+   "statement": "Let δ>0. Is it true that, for all sufficiently large n, every K_5-free graph on n vertices with at least δn² edges contains a set of ≫_δ n vertices spanning no triangle? Equivalently, is the Ramsey–Turán density lim_{ε→0} lim_n RT_3(n, K_5, εn)/n² equal to 0?",
+   "label": "PRIOR",
+   "prior_work": "Balogh and Lenz (2013), 'On the Ramsey–Turán numbers of graphs and hypergraphs', Israel J. Math. 194, 45–68 (shows the density is positive); Liu, Reiher, Sharifzadeh and Staden (2021), 'Geometric constructions for Ramsey–Turán theory' (value is exactly 1/12).",
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/533"
+   ],
+   "note": "Wiki 2(a): GPT (26 Jan 2026) found the full solution in the literature. Answer: no."
+  },
+  {
+   "id": 574,
+   "statement": "For k ≥ 2, is the maximum number of edges in an n-vertex graph containing neither a cycle of length 2k−1 nor one of length 2k equal to (1+o(1))(n/2)^{1+1/k}?",
+   "label": "PRIOR",
+   "prior_work": "Lazebnik, Ustimenko and Woldar (1994), 'Properties of certain families of 2k-cycle-free graphs', J. Combin. Theory Ser. B 60, 293–298 (disproof for k=3,5); Füredi, Naor and Verstraëte (2006), 'On the Turán number for the hexagon', Adv. Math. 203 (alternative disproof for k=3).",
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/574"
+   ],
+   "note": "Wiki 2(a): GPT-5.4 Pro (28 Mar 2026) found the full solution in the literature. Answer: no."
+  },
+  {
+   "id": 591,
+   "statement": "Let α be the ordinal ω^{ω²}. In every red/blue colouring of the edges of the complete graph on α, must there be either a red complete subgraph of order type α or a blue triangle (i.e. does α → (α,3)² hold)?",
+   "label": "PRIOR",
+   "prior_work": "Schipperus (2010), 'Countable partition ordinals', Ann. Pure Appl. Logic 161, 1195–1215; independently Darby.",
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/591"
+   ],
+   "note": "Wiki 2(a): ChatGPT Deep Research (17 Jan 2026) and Aletheia (1 Feb 2026) found the full solution in the literature. Answer: yes."
+  },
+  {
+   "id": 965,
+   "statement": "For every 2-colouring of the real numbers, must there exist a set A ⊆ ℝ of cardinality ℵ_1 such that all sums a+b with a ≠ b in A have the same colour?",
+   "label": "PRIOR",
+   "prior_work": "Komjáth (2016), 'A certain 2-coloring of the reals', Real Anal. Exchange 41(1) (ZFC disproof); independently Soukup and Weiss; under CH: Hindman, Leader and Strauss (2017), 'Pairwise sums in colourings of the reals', Abh. Math. Semin. Univ. Hambg.",
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/965"
+   ],
+   "note": "Wiki 2(a): GPT (2 Jan 2026) found the full solution in the literature. Answer: no."
+  },
+  {
+   "id": 992,
+   "statement": "Let x_1 < x_2 < ... be any increasing sequence of integers. Is it true that for almost every α ∈ [0,1] the discrepancy D(N) = max_I |#{n ≤ N : {αx_n} ∈ I} − |I|N| satisfies D(N) ≪ N^{1/2}(log N)^{o(1)}?",
+   "label": "PRIOR",
+   "prior_work": "Berkes and Philipp (1994), 'The size of trigonometric and Walsh series and uniform distribution mod 1', J. London Math. Soc. (2) 50, 454–464 (sequence with limsup D(N)/(N log N)^{1/2} > 0 a.e.).",
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/992"
+   ],
+   "note": "Wiki 2(a): Aletheia (1 Feb 2026) found the full solution in the literature. Answer: no."
+  },
+  {
+   "id": 1099,
+   "statement": "Let 1 = d_1 < ... < d_τ(n) = n be the divisors of n and, for α > 1, h_α(n) = Σ_i (d_{i+1}/d_i − 1)^α. Is liminf_{n→∞} h_α(n) bounded by a constant depending only on α?",
+   "label": "PRIOR",
+   "prior_work": "Vose (1984), 'Integers with consecutive divisors in small ratio', J. Number Theory 19.",
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/1099"
+   ],
+   "note": "Wiki 2(a): ChatGPT Deep Research / Gemini (19 Oct 2025) found the full solution in the literature. Answer: yes."
+  },
+  {
+   "id": 1130,
+   "statement": "For nodes x_1,...,x_n in [−1,1] with Lagrange basis polynomials l_k, set x_0 = −1, x_{n+1} = 1 and Υ = min_{0≤i≤n} max_{x∈[x_i,x_{i+1}]} Σ_k |l_k(x)|. Is Υ ≪ log n, and which node sets maximise Υ (are they characterised by all the interval maxima being equal)?",
+   "label": "PRIOR",
+   "prior_work": "de Boor and Pinkus (1978), 'Proof of the conjectures of Bernstein and Erdős concerning the optimal nodes for polynomial interpolation', J. Approx. Theory 24, 289–303.",
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/1130"
+   ],
+   "note": "Wiki 2(a): GPT-5.2 Pro (17 Jan 2026) found the full solution in the literature. Shares its source with key item 1129, so the two are not independent."
+  },
+  {
+   "id": 1147,
+   "statement": "Let α > 0 be irrational. Is the set of n ≥ 1 with ‖αn²‖ < 1/log n (distance to the nearest integer) an additive basis of order 2?",
+   "label": "PRIOR",
+   "prior_work": "Konieczny (2016), 'Sets of recurrence as bases for the positive integers', Acta Arith. 174(4) (disproof for a.e. α and α = √2). Title matched by search; the site cites it only as [Ko16b].",
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/1147"
+   ],
+   "note": "Wiki 2(a): GPT-5.2 Thinking (26 Jan 2026) found the full solution in the literature. Answer: no."
+  },
+  {
+   "id": 1161,
+   "statement": "Let f_k(n) be the number of elements of order k in the symmetric group S_n. For which k is f_k(n) maximal, and how large is the maximum?",
+   "label": "PRIOR",
+   "prior_work": "Beker (2025), 'The most probable order of a random permutation', arXiv:2510.11698 (max_k f_k(n) ~ (n−1)!, with the maximising k characterised).",
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/1161"
+   ],
+   "note": "Wiki 2(a): GPT-5.2 Thinking (24 Jan 2026) found the full solution in the literature (a 2025 preprint)."
+  },
+  {
+   "id": 1092,
+   "statement": "Let f_r(n) be maximal such that any graph G in which every m-vertex subgraph is the union of a graph of chromatic number ≤ r and a graph with ≤ f_r(m) edges has chromatic number ≤ r+1. Is f_2(n) ≫ n, and more generally f_r(n) ≫_r n?",
+   "label": "PRIOR",
+   "prior_work": "Rödl (1982), 'Nearly bipartite graphs with large chromatic number', Combinatorica 2, 377–383 (implies f_r(n) = o(n)).",
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/1092"
+   ],
+   "note": "Wiki 1(d): Chojecki + GPT-5.5 Pro listed as a full solution (28 Apr 2026). The site page resolves it via Rödl's 1982 construction, which Tang pointed out in the comments. Answer: no. Moderate confidence: the wiki has not moved it to 1(b)."
+  },
+  {
+   "id": 1195,
+   "statement": "Let S ⊂ ℝ be a set of infinite Lebesgue measure such that x/y is never an integer for distinct x, y ∈ S. How fast can |S ∩ (0,x)| tend to infinity?",
+   "label": "NEW",
+   "prior_work": null,
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/1195"
+   ],
+   "note": "Wiki 1(d): Ho + GPT-5.4 Pro full solution (19 Apr 2026). Such S with |S∩(0,x)| ≥ F(x) exists iff ∫_1^∞ F(x)/x² dx < ∞. Prior work (Haight 1970, Szemerédi 1971) covered existence only."
+  },
+  {
+   "id": 858,
+   "statement": "Let A ⊆ {1,...,N} contain no solution to at = b with a, b ∈ A where the smallest prime factor of t exceeds a. Estimate the maximum of (1/log N) Σ_{n∈A} 1/n.",
+   "label": "NEW",
+   "prior_work": null,
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/858"
+   ],
+   "note": "Wiki 1(d): Chojecki + GPT-5.4 Pro full solution (15 Apr 2026): max = (c+o(1)) log N with explicit c ≈ 0.618. Earlier results only o(log N) or Behrend-type."
+  },
+  {
+   "id": 696,
+   "statement": "Let h(n) be the longest chain of primes p_1 < ... < p_ℓ dividing n with p_{i+1} ≡ 1 mod p_i, and H(n) the longest chain of divisors d_1 < ... < d_u of n with d_{i+1} ≡ 1 mod d_i. Estimate h(n) and H(n); is H(n)/h(n) → ∞ for almost all n?",
+   "label": "NEW",
+   "prior_work": null,
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/696"
+   ],
+   "note": "Wiki 1(d): Mallen, Turturean + GPT-5.5 Pro / Claude / Aristotle full solution (Lean, Apr–Jun 2026): log_* n ≪ h(n) ≤ H(n) ≪ log_* n for almost all n, so the answer is no. Page cites no prior solution."
+  },
+  {
+   "id": 896,
+   "statement": "For A, B ⊆ {1,...,N}, let F(A,B) be the number of integers m having exactly one representation m = ab with a ∈ A, b ∈ B. Estimate the maximum of F(A,B).",
+   "label": "NEW",
+   "prior_work": null,
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/896"
+   ],
+   "note": "Wiki 1(d): Chojecki + GPT-5.5 Pro full solution (26 Apr 2026): max ≍ N²/((log N)^δ (log log N)^{3/2}), δ = 1 − (1+log log 2)/log 2. The upper bound is immediate from Ford (2008); the AI proved the lower bound using Ford-type estimates. The answer itself was not previously stated."
+  },
+  {
+   "id": 258,
+   "statement": "Let a_1, a_2, ... be positive integers with a_n → ∞. Is Σ_n τ(n)/(a_1 a_2 ⋯ a_n) irrational, where τ(n) is the number of divisors of n?",
+   "label": "NEW",
+   "prior_work": null,
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/258"
+   ],
+   "note": "Wiki 1(c): GPT-5.4 Pro full solution (14 Apr 2026), building on Tao–Teräväinen (2025); the page credits Chojecki + GPT-5.4 Pro (Lean). Prior: only the monotone case (Erdős–Straus) and constant a_n."
+  },
+  {
+   "id": 729,
+   "statement": "Let C > 0. Are there infinitely many integers a, b, n with a + b > n + C log n such that the denominator of n!/(a! b!) contains only primes bounded in terms of C?",
+   "label": "NEW",
+   "prior_work": null,
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/729"
+   ],
+   "note": "Wiki 1(c): Aristotle + GPT-5.2 Pro full solution (Lean, 8–10 Jan 2026), adapting the AI solution of a sibling problem. Page: Barreto/Leeham with ChatGPT+Aristotle, no prior literature."
+  },
+  {
+   "id": 1153,
+   "statement": "For nodes x_1,...,x_n in [−1,1] with Lagrange basis polynomials l_k, let λ(x) = Σ_k |l_k(x)|. Is it true that for every fixed −1 ≤ a < b ≤ 1, max_{x∈[a,b]} λ(x) > (2/π − o(1)) log n?",
+   "label": "NEW",
+   "prior_work": null,
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/1153"
+   ],
+   "note": "Wiki 1(d): Bhalla, Sothanaphan, Tao with AlphaEvolve/Claude/Gemini/GPT full solution (Feb–Mar 2026); page credits Tao [Ta26b] with the bound (2/π) log n − O(1). Prior: full interval only (Bernstein 1931, Erdős 1961) and ≫ log n on subintervals (Erdős–Szabados 1978)."
+  },
+  {
+   "id": 1197,
+   "statement": "Let E ⊂ (0,∞) have positive measure. Is it true that for almost every x > 0 and all sufficiently large integers n there is an integer r ≥ 1 with nx ∈ r·E?",
+   "label": "NEW",
+   "prior_work": null,
+   "sources": [
+    "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems",
+    "https://www.erdosproblems.com/1197"
+   ],
+   "note": "Wiki 1(c): Aristotle + Claude Opus 4.7 + GPT-5.4 Pro full solution (Lean, Apr–Jun 2026), building on Buczolich–Mauldin (1999). Page: counterexample by ebarschkis via a variant of the Buczolich–Mauldin construction. Answer: no."
+  }
+ ]
+}
