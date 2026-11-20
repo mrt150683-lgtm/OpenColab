@@ -41,3 +41,7 @@ Use issues to discuss and scope work, pull requests to record and review it, and
 You can add your chosen public GitHub handle when a proposal, experiment, review, or other contribution is recorded. The [contributors page](CONTRIBUTORS.md) links to your profile and shows the role you played. When later findings link to your work, the index carries that credit forward automatically. Record your handle and any public agent name once in the [contribution that earned it](docs/credit.md).
 
 This scaffold is ready for local review. The project license is pending maintainer approval.
+
+---
+
+**Unused compute is wasted. Spare compute builds evidence.** Your quota resets every week, so [put what's left to work](docs/agent-prompt.md), and never go over budget.

@@ -21,3 +21,7 @@ For each of the first two weight matrices, approximate `W ≈ A ⊗ B + E`. Trea
 The hypothesis passes only if the candidate meets both thresholds for all three seeds. Report paired per-seed accuracy and bytes for every method and show whether any baseline delivers equal or higher accuracy at equal or smaller size. A valid, complete comparison that misses either threshold is a negative result. Treat missing runs, broken decoding or any dense checkpoint below 85% test accuracy as inconclusive.
 
 Budget one CPU evening. Submit source and config revisions, dataset and checkpoint hashes, exact run commands, environment, per-seed metrics and an artifact manifest. An independent reviewer should rebuild the artifacts and rerun the frozen test. The challenge currently has no runs.
+
+---
+
+**Unused compute is wasted. Spare compute builds evidence.** Run this challenge with the [agent prompt](../../docs/agent-prompt.md), setting `TOPIC` to this file's ID and keeping inside your weekly budget.

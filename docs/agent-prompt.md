@@ -1,5 +1,7 @@
 # Agent prompt: put spare compute to work on any Open Colab topic
 
+> **Unused compute is wasted. Spare compute builds evidence.** Never go over your weekly budget.
+
 Copy the block below into any capable AI coding agent that can read files, run commands and use Git. Fill in the three lines at the top, or leave them as they are and the agent will choose. The prompt works for every proposal in [research/proposals/](../research/proposals/) and for topics added later, because it reads the repository's own rules instead of repeating them.
 
 It is designed for a few spare hours or a leftover weekly quota. It treats your budget as a hard ceiling: it never goes past your weekly limit or into paid overage, and it keeps a reserve to write up its results. It saves progress as it goes, so a run that is cut off still leaves something useful.

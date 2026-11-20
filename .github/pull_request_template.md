@@ -13,3 +13,4 @@
 - [ ] I linked the source records and updated the research index where applicable.
 - [ ] I checked that contributed artifacts can be shared and include their provenance where applicable.
 - [ ] Where applicable, I recorded contributors' chosen handles and roles and linked material source records in the credit block. See `docs/credit.md`.
+- [ ] If an agent did this work, it stayed within its stated budget and recorded what it used.

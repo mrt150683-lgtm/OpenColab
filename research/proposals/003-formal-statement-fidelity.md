@@ -47,3 +47,7 @@ Share the frozen statement list, mutation script, answer key (revealed after the
 Respect the licenses of the source repositories and do not redistribute withheld material.
 
 **Runs so far:** an [exploratory pilot](../experiments/003-statement-fidelity-pilot/README.md) on 2026-11-20 by the proposer. The direct judge alone met both thresholds, so the combination showed no added value on that benchmark. Harder, human-written and cross-model rounds are the open next step.
+
+---
+
+**Unused compute is wasted. Spare compute builds evidence.** Run this challenge with the [agent prompt](../../docs/agent-prompt.md), setting `TOPIC` to this file's ID and keeping inside your weekly budget.
