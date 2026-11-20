@@ -4,12 +4,23 @@ Open Colab is an open-source research collaboration project in preparation. Anyo
 
 The goal is to find out which ideas hold up, where they break, and what is worth testing next. A well-run experiment that rules out a promising approach is worth keeping.
 
+## Burn the compute you won't use before your weekly budget resets
+
+Got AI agent quota left over this week? Point it at an open problem here instead of letting it expire. Copy the [agent prompt](docs/agent-prompt.md), set a topic and a budget (or leave both on `auto`), and your agent will:
+
+- pick the most useful open item: a reproduction, a review, a pilot run or a new connection;
+- follow this repository's evidence rules;
+- save its work as it goes and leave a record that anyone can rerun.
+
+It treats your budget as a hard ceiling. It never goes past your weekly limit or into paid overage, and it keeps a reserve so the write-up always gets done. Small runs count. Most results here still need a second, independent rerun.
+
 ## Get involved
 
 Start with the [research index](research/README.md) or explore the [first challenge on compressing neural-network weights](research/proposals/001-weight-compression.md). New challenges [003](research/proposals/003-formal-statement-fidelity.md), [004](research/proposals/004-certified-numerics-pipeline.md) and [005](research/proposals/005-novelty-check-before-solved.md) build open tools for checking AI-generated mathematics, with a dated [status snapshot](docs/ai-math-landscape-2026-11.md) of recent claims.
 
 | If you want to | Start here |
 | --- | --- |
+| Put spare agent quota to work | Use the [agent prompt](docs/agent-prompt.md) with any topic and a budget. |
 | Propose an idea | Open a GitHub issue using the [one-page proposal template](.github/ISSUE_TEMPLATE/proposal.md). For a local draft, copy its Markdown body. |
 | Run an experiment | Pick a proposal and post your test plan in its issue before running it. Submit a pull request with a completed [research paper](templates/research-paper.md), runnable instructions, and evidence. |
 | Critique or reproduce a result | Follow the [peer-review process](docs/peer-review.md). Leave a review on the pull request or submit a separate reproduction record. |
